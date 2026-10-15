@@ -1,0 +1,45 @@
+name: Atualizar preços
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # todo dia às 09:00 UTC (06:00 em Brasília)
+  workflow_dispatch:       # botão "Run workflow" para rodar na mão
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-precos
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o site
+        uses: actions/checkout@v4
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependência
+        run: pip install requests
+
+      - name: Buscar preços reais (Travelpayouts)
+        env:
+          TP_TOKEN: ${{ secrets.TP_TOKEN }}
+        run: python scripts/atualizar_precos.py
+
+      - name: Salvar precos.json se mudou
+        run: |
+          if git diff --quiet -- precos.json; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add precos.json
+          git commit -m "Atualiza preços (automático)"
+          git push origin HEAD:main

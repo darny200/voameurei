@@ -160,10 +160,16 @@ main section .wrap { padding-block: 36px; }
 .secao-titulo h2 { font-size: var(--t-xl); font-weight: 800; letter-spacing: -.015em; }
 .secao-titulo p { color: var(--tinta-2); max-width: 40rem; }
 
-.aviso {
-  display: flex; gap: 10px; align-items: flex-start; background: var(--sol-suave); color: var(--tinta);
-  border-radius: var(--raio-p); padding: 10px 14px; font-size: var(--t-s); margin-bottom: 16px;
+.atualizado { font-size: var(--t-xs); color: var(--tinta-2); margin: 0 0 10px; text-align: right; }
+/* Quando não há preço para a rota/mês */
+.sem-dados {
+  background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio);
+  box-shadow: 0 10px 30px var(--sombra); padding: 22px 20px; display: grid; gap: 12px; margin-top: 18px;
 }
+.sem-dados h3 { font-size: var(--t-l); font-weight: 800; }
+.sem-dados p { color: var(--tinta-2); }
+.sugestoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.sugestoes .chip { text-align: left; }
 
 /* Cartão de embarque (rota + dia mais barato) */
 .embarque {
@@ -225,6 +231,10 @@ details[open] .chevron { transform: rotate(180deg); }
 .dia.campeao .estrela { position: absolute; top: -9px; right: -5px; background: var(--sol); color: var(--sobre-sol); border-radius: 999px; font-size: .62rem; font-weight: 800; padding: 1px 5px; }
 .dia.escolhido { outline: 3px solid var(--sol); outline-offset: 1px; }
 .dia.vazio { visibility: hidden; }
+.dia.sem { cursor: default; background: transparent; border: 1px dashed var(--linha); }
+.dia.sem:hover { border-color: var(--linha); }
+.dia.sem .n { color: var(--tinta-2); font-weight: 600; }
+.dia.sem .p { color: var(--linha); }
 .legenda { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; font-size: var(--t-s); color: var(--tinta-2); }
 .legenda span { display: inline-flex; align-items: center; gap: 6px; }
 .bolinha { width: 14px; height: 14px; border-radius: 4px; display: inline-block; border: 2px solid transparent; }
@@ -355,8 +365,8 @@ footer strong { color: var(--sobre-mar); }
       </div>
       <div class="queridinhos" aria-label="Destinos mais procurados">
         <span>Os queridinhos:</span>
-        <button type="button" class="chip" data-cidade="CNF">Belo Horizonte</button>
-        <button type="button" class="chip" data-cidade="GRU">São Paulo</button>
+        <button type="button" class="chip" data-cidade="BHZ">Belo Horizonte</button>
+        <button type="button" class="chip" data-cidade="SAO">São Paulo</button>
         <button type="button" class="chip" data-cidade="GYN">Goiânia</button>
       </div>
     </form>
@@ -369,7 +379,15 @@ footer strong { color: var(--sobre-mar); }
   <!-- RESULTADO -->
   <section id="resultado" aria-live="polite">
     <div class="wrap">
-      <div class="aviso" role="note"><span aria-hidden="true">ℹ️</span><span>Preços de exemplo — a conexão com a API de voos será feita na próxima etapa.</span></div>
+      <p class="atualizado" id="atualizado"></p>
+
+      <div class="sem-dados" id="sem-dados" hidden>
+        <h3>Poxa, meu rei…</h3>
+        <p>Ainda não temos preços para essa rota neste mês. Tente outro mês ou outra cidade.</p>
+        <div class="sugestoes" id="sugestoes" aria-label="Sugestões com preço"></div>
+      </div>
+
+      <div id="com-dados">
 
       <article class="embarque" aria-label="Rota e dia mais barato">
         <div class="embarque-info">
@@ -392,7 +410,7 @@ footer strong { color: var(--sobre-mar); }
       <div class="calendario-caixa">
         <div class="cal-topo">
           <h3 id="cal-titulo">Calendário</h3>
-          <span>Preço em R$ em cada dia. Toque num dia para ver o link.</span>
+          <span>Preço em R$ por dia (— = sem preço ainda). Toque num dia para ver o link.</span>
         </div>
         <div class="cal" id="calendario" role="grid" aria-label="Preços por dia"></div>
         <div class="legenda">
@@ -405,6 +423,7 @@ footer strong { color: var(--sobre-mar); }
           <a class="btn btn-sol" id="escolha-link" href="#" target="_blank" rel="noopener sponsored">Comprar este dia</a>
         </div>
       </div>
+      </div><!-- /com-dados -->
     </div>
   </section>
 
@@ -413,7 +432,7 @@ footer strong { color: var(--sobre-mar); }
     <div class="wrap">
       <div class="secao-titulo">
         <h2>Promoções de hoje</h2>
-        <p>As rotas que a nossa gente mais procura, com o dia mais barato do próximo mês.</p>
+        <p>As passagens mais baratas que achamos hoje nas rotas da nossa gente. Toque para ver os detalhes.</p>
       </div>
       <div class="promos" id="promos"></div>
     </div>
@@ -471,7 +490,7 @@ footer strong { color: var(--sobre-mar); }
 <footer>
   <div class="wrap">
     <strong>Baianinho das Passagens · VoaMeuRei.com</strong>
-    <p>Preços de exemplo — a conexão com a API de voos será feita na próxima etapa. Quando estiver ligada, os preços virão das companhias e podem mudar a qualquer momento até a compra.</p>
+    <p>Os preços vêm de buscas recentes na Aviasales e são atualizados todo dia. Só ida, por pessoa. Podem mudar até a hora da compra.</p>
     <p>Alguns links podem ser de parceiros. Você paga o mesmo e ajuda o Baianinho a continuar de graça.</p>
   </div>
 </footer>
@@ -483,151 +502,109 @@ footer strong { color: var(--sobre-mar); }
 
 <script>
 /* =====================================================================
-   CONFIG — mexa só aqui para trocar links e, depois, ligar a API.
+   CONFIG — mexa só aqui para trocar links.
    ===================================================================== */
 const CONFIG = {
-  // Link de afiliado. As palavras entre chaves são trocadas sozinhas:
-  // {ORIGEM} e {DESTINO} = código do aeroporto (ex.: MIA, CNF)
-  // {DATA} = dia do voo no formato AAAA-MM-DD
-  // TROQUE pelo link que o programa de afiliados te der.
-  AFFILIATE_LINK_TEMPLATE: 'https://www.exemplo-parceiro.com/voos?de={ORIGEM}&para={DESTINO}&data={DATA}&afiliado=SEU_CODIGO',
+  // Link de compra (afiliado Aviasales, marker 790537). As palavras entre chaves são trocadas sozinhas:
+  // {ORIGEM} e {DESTINO} = código da cidade (ex.: MIA, BHZ); {DD} = dia; {MM} = mês. O "1" no fim = 1 adulto.
+  // Exemplo: MIA0312BHZ1 = Miami → Belo Horizonte no dia 03/12.
+  // Quando a API manda o link exato do voo, usamos ele (já vem com o marker no precos.json).
+  AFFILIATE_LINK_TEMPLATE: 'https://www.aviasales.com/search/{ORIGEM}{DD}{MM}{DESTINO}1?marker=790537',
+
+  // Arquivo com os preços reais (o robô do GitHub atualiza todo dia; o token fica escondido lá).
+  PRECOS_URL: 'precos.json',
 
   // Link do canal do WhatsApp do Baianinho (TROQUE quando o canal existir).
   WHATSAPP_CHANNEL_URL: 'https://whatsapp.com/channel/SEU_CANAL_AQUI',
 
-  // Endereço do site (usado se quiser divulgar o próprio site no post).
+  // Endereço do site (vai no texto do post do WhatsApp).
   SITE_URL: 'https://voameurei.com'
 };
 
-/* Cidades: código do aeroporto, nome, região e um "fator" de preço
-   (só usado pelos preços de exemplo; a API real não precisa dele). */
+/* Cidades (códigos de CIDADE, que juntam todos os aeroportos dela). */
 const CIDADES = {
   // EUA
-  MIA: { nome: 'Miami', aeroporto: 'Miami Internacional', regiao: 'EUA', fator: 0.92 },
-  MCO: { nome: 'Orlando', aeroporto: 'Orlando Internacional', regiao: 'EUA', fator: 0.95 },
-  JFK: { nome: 'Nova York', aeroporto: 'JFK, Nova York', regiao: 'EUA', fator: 1.00 },
-  BOS: { nome: 'Boston', aeroporto: 'Logan, Boston', regiao: 'EUA', fator: 1.03 },
-  ATL: { nome: 'Atlanta', aeroporto: 'Hartsfield-Jackson, Atlanta', regiao: 'EUA', fator: 1.00 },
+  MIA: { nome: 'Miami', regiao: 'EUA' },
+  ORL: { nome: 'Orlando', regiao: 'EUA' },
+  NYC: { nome: 'Nova York', regiao: 'EUA' },
+  BOS: { nome: 'Boston', regiao: 'EUA' },
+  ATL: { nome: 'Atlanta', regiao: 'EUA' },
   // Europa
-  LIS: { nome: 'Lisboa', aeroporto: 'Humberto Delgado, Lisboa', regiao: 'Europa', fator: 0.90 },
-  OPO: { nome: 'Porto', aeroporto: 'Francisco Sá Carneiro, Porto', regiao: 'Europa', fator: 0.95 },
-  LHR: { nome: 'Londres', aeroporto: 'Heathrow, Londres', regiao: 'Europa', fator: 1.05 },
-  MAD: { nome: 'Madri', aeroporto: 'Barajas, Madri', regiao: 'Europa', fator: 0.98 },
-  BCN: { nome: 'Barcelona', aeroporto: 'El Prat, Barcelona', regiao: 'Europa', fator: 1.02 },
-  FCO: { nome: 'Roma', aeroporto: 'Fiumicino, Roma', regiao: 'Europa', fator: 1.06 },
-  MXP: { nome: 'Milão', aeroporto: 'Malpensa, Milão', regiao: 'Europa', fator: 1.05 },
-  CDG: { nome: 'Paris', aeroporto: 'Charles de Gaulle, Paris', regiao: 'Europa', fator: 1.04 },
+  LIS: { nome: 'Lisboa', regiao: 'Europa' },
+  OPO: { nome: 'Porto', regiao: 'Europa' },
+  LON: { nome: 'Londres', regiao: 'Europa' },
+  MAD: { nome: 'Madri', regiao: 'Europa' },
+  BCN: { nome: 'Barcelona', regiao: 'Europa' },
+  ROM: { nome: 'Roma', regiao: 'Europa' },
+  MIL: { nome: 'Milão', regiao: 'Europa' },
+  PAR: { nome: 'Paris', regiao: 'Europa' },
   // Brasil (destaque = aparece com estrela na lista)
-  CNF: { nome: 'Belo Horizonte', aeroporto: 'Confins', regiao: 'Brasil', fator: 1.03, destaque: true },
-  GRU: { nome: 'São Paulo', aeroporto: 'Guarulhos', regiao: 'Brasil', fator: 0.94, destaque: true },
-  GYN: { nome: 'Goiânia', aeroporto: 'Santa Genoveva, Goiânia', regiao: 'Brasil', fator: 1.10, destaque: true },
-  GIG: { nome: 'Rio de Janeiro', aeroporto: 'Galeão, Rio', regiao: 'Brasil', fator: 0.98 },
-  SSA: { nome: 'Salvador', aeroporto: 'Salvador Internacional', regiao: 'Brasil', fator: 1.04 },
-  REC: { nome: 'Recife', aeroporto: 'Guararapes, Recife', regiao: 'Brasil', fator: 1.00 },
-  FOR: { nome: 'Fortaleza', aeroporto: 'Pinto Martins, Fortaleza', regiao: 'Brasil', fator: 0.98 },
-  BSB: { nome: 'Brasília', aeroporto: 'Brasília Internacional', regiao: 'Brasil', fator: 1.04 }
+  BHZ: { nome: 'Belo Horizonte', regiao: 'Brasil', destaque: true },
+  SAO: { nome: 'São Paulo', regiao: 'Brasil', destaque: true },
+  GYN: { nome: 'Goiânia', regiao: 'Brasil', destaque: true },
+  RIO: { nome: 'Rio de Janeiro', regiao: 'Brasil' },
+  SSA: { nome: 'Salvador', regiao: 'Brasil' },
+  REC: { nome: 'Recife', regiao: 'Brasil' },
+  FOR: { nome: 'Fortaleza', regiao: 'Brasil' },
+  BSB: { nome: 'Brasília', regiao: 'Brasil' }
 };
 
-// Rotas que aparecem em "Promoções de hoje"
-const ROTAS_PROMO = [['MIA','CNF'], ['MCO','GRU'], ['BOS','CNF'], ['LIS','GRU'], ['LHR','GIG'], ['JFK','GYN']];
+// Nome das companhias a partir do código que a API manda
+const COMPANHIAS = {
+  LA: 'LATAM', JJ: 'LATAM', G3: 'GOL', AD: 'Azul', TP: 'TAP', AA: 'American Airlines', DL: 'Delta', UA: 'United',
+  CM: 'Copa Airlines', AV: 'Avianca', IB: 'Iberia', UX: 'Air Europa', AF: 'Air France', KL: 'KLM', BA: 'British Airways',
+  LH: 'Lufthansa', LX: 'Swiss', AZ: 'ITA Airways', TK: 'Turkish Airlines', EK: 'Emirates', QR: 'Qatar Airways',
+  AT: 'Royal Air Maroc', AR: 'Aerolíneas Argentinas', H2: 'SKY Airline', DM: 'Arajet', F9: 'Frontier', NK: 'Spirit',
+  B6: 'JetBlue', FR: 'Ryanair', U2: 'easyJet', VY: 'Vueling', W4: 'Wizz Air', ET: 'Ethiopian', SN: 'Brussels Airlines',
+  '2Z': 'Voepass', O6: 'Avianca Brasil', P5: 'Wingo', WN: 'Southwest', AC: 'Air Canada', TS: 'Air Transat'
+};
 
 /* =====================================================================
    buscarPrecos — o ÚNICO lugar de onde o site tira preços.
-   Recebe: origem e destino (códigos, ex. 'MIA', 'CNF') e mes ('AAAA-MM').
-   Devolve: { origem, destino, mes, moeda, dias: [{ data:'AAAA-MM-DD', preco, link }] }
+   Lê o precos.json (gerado todo dia pelo robô) e devolve a rota/mês pedidos:
+   { origem, destino, mes, moeda, dias: [{ data:'AAAA-MM-DD', preco, link, voo }] }
+   Se não houver preço, "dias" vem vazio.
    ===================================================================== */
-async function buscarPrecos(origem, destino, mes) {
-  // AQUI entra a chamada à API (Kiwi/Tequila, Amadeus ou Skyscanner).
-  // Exemplo do que será feito na próxima etapa:
-  //   const resposta = await fetch('https://SUA-API/precos?de=' + origem + '&para=' + destino + '&mes=' + mes);
-  //   const json = await resposta.json();
-  //   return converterParaNossoFormato(json);
-  // Por enquanto, devolvemos preços de EXEMPLO (sempre iguais para a mesma rota e mês).
-  return gerarPrecosDeExemplo(origem, destino, mes);
-}
-
-/* ---------- Preços de exemplo (apagar quando a API estiver ligada) ---------- */
-
-// Transforma um texto num número fixo (mesma rota + mês = mesmos preços)
-function numeroDoTexto(texto) {
-  let h = 2166136261;
-  for (let i = 0; i < texto.length; i++) { h ^= texto.charCodeAt(i); h = Math.imul(h, 16777619); }
-  return h >>> 0;
-}
-// Sorteio "de mentirinha" que sempre repete a mesma sequência para a mesma semente
-function sorteador(semente) {
-  let a = semente;
-  return function () {
-    a |= 0; a = (a + 0x6D2B79F5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
-function gerarPrecosDeExemplo(origem, destino, mes) {
-  const [ano, m] = mes.split('-').map(Number);
-  const sorte = sorteador(numeroDoTexto(origem + '-' + destino + '-' + mes));
-  const cidadeFora = CIDADES[origem].regiao === 'Brasil' ? CIDADES[destino] : CIDADES[origem];
-  const cidadeBrasil = CIDADES[origem].regiao === 'Brasil' ? CIDADES[origem] : CIDADES[destino];
-  const ehEUA = cidadeFora.regiao === 'EUA';
-  const faixa = ehEUA ? [2000, 5500] : [2500, 6000];       // menor e maior preço possível
-  const base = (ehEUA ? 2450 : 3000) * cidadeFora.fator * cidadeBrasil.fator * (0.95 + sorte() * 0.1);
-  // Época do ano: dezembro e janeiro mais caros
-  const epoca = { 1: 1.18, 2: 1.06, 3: 0.92, 4: 0.94, 5: 0.9, 6: 1.0, 7: 1.15, 8: 1.02, 9: 0.93, 10: 0.95, 11: 0.98, 12: 1.24 }[m];
-  // Dia da semana (domingo=0): terça e quarta mais baratas, sexta e domingo mais caras
-  const semana = [1.17, 1.02, 0.88, 0.86, 0.97, 1.2, 1.05];
-  const totalDias = new Date(ano, m, 0).getDate();
-  const dias = [];
-  for (let d = 1; d <= totalDias; d++) {
-    const diaSemana = new Date(ano, m - 1, d).getDay();
-    let festa = 1;
-    if (m === 12 && d >= 18) festa = 1.12;   // perto do Natal
-    if (m === 1 && d <= 6) festa = 1.08;     // volta do Ano Novo
-    const ruido = 0.93 + sorte() * 0.14;
-    let preco = base * epoca * semana[diaSemana] * festa * ruido;
-    // Perto do limite, o preço vai "freando" sem nunca passar (assim os preços não ficam todos iguais)
-    if (preco < faixa[0] + 300) preco = faixa[0] + 300 * Math.exp((preco - faixa[0] - 300) / 300);
-    if (preco > faixa[1] - 300) preco = faixa[1] - 300 * Math.exp((faixa[1] - 300 - preco) / 300);
-    preco = Math.round(preco / 10) * 10;
-    const data = ano + '-' + String(m).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-    dias.push({ data, preco, link: montarLink(origem, destino, data), voo: vooDeExemplo(origem, destino, data) });
+let promessaPrecos = null;
+function carregarPrecos() {
+  if (!promessaPrecos) {
+    const agora = new Date();
+    const versao = agora.getFullYear() + String(agora.getMonth() + 1).padStart(2, '0')
+      + String(agora.getDate()).padStart(2, '0') + String(agora.getHours()).padStart(2, '0');   // muda a cada hora
+    promessaPrecos = fetch(CONFIG.PRECOS_URL + '?v=' + versao)
+      .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .catch((e) => { console.warn('Não deu para ler os preços:', e); return { rotas: {}, promocoes: [], meses: [] }; });
   }
-  return { origem, destino, mes, moeda: 'BRL', dias };
+  return promessaPrecos;
 }
 
-// Detalhes do voo de exemplo: companhia, horários, escalas e duração.
-// A API real devolve isso pronto; aqui é só para mostrar como vai ficar.
-const HORAS_BASE = { MIA: 8, MCO: 8.5, ATL: 9.5, JFK: 10, BOS: 10.5, LIS: 9.5, OPO: 9.5, MAD: 10.5, BCN: 11, LHR: 11.5, CDG: 11.5, FCO: 12, MXP: 11.5 };
-const AJUSTE_BRASIL = { GRU: 0, GIG: 0, CNF: 0.5, BSB: 0.3, GYN: 0.8, SSA: -1, REC: -1.5, FOR: -1.5 };
-const FUSO = { EUA: -5, Brasil: -3, LIS: 0, OPO: 0, LHR: 0 };     // horas em relação a Londres (inverno)
-const DIRETOS = ['MIA-GRU', 'MIA-GIG', 'MCO-GRU', 'JFK-GRU', 'ATL-GRU', 'LIS-GRU', 'LIS-GIG', 'LIS-CNF', 'LIS-SSA', 'LIS-REC', 'LIS-FOR', 'LIS-BSB', 'OPO-GRU', 'LHR-GRU', 'LHR-GIG', 'MAD-GRU', 'CDG-GRU', 'CDG-GIG', 'FCO-GRU', 'MXP-GRU', 'BCN-GRU'];
-const CIAS = { EUA: ['LATAM', 'American Airlines', 'Azul', 'GOL', 'Delta', 'Copa Airlines'], Europa: ['TAP', 'LATAM', 'British Airways', 'Iberia', 'Air France', 'ITA Airways', 'Azul'] };
-function fusoDe(cod) { const c = CIDADES[cod]; return FUSO[cod] ?? FUSO[c.regiao] ?? 1; }
-function vooDeExemplo(origem, destino, data) {
-  const sorte = sorteador(numeroDoTexto(origem + destino + data + 'voo'));
-  const fora = CIDADES[origem].regiao === 'Brasil' ? destino : origem;
-  const brasil = fora === origem ? destino : origem;
-  const direto = DIRETOS.includes(fora + '-' + brasil) && sorte() < 0.6;
-  const escalas = direto ? 0 : (sorte() < 0.8 ? 1 : 2);
-  const minutos = Math.round(((HORAS_BASE[fora] + AJUSTE_BRASIL[brasil]) + escalas * (2 + sorte() * 3)) * 60 / 5) * 5;
-  const saidaMin = [7 * 60 + 10, 10 * 60 + 45, 16 * 60 + 30, 19 * 60 + 55, 21 * 60 + 40, 23 * 60 + 15][Math.floor(sorte() * 6)];
-  const chegadaTotal = saidaMin + minutos + (fusoDe(destino) - fusoDe(origem)) * 60;
-  const lista = CIAS[CIDADES[fora].regiao];
-  return {
-    companhia: lista[Math.floor(sorte() * lista.length)],
-    saida: hora(saidaMin), chegada: hora(chegadaTotal), diasDepois: Math.floor(chegadaTotal / 1440),
-    escalas, duracao: Math.floor(minutos / 60) + 'h' + String(minutos % 60).padStart(2, '0')
-  };
+async function buscarPrecos(origem, destino, mes) {
+  const json = await carregarPrecos();
+  const doMes = ((json.rotas || {})[origem + '-' + destino] || {})[mes] || {};
+  const dias = Object.keys(doMes).sort().map((dd) => {
+    const v = doMes[dd];
+    const data = mes + '-' + dd;
+    return {
+      data, preco: v.preco, link: v.link || montarLink(origem, destino, data),
+      voo: { cia: v.cia, escalas: v.escalas, saida: v.saida, duracaoMin: v.duracao_min }
+    };
+  });
+  return { origem, destino, mes, moeda: json.moeda || 'BRL', dias };
 }
-function hora(min) { const m = ((min % 1440) + 1440) % 1440; return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+
+// Quantos dias com preço cada rota/mês tem (para sugerir alternativas)
+async function diasComPreco(origem, destino, mes) {
+  const json = await carregarPrecos();
+  return Object.keys(((json.rotas || {})[origem + '-' + destino] || {})[mes] || {}).length;
+}
 
 /* ---------- Ajudantes ---------- */
 function montarLink(origem, destino, data) {
+  const [, mm, dd] = data.split('-');
   return CONFIG.AFFILIATE_LINK_TEMPLATE
     .replace('{ORIGEM}', encodeURIComponent(origem))
     .replace('{DESTINO}', encodeURIComponent(destino))
-    .replace('{DATA}', encodeURIComponent(data));
+    .replace('{DD}', dd).replace('{MM}', mm);
 }
 const DIAS_CURTOS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 const DIAS_PLURAL = ['os domingos', 'as segundas', 'as terças', 'as quartas', 'as quintas', 'as sextas', 'os sábados'];
@@ -643,17 +620,21 @@ function dataLonga(texto) {           // "qua, 4 de dezembro"
   const dt = paraData(texto);
   return DIAS_CURTOS[dt.getDay()] + ', ' + dt.getDate() + ' de ' + MESES[dt.getMonth()];
 }
+function nomeMes(mes) { const [a, m] = mes.split('-').map(Number); const n = MESES[m - 1]; return n.charAt(0).toUpperCase() + n.slice(1) + ' de ' + a; }
+function nomeCia(cod) { return cod ? (COMPANHIAS[cod] ? COMPANHIAS[cod] + ' (' + cod + ')' : cod) : 'Várias companhias'; }
 // Lista de detalhes (aparece só quando a pessoa abre o cartão)
 function fichaDoVoo(o, d, dia) {
-  const v = dia.voo;
-  const escalas = v.escalas === 0 ? 'Voo direto' : (v.escalas === 1 ? '1 escala' : v.escalas + ' escalas');
-  return '<div><dt>Aeroportos</dt><dd>' + CIDADES[o].aeroporto + ' (' + o + ') → ' + CIDADES[d].aeroporto + ' (' + d + ')</dd></div>'
-    + '<div><dt>Saída e chegada</dt><dd>' + v.saida + ' → ' + v.chegada + (v.diasDepois > 0 ? ' (+' + v.diasDepois + ' dia)' : '') + '</dd></div>'
-    + '<div><dt>Companhia</dt><dd>' + v.companhia + ' (exemplo)</dd></div>'
-    + '<div><dt>Escalas e duração</dt><dd>' + escalas + ', ' + v.duracao + ' de viagem</dd></div>'
-    + '<p class="obs">Só ida, por pessoa. Horário local de cada cidade.</p>';
+  const v = dia.voo || {};
+  const escalas = v.escalas == null ? '' : (v.escalas === 0 ? 'Voo direto' : (v.escalas === 1 ? '1 escala' : v.escalas + ' escalas'));
+  const duracao = v.duracaoMin ? Math.floor(v.duracaoMin / 60) + 'h' + String(v.duracaoMin % 60).padStart(2, '0') + ' de viagem' : '';
+  const saida = v.saida && v.saida.length >= 16 ? v.saida.slice(11, 16) : '';
+  return '<div><dt>Rota</dt><dd>' + CIDADES[o].nome + ' (' + o + ') → ' + CIDADES[d].nome + ' (' + d + ')</dd></div>'
+    + '<div><dt>Saída</dt><dd>' + dataLonga(dia.data) + (saida ? ', ' + saida : '') + '</dd></div>'
+    + '<div><dt>Companhia</dt><dd>' + nomeCia(v.cia) + '</dd></div>'
+    + ((escalas || duracao) ? '<div><dt>Escalas e duração</dt><dd>' + [escalas, duracao].filter(Boolean).join(', ') + '</dd></div>' : '')
+    + '<p class="obs">Só ida, por pessoa. Preço de buscas recentes: pode mudar até a compra. Horário local da saída.</p>';
 }
-function reais(valor) { return 'R$ ' + formatoNumero.format(valor); }
+function reais(valor) { return 'R$\u00a0' + formatoNumero.format(valor); }
 function nomeRota(o, d) { return CIDADES[o].nome + ' → ' + CIDADES[d].nome; }
 const $ = (id) => document.getElementById(id);
 
@@ -698,17 +679,28 @@ function montarOrigem(valor) {
   selOrigem.value = valor;
 }
 
-// Próximos 6 meses (a partir do mês que vem)
-function montarMeses() {
-  const hoje = new Date();
-  for (let i = 1; i <= 6; i++) {
-    const dt = new Date(hoje.getFullYear(), hoje.getMonth() + i, 1);
-    const op = document.createElement('option');
-    op.value = dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0');
-    const nome = MESES[dt.getMonth()];
-    op.textContent = nome.charAt(0).toUpperCase() + nome.slice(1) + ' de ' + dt.getFullYear();
-    selMes.appendChild(op);
+// Meses que existem no precos.json (mês atual + 2). Sem arquivo: calcula na hora.
+function montarMeses(lista) {
+  if (!lista || !lista.length) {
+    const hoje = new Date(); lista = [];
+    for (let i = 0; i < 3; i++) {
+      const dt = new Date(hoje.getFullYear(), hoje.getMonth() + i, 1);
+      lista.push(dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0'));
+    }
   }
+  selMes.innerHTML = '';
+  lista.forEach((mes) => {
+    const op = document.createElement('option');
+    op.value = mes; op.textContent = nomeMes(mes);
+    selMes.appendChild(op);
+  });
+}
+
+function irPara(o, d, mes, rolar) {
+  selOrigem.value = o;
+  preencherCidades(selDestino, ladoOposto(o), d);
+  if (mes) selMes.value = mes;
+  pesquisar(rolar);
 }
 
 selOrigem.addEventListener('change', () => {
@@ -721,7 +713,7 @@ $('btn-inverter').addEventListener('click', () => {
   preencherCidades(selDestino, ladoOposto(d), o);
   pesquisar();
 });
-document.querySelectorAll('.chip').forEach((chip) => {
+document.querySelectorAll('.chip[data-cidade]').forEach((chip) => {
   chip.addEventListener('click', () => {
     const cod = chip.dataset.cidade;
     // Coloca a cidade brasileira no lado do Brasil, seja origem ou destino
@@ -736,16 +728,60 @@ let resultadoAtual = null;
 
 async function pesquisar(rolar) {
   const dados = await buscarPrecos(selOrigem.value, selDestino.value, selMes.value);
-  mostrarResultado(dados);
+  if (dados.dias.length) mostrarResultado(dados); else await mostrarSemDados(dados);
   if (rolar) $('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Mensagem simpática + botões para meses/rotas que TÊM preço
+async function mostrarSemDados(dados) {
+  $('com-dados').hidden = true;
+  $('sem-dados').hidden = false;
+  const json = await carregarPrecos();
+  const meses = json.meses || [];
+  const sugestoes = [];
+  const { origem: o, destino: d, mes } = dados;
+  // 1) Mesma rota, outros meses
+  for (const m of meses) if (m !== mes && await diasComPreco(o, d, m)) sugestoes.push([o, d, m, nomeMes(m)]);
+  // 2) Mesmo mês, rotas parecidas (mesma origem, mesmo destino ou o caminho de volta)
+  const rotas = [];
+  for (const chave of Object.keys(json.rotas || {})) {
+    const [ro, rd] = chave.split('-');
+    if (chave === o + '-' + d) continue;
+    const parecida = ro === o || rd === d || (ro === d && rd === o) || (ro === d) || (rd === o);
+    if (!parecida) continue;
+    const qtd = await diasComPreco(ro, rd, mes);
+    if (!qtd) continue;
+    const menor = Math.min(...Object.values(json.rotas[chave][mes]).map((v) => v.preco));
+    rotas.push({ ro, rd, menor, peso: (ro === o ? 0 : 1) + (rd === d ? 0 : 1) });
+  }
+  rotas.sort((a, b) => a.peso - b.peso || a.menor - b.menor);
+  rotas.slice(0, 4).forEach((r) => sugestoes.push([r.ro, r.rd, mes, nomeRota(r.ro, r.rd) + ' · desde ' + reais(r.menor)]));
+
+  const caixa = $('sugestoes');
+  caixa.innerHTML = '';
+  if (!sugestoes.length) {
+    caixa.innerHTML = '<p>Volte amanhã: os preços são atualizados todo dia.</p>';
+    return;
+  }
+  sugestoes.slice(0, 6).forEach(([so, sd, sm, texto]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.textContent = texto;
+    if (so === o && sd === d) b.textContent = 'Ver ' + texto;
+    else if (sm !== mes) b.textContent = texto + ' (' + nomeMes(sm) + ')';
+    b.addEventListener('click', () => irPara(so, sd, sm, false));
+    caixa.appendChild(b);
+  });
 }
 
 function mostrarResultado(dados) {
   resultadoAtual = dados;
+  $('com-dados').hidden = false;
+  $('sem-dados').hidden = true;
   const porPreco = [...dados.dias].sort((a, b) => a.preco - b.preco);
   const melhor = porPreco[0];
-  const tresMelhores = new Set(porPreco.slice(0, 3).map((d) => d.data));
-  const limiteCaro = porPreco[Math.floor(porPreco.length * 0.8)].preco;
+  const tresMelhores = new Set(porPreco.slice(0, Math.min(3, porPreco.length)).map((d) => d.data));
+  const limiteCaro = porPreco.length >= 5 ? porPreco[Math.floor(porPreco.length * 0.8)].preco : Infinity;
+  const porData = new Map(dados.dias.map((d) => [d.data, d]));
 
   // Cartão da rota
   $('rota-nomes').innerHTML = CIDADES[dados.origem].nome + ' <span class="seta">→</span> ' + CIDADES[dados.destino].nome;
@@ -754,40 +790,55 @@ function mostrarResultado(dados) {
   $('melhor-valor').textContent = reais(melhor.preco);
   $('melhor-link').href = melhor.link;
 
-  // Dica: dia da semana com a menor média
+  // Dica: dia da semana com a menor média (só quando há dias suficientes)
   const soma = Array(7).fill(0), qtd = Array(7).fill(0);
   dados.dias.forEach((d) => { const s = paraData(d.data).getDay(); soma[s] += d.preco; qtd[s]++; });
-  let melhorSemana = 0;
-  for (let s = 1; s < 7; s++) if (soma[s] / qtd[s] < soma[melhorSemana] / qtd[melhorSemana]) melhorSemana = s;
-  const media = Math.round(soma[melhorSemana] / qtd[melhorSemana] / 10) * 10;
-  $('dica-texto').textContent = 'Dica: nesta rota, ' + DIAS_PLURAL[melhorSemana] + ' costumam ser mais baratas'
-    .replace('mais baratas', (melhorSemana === 0 || melhorSemana === 6) ? 'mais baratos' : 'mais baratas')
-    + ' (média de ' + reais(media) + ').';
+  const validos = [0, 1, 2, 3, 4, 5, 6].filter((s) => qtd[s] >= 2);
+  if (dados.dias.length >= 10 && validos.length >= 3) {
+    const melhorSemana = validos.reduce((a, s) => (soma[s] / qtd[s] < soma[a] / qtd[a] ? s : a), validos[0]);
+    const media = Math.round(soma[melhorSemana] / qtd[melhorSemana] / 10) * 10;
+    $('dica-texto').textContent = 'Dica: nesta rota, ' + DIAS_PLURAL[melhorSemana]
+      + ((melhorSemana === 0 || melhorSemana === 6) ? ' costumam ser mais baratos' : ' costumam ser mais baratas')
+      + ' (média de ' + reais(media) + ').';
+  } else {
+    $('dica-texto').textContent = 'Dica: achamos preço em ' + dados.dias.length + (dados.dias.length === 1 ? ' dia' : ' dias')
+      + ' deste mês. Os outros dias ainda não foram pesquisados; vale conferir no link.';
+  }
 
-  // Calendário
+  // Calendário (o mês inteiro; dias sem preço aparecem com "—")
   const [ano, m] = dados.mes.split('-').map(Number);
-  $('cal-titulo').textContent = MESES[m - 1].charAt(0).toUpperCase() + MESES[m - 1].slice(1) + ' de ' + ano;
+  $('cal-titulo').textContent = nomeMes(dados.mes);
   const cal = $('calendario');
   cal.innerHTML = '';
   DIAS_CURTOS.forEach((n) => { const c = document.createElement('div'); c.className = 'cal-dow'; c.textContent = n; cal.appendChild(c); });
-  const primeiroDia = paraData(dados.dias[0].data).getDay();
+  const primeiroDia = new Date(ano, m - 1, 1).getDay();
   for (let i = 0; i < primeiroDia; i++) { const v = document.createElement('div'); v.className = 'dia vazio'; cal.appendChild(v); }
-  dados.dias.forEach((d, i) => {
+  const totalDias = new Date(ano, m, 0).getDate();
+  for (let n = 1; n <= totalDias; n++) {
+    const data = dados.mes + '-' + String(n).padStart(2, '0');
+    const d = porData.get(data);
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'dia';
-    b.style.setProperty('--i', i);
+    b.style.setProperty('--i', n - 1);
+    if (!d) {
+      b.classList.add('sem'); b.disabled = true;
+      b.innerHTML = '<span class="n">' + n + '</span><span class="p">—</span>';
+      b.setAttribute('aria-label', dataCurta(data) + ', sem preço');
+      cal.appendChild(b);
+      continue;
+    }
     const ehMelhor = d.data === melhor.data;
     if (tresMelhores.has(d.data)) b.classList.add('barato');
     if (ehMelhor) b.classList.add('campeao');
     if (!tresMelhores.has(d.data) && d.preco >= limiteCaro) b.classList.add('caro');
     b.innerHTML = (ehMelhor ? '<span class="estrela">★</span>' : '')
-      + '<span class="n">' + paraData(d.data).getDate() + '</span>'
+      + '<span class="n">' + n + '</span>'
       + '<span class="p">' + formatoNumero.format(d.preco) + '</span>';
     b.setAttribute('aria-label', dataCurta(d.data) + ', ' + reais(d.preco) + (ehMelhor ? ', mais barato do mês' : ''));
     b.addEventListener('click', () => escolherDia(d, b));
     cal.appendChild(b);
-  });
+  }
   $('escolha').hidden = true;
 
   atualizarPost();
@@ -807,11 +858,10 @@ function montarTextoPost(dados) {
     .sort((a, b) => a.data.localeCompare(b.data));
   const indoParaBrasil = CIDADES[dados.destino].regiao === 'Brasil';
   const chamada = indoParaBrasil ? 'viagem para o Brasil!' : 'viagem para ' + CIDADES[dados.destino].nome + '!';
-  const melhor = [...dados.dias].sort((a, b) => a.preco - b.preco)[0];
   return '✈️ Olha, pessoal, aproveita essa promoção: ' + chamada + '\n'
     + nomeRota(dados.origem, dados.destino) + '\n'
     + dois.map((d) => '📅 ' + dataCurta(d.data) + ' — ' + reais(d.preco)).join('\n') + '\n'
-    + 'Compra agora, porque vai aumentar. Entra pelo link: ' + melhor.link;
+    + 'Compra agora, porque vai aumentar. Entra no site: ' + CONFIG.SITE_URL;
 }
 function atualizarPost() {
   if (!resultadoAtual) return;
@@ -839,46 +889,67 @@ $('btn-copiar').addEventListener('click', async () => {
   setTimeout(() => { $('feedback').textContent = ''; }, 4000);
 });
 
-/* ---------- Promoções de hoje ---------- */
+/* ---------- Promoções de hoje (vêm prontas do precos.json) ---------- */
 async function montarPromocoes() {
-  const mes = selMes.options[0].value;           // próximo mês
+  const json = await carregarPrecos();
   const caixa = $('promos');
   caixa.innerHTML = '';
-  for (const [o, d] of ROTAS_PROMO) {
-    const dados = await buscarPrecos(o, d, mes);
-    const melhor = [...dados.dias].sort((a, b) => a.preco - b.preco)[0];
+  const lista = json.promocoes || [];
+  if (!lista.length) { caixa.innerHTML = '<p>Volte amanhã: as promoções são atualizadas todo dia.</p>'; return; }
+  for (const p of lista) {
+    const o = p.origem || p.rota.split('-')[0], d = p.destino || p.rota.split('-')[1];
+    if (!CIDADES[o] || !CIDADES[d]) continue;
+    const dia = { data: p.data, preco: p.preco, link: p.link || montarLink(o, d, p.data),
+      voo: { cia: p.cia, escalas: p.escalas, saida: p.saida, duracaoMin: p.duracao_min } };
     const card = document.createElement('details');
     card.className = 'promo';
     card.innerHTML =
       '<summary>'
       + '<span class="promo-rota">' + CIDADES[o].nome + ' <span class="seta">→</span> ' + CIDADES[d].nome + '</span>'
       + '<span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>'
-      + '<span class="promo-valor">' + reais(melhor.preco) + '</span>'
-      + '<span class="promo-dia">' + dataLonga(melhor.data) + '</span>'
+      + '<span class="promo-valor">' + reais(dia.preco) + '</span>'
+      + '<span class="promo-dia">' + dataLonga(dia.data) + '</span>'
       + '</summary>'
       + '<div class="promo-mais">'
-      + '<dl class="ficha">' + fichaDoVoo(o, d, melhor) + '</dl>'
+      + '<dl class="ficha">' + fichaDoVoo(o, d, dia) + '</dl>'
       + '<div class="promo-botoes">'
-      + '<a class="btn btn-verde" href="' + melhor.link + '" target="_blank" rel="noopener sponsored">Comprar pelo link</a>'
+      + '<a class="btn btn-verde" href="' + dia.link + '" target="_blank" rel="noopener sponsored">Comprar pelo link</a>'
       + '<button type="button" class="btn btn-contorno">Ver calendário</button></div>'
       + '</div>';
-    card.querySelector('button').addEventListener('click', () => {
-      selOrigem.value = o;
-      preencherCidades(selDestino, ladoOposto(o), d);
-      selMes.value = mes;
-      pesquisar(true);
-    });
+    card.querySelector('button').addEventListener('click', () => irPara(o, d, dia.data.slice(0, 7), true));
     caixa.appendChild(card);
   }
 }
 
 /* ---------- Início ---------- */
-$('btn-canal').href = CONFIG.WHATSAPP_CHANNEL_URL;
-montarMeses();
-montarOrigem('MIA');
-preencherCidades(selDestino, 'brasil', 'CNF');
-pesquisar(false);
-montarPromocoes();
+async function iniciar() {
+  $('btn-canal').href = CONFIG.WHATSAPP_CHANNEL_URL;
+  const json = await carregarPrecos();
+  montarMeses(json.meses);
+  if (json.atualizado_em) {
+    const dt = new Date(json.atualizado_em);
+    $('atualizado').textContent = 'Preços atualizados em ' + String(dt.getDate()).padStart(2, '0') + '/'
+      + String(dt.getMonth() + 1).padStart(2, '0') + ' às ' + String(dt.getHours()).padStart(2, '0') + ':'
+      + String(dt.getMinutes()).padStart(2, '0');
+  }
+  // Rota inicial: Miami → BH (ou a primeira das queridinhas que tiver preço), no mês com mais dias
+  let inicio = ['MIA', 'BHZ'], mesInicio = selMes.options[0] ? selMes.options[0].value : '';
+  const candidatas = [['MIA', 'BHZ'], ['MIA', 'SAO'], ['MIA', 'GYN'], ['LIS', 'SAO'], ['LON', 'SAO']];
+  achou: for (const [o, d] of candidatas) {
+    let melhorQtd = 0;
+    for (const op of selMes.options) {
+      const qtd = await diasComPreco(o, d, op.value);
+      if (qtd > melhorQtd) { melhorQtd = qtd; inicio = [o, d]; mesInicio = op.value; }
+    }
+    if (melhorQtd) break achou;
+  }
+  montarOrigem(inicio[0]);
+  preencherCidades(selDestino, 'brasil', inicio[1]);
+  selMes.value = mesInicio;
+  pesquisar(false);
+  montarPromocoes();
+}
+iniciar();
 </script>
 </body>
 </html>

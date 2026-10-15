@@ -2,3 +2,7 @@ node_modules/
 shot-*.png
 package-lock.json
 package.json
+
+.env
+precos_debug*
+__pycache__/
