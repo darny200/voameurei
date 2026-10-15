@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-15T16:13:16+00:00",
+ "atualizado_em": "2026-10-15T17:39:43+00:00",
  "moeda": "BRL",
  "meses": [
   "2026-10",
@@ -37,6 +37,14 @@
   },
   "MIA-SAO": {
    "2026-10": {
+    "19": {
+     "preco": 2193,
+     "cia": "F9",
+     "escalas": 2,
+     "saida": "2026-10-19T23:29",
+     "duracao_min": 756,
+     "link": "https://www.aviasales.com/search/MIA1910SAO1?t=CM17924525401792529400001221MIASJUPTYGRU_bde361ae695354bfb4142d772cb24b31_36492&search_date=15102026&expected_price_uuid=01a140a2-05a0-8040-a0a7-fe920e079ad4&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=IkrrfLLWb4PZelp8seKfOw&expected_price_source=share&expected_price_currency=brl&expected_price=2193&marker=790537"
+    },
     "20": {
      "preco": 2057,
      "cia": "F9",
@@ -148,12 +156,12 @@
   "ORL-BHZ": {
    "2026-10": {
     "18": {
-     "preco": 1995,
+     "preco": 1990,
      "cia": "CM",
      "escalas": 1,
      "saida": "2026-10-18T08:01",
      "duracao_min": 623,
-     "link": "https://www.aviasales.com/search/ORL1810BHZ1?t=CM17923104601792395000001349MCOPTYCNF_3fca10e679de1db33efbcff5e2747ba3_33034&search_date=15102026&expected_price_uuid=01a13fe0-f3f2-8030-6370-105cdcd89002&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=_LPv2VY4FaoABNJpKMJJOg&expected_price_source=share&expected_price_currency=brl&expected_price=1995&marker=790537"
+     "link": "https://www.aviasales.com/search/ORL1810BHZ1?t=CM17923104601792395000001349MCOPTYCNF_3fca10e679de1db33efbcff5e2747ba3_33034&search_date=15102026&expected_price_uuid=01a13fe0-f3f2-8030-6370-105cdcd89002&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=_LPv2VY4FaoABNJpKMJJOg&expected_price_source=share&expected_price_currency=brl&expected_price=1990&marker=790537"
     },
     "30": {
      "preco": 3876,
@@ -231,7 +239,7 @@
    },
    "2026-12": {
     "11": {
-     "preco": 5848,
+     "preco": 5831,
      "cia": "G3",
      "escalas": 2,
      "saida": "2026-12-11T21:10",
@@ -239,12 +247,12 @@
      "link": "https://www.aviasales.com/search/ORL1112SAO1?marker=790537"
     },
     "17": {
-     "preco": 2563,
+     "preco": 2556,
      "cia": "AV",
      "escalas": 1,
      "saida": "2026-12-17T14:10",
      "duracao_min": 625,
-     "link": "https://www.aviasales.com/search/ORL1712SAO1?t=AV17975166001797634500001845MCOBOGGRU_260951d2f0c9e65b42b2b80699b9436d_42397&search_date=15102026&expected_price_uuid=01a13d0f-202b-8040-a68e-a5fd86eb10b1&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=S5Adt3eOPehlPxM2TifbHQ&expected_price_source=share&expected_price_currency=brl&expected_price=2563&marker=790537"
+     "link": "https://www.aviasales.com/search/ORL1712SAO1?t=AV17975166001797634500001845MCOBOGGRU_260951d2f0c9e65b42b2b80699b9436d_42397&search_date=15102026&expected_price_uuid=01a13d0f-202b-8040-a68e-a5fd86eb10b1&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=S5Adt3eOPehlPxM2TifbHQ&expected_price_source=share&expected_price_currency=brl&expected_price=2556&marker=790537"
     },
     "21": {
      "preco": 1889,
@@ -255,12 +263,12 @@
      "link": "https://www.aviasales.com/search/ORL2112SAO1?t=G317978584801797934200001142MCOMIAGIGVCP_6a393062ebed731088f5124d22a52b00_32256&search_date=10102026&expected_price_uuid=01a125fa-a599-8040-a23c-02becf912b8c&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=oyYg4n31zGG_Knz54fyFNw&expected_price_source=share&expected_price_currency=brl&expected_price=1889&marker=790537"
     },
     "31": {
-     "preco": 1855,
+     "preco": 1850,
      "cia": "AA",
      "escalas": 2,
      "saida": "2026-12-31T06:00",
      "duracao_min": 676,
-     "link": "https://www.aviasales.com/search/ORL3112SAO1?t=G317986968001798755600000860MCOMIABELGRU_814ca27f7af5e256bbea7738583d1c0d_30690&search_date=15102026&expected_price_uuid=01a13d0f-2c2d-8040-681c-767b29b8f9b6&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=eIScjWDybwfGxWa2rgkO0w&expected_price_source=share&expected_price_currency=brl&expected_price=1855&marker=790537"
+     "link": "https://www.aviasales.com/search/ORL3112SAO1?t=G317986968001798755600000860MCOMIABELGRU_814ca27f7af5e256bbea7738583d1c0d_30690&search_date=15102026&expected_price_uuid=01a13d0f-2c2d-8040-681c-767b29b8f9b6&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=eIScjWDybwfGxWa2rgkO0w&expected_price_source=share&expected_price_currency=brl&expected_price=1850&marker=790537"
     }
    }
   },
@@ -310,6 +318,14 @@
   },
   "NYC-SAO": {
    "2026-10": {
+    "17": {
+     "preco": 4231,
+     "cia": "G3",
+     "escalas": 1,
+     "saida": "2026-10-17T23:00",
+     "duracao_min": 670,
+     "link": "https://www.aviasales.com/search/NYC1710SAO1?t=G317922780001792336500000915JFKGIGVCP_d35332da5f4cffd61427f605f42e3085_70394&search_date=15102026&expected_price_uuid=01a1408f-48be-8031-2ccb-e728455a4a0d&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=l-oT20yWva28Ra-WFQx20w&expected_price_source=share&expected_price_currency=brl&expected_price=4231&marker=790537"
+    },
     "28": {
      "preco": 4025,
      "cia": "AV",
@@ -352,13 +368,21 @@
      "duracao_min": 810,
      "link": "https://www.aviasales.com/search/NYC0511SAO1?t=CM17938449001793970900001980JFKPTYCNFGRU_779189f6cf43be4d8e8a752376891eba_36153&search_date=09102026&expected_price_uuid=01a11ea0-60ca-8030-a993-94b389e68536&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=aFRcMrdbzbIycWcxMl5O8Q&expected_price_source=share&expected_price_currency=brl&expected_price=2121&marker=790537"
     },
+    "09": {
+     "preco": 4671,
+     "cia": "B6",
+     "escalas": 1,
+     "saida": "2026-11-09T20:56",
+     "duracao_min": null,
+     "link": "https://www.aviasales.com/search/NYC0911SAO1?marker=790537"
+    },
     "14": {
-     "preco": 1927,
+     "preco": 1921,
      "cia": "AD",
      "escalas": 1,
      "saida": "2026-11-14T12:29",
      "duracao_min": 714,
-     "link": "https://www.aviasales.com/search/NYC1411SAO1?t=AD17946593401794768000001691LGAFLLVCP_10cd88e411b1319795c8c63676d50763_31866&search_date=15102026&expected_price_uuid=01a13d99-987f-8040-2434-06fc722d9587&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xBB2fuhfbJwv6EgdjGHZ3w&expected_price_source=share&expected_price_currency=brl&expected_price=1927&marker=790537"
+     "link": "https://www.aviasales.com/search/NYC1411SAO1?t=AD17946593401794768000001691LGAFLLVCP_10cd88e411b1319795c8c63676d50763_31866&search_date=15102026&expected_price_uuid=01a13d99-987f-8040-2434-06fc722d9587&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xBB2fuhfbJwv6EgdjGHZ3w&expected_price_source=share&expected_price_currency=brl&expected_price=1921&marker=790537"
     },
     "15": {
      "preco": 4373,
@@ -371,12 +395,12 @@
    },
    "2026-12": {
     "07": {
-     "preco": 1499,
-     "cia": "AV",
-     "escalas": 2,
-     "saida": "2026-12-07T06:30",
-     "duracao_min": 830,
-     "link": "https://www.aviasales.com/search/NYC0712SAO1?t=AV17966250001796723700001525JFKBOGGIGGRU_954efa28982f999e18206963b8efe3a5_25482&search_date=09102026&expected_price_uuid=01a120af-c19f-8040-a63e-4bcf0bb0a0e1&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=o2pSrp4kyLJJsLbGOz4Rpw&expected_price_source=share&expected_price_currency=brl&expected_price=1499&marker=790537"
+     "preco": 2209,
+     "cia": "UA",
+     "escalas": 1,
+     "saida": "2026-12-07T19:20",
+     "duracao_min": 715,
+     "link": "https://www.aviasales.com/search/NYC0712SAO1?t=AD17966712001796755200001280EWRFLLVCP_59b4600a5a12ac2fbab3539946155d8a_36746&search_date=15102026&expected_price_uuid=01a140a5-8e47-8030-2c1d-f8d1fc005a4e&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=jOTM6SpK_aTilDI5pmIOsQ&expected_price_source=share&expected_price_currency=brl&expected_price=2209&marker=790537"
     },
     "20": {
      "preco": 6549,
@@ -501,7 +525,16 @@
     }
    },
    "2026-11": {},
-   "2026-12": {}
+   "2026-12": {
+    "20": {
+     "preco": 5518,
+     "cia": "LA",
+     "escalas": 1,
+     "saida": "2026-12-20T14:53",
+     "duracao_min": null,
+     "link": "https://www.aviasales.com/search/ATL2012SAO1?marker=790537"
+    }
+   }
   },
   "ATL-GYN": {
    "2026-10": {},
@@ -547,7 +580,7 @@
      "link": "https://www.aviasales.com/search/LIS2012BHZ1?t=TK17977752001797978900003575LISOPOISTGRUCNF_d85d4b325c36b2d3e46f2514b65fde10_72530&search_date=14102026&expected_price_uuid=01a13b88-021e-8040-6dd7-be58b1b1b7c3&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=xJbKTSZCZTCz0b4f-h_pXQ&expected_price_source=share&expected_price_currency=brl&expected_price=4362&marker=790537"
     },
     "22": {
-     "preco": 6860,
+     "preco": 6840,
      "cia": "LA",
      "escalas": 1,
      "saida": "2026-12-22T08:50",
@@ -631,12 +664,12 @@
      "link": "https://www.aviasales.com/search/LIS2510SAO1?t=AD17929623001793123100002860LISOPOMADVCP_44ce1e1295feaf1f31454df1e136e929_62596&search_date=13102026&expected_price_uuid=01a135b8-84f7-8031-2ede-8d90d4324c76&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Ejc3C50_xVoag7xILojjzg&expected_price_source=share&expected_price_currency=brl&expected_price=3750&marker=790537"
     },
     "26": {
-     "preco": 3232,
+     "preco": 3223,
      "cia": "EC",
      "escalas": 1,
      "saida": "2026-10-26T20:00",
      "duracao_min": 725,
-     "link": "https://www.aviasales.com/search/LIS2610SAO1?t=AD17930448001793123100001485LISMADVCP_1564c063c4745b41d32e036640a71e66_53548&search_date=15102026&expected_price_uuid=01a13fa9-713c-8031-65fb-e5ac7eae33cd&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=FcwDx0I05uFuR6B8wCV9Pg&expected_price_source=share&expected_price_currency=brl&expected_price=3232&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2610SAO1?t=AD17930448001793123100001485LISMADVCP_1564c063c4745b41d32e036640a71e66_53548&search_date=15102026&expected_price_uuid=01a13fa9-713c-8031-65fb-e5ac7eae33cd&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=FcwDx0I05uFuR6B8wCV9Pg&expected_price_source=share&expected_price_currency=brl&expected_price=3223&marker=790537"
     },
     "27": {
      "preco": 2796,
@@ -753,12 +786,12 @@
      "link": "https://www.aviasales.com/search/LIS1311SAO1?marker=790537"
     },
     "14": {
-     "preco": 2136,
+     "preco": 2130,
      "cia": "YU",
      "escalas": 0,
      "saida": "2026-11-14T12:05",
      "duracao_min": 620,
-     "link": "https://www.aviasales.com/search/LIS1411SAO1?t=AD17946579001794684300000620LISVCP_25e6f8ff430184e321f651e6b2954a43_35337&search_date=15102026&expected_price_uuid=01a13dc4-3afa-8030-2d16-1355c690753c&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH1%7CR1%7CTBC0&itinerary_key=zGnkfvIbUUTTC2O0pAy6HA&expected_price_source=share&expected_price_currency=brl&expected_price=2136&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1411SAO1?t=AD17946579001794684300000620LISVCP_25e6f8ff430184e321f651e6b2954a43_35337&search_date=15102026&expected_price_uuid=01a13dc4-3afa-8030-2d16-1355c690753c&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH1%7CR1%7CTBC0&itinerary_key=zGnkfvIbUUTTC2O0pAy6HA&expected_price_source=share&expected_price_currency=brl&expected_price=2130&marker=790537"
     },
     "15": {
      "preco": 4527,
@@ -891,28 +924,28 @@
      "link": "https://www.aviasales.com/search/LIS0712SAO1?t=TP17966862001796767200001530LISOPOGRU_0c52930ea45cd6b642a2102c08c36568_40866&search_date=11102026&expected_price_uuid=01a12ab1-8efc-8031-2758-c50be810e1a8&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=yPIjpfncryOoDBWIUykqCA&expected_price_source=share&expected_price_currency=brl&expected_price=2395&marker=790537"
     },
     "08": {
-     "preco": 2744,
+     "preco": 2736,
      "cia": "G3",
      "escalas": 1,
      "saida": "2026-12-08T23:35",
      "duracao_min": 675,
-     "link": "https://www.aviasales.com/search/LIS0812SAO1?t=G317967729001796821200000985LISGIGCGH_7d4a63951db93f2b509e3126c5b488d8_45434&search_date=15102026&expected_price_uuid=01a13ff4-eefe-8031-6c23-554adf6d30c9&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Pv1I_MOeT6CKCR8016ZSVg&expected_price_source=share&expected_price_currency=brl&expected_price=2744&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS0812SAO1?t=G317967729001796821200000985LISGIGCGH_7d4a63951db93f2b509e3126c5b488d8_45434&search_date=15102026&expected_price_uuid=01a13ff4-eefe-8031-6c23-554adf6d30c9&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Pv1I_MOeT6CKCR8016ZSVg&expected_price_source=share&expected_price_currency=brl&expected_price=2736&marker=790537"
     },
     "09": {
-     "preco": 2906,
+     "preco": 2898,
      "cia": "G3",
      "escalas": 1,
      "saida": "2026-12-09T23:30",
      "duracao_min": 675,
-     "link": "https://www.aviasales.com/search/LIS0912SAO1?t=G317968590001796917200001150LISGIGCGH_c1763816c31f3b369403017eef7aad28_48121&search_date=15102026&expected_price_uuid=01a13ff4-889d-8030-e4f7-8615f6fb55b8&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH1%7CR1%7CTBC0&itinerary_key=G8loUFCok_aw861cz9IPEQ&expected_price_source=share&expected_price_currency=brl&expected_price=2906&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS0912SAO1?t=G317968590001796917200001150LISGIGCGH_c1763816c31f3b369403017eef7aad28_48121&search_date=15102026&expected_price_uuid=01a13ff4-889d-8030-e4f7-8615f6fb55b8&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH1%7CR1%7CTBC0&itinerary_key=G8loUFCok_aw861cz9IPEQ&expected_price_source=share&expected_price_currency=brl&expected_price=2898&marker=790537"
     },
     "10": {
-     "preco": 3004,
+     "preco": 2996,
      "cia": "YU",
      "escalas": 0,
      "saida": "2026-12-10T09:20",
      "duracao_min": 620,
-     "link": "https://www.aviasales.com/search/LIS1012SAO1?t=AD17968944001796920800000620LISVCP_980b195add710f644c399206bed4dd84_49697&search_date=15102026&expected_price_uuid=01a13ed4-2dbe-8030-a113-7853787027f3&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH1%7CR1%7CTBC0&itinerary_key=NpmG3apcNC3hS8lf7S9p6Q&expected_price_source=share&expected_price_currency=brl&expected_price=3004&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1012SAO1?t=AD17968944001796920800000620LISVCP_980b195add710f644c399206bed4dd84_49697&search_date=15102026&expected_price_uuid=01a13ed4-2dbe-8030-a113-7853787027f3&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH1%7CR1%7CTBC0&itinerary_key=NpmG3apcNC3hS8lf7S9p6Q&expected_price_source=share&expected_price_currency=brl&expected_price=2996&marker=790537"
     },
     "11": {
      "preco": 2548,
@@ -987,12 +1020,12 @@
      "link": "https://www.aviasales.com/search/LIS2112SAO1?t=AD17978835001797962400001495LISMADVCP_50b291bafb1c3105e040ed7a6a34240b_58147&search_date=13102026&expected_price_uuid=01a136bb-e4bb-8040-6b39-8b8e083ec1b9&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=GAZ3y_dvVJj_eS-F6Brg4w&expected_price_source=share&expected_price_currency=brl&expected_price=3466&marker=790537"
     },
     "22": {
-     "preco": 3533,
+     "preco": 3523,
      "cia": "FR",
      "escalas": 3,
      "saida": "2026-12-22T18:00",
      "duracao_min": 1340,
-     "link": "https://www.aviasales.com/search/LIS2212SAO1?t=TK17979624001798134300003045LISBGYMXPVLCISTGRU_2fc1b06e8bdbdf4d4fe096c0d4502b51_58445&search_date=15102026&expected_price_uuid=01a13ec8-9613-8030-62c0-dfef04c7b283&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rjqZl3J6YHw6aMxgDG_EJw&expected_price_source=share&expected_price_currency=brl&expected_price=3533&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2212SAO1?t=TK17979624001798134300003045LISBGYMXPVLCISTGRU_2fc1b06e8bdbdf4d4fe096c0d4502b51_58445&search_date=15102026&expected_price_uuid=01a13ec8-9613-8030-62c0-dfef04c7b283&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rjqZl3J6YHw6aMxgDG_EJw&expected_price_source=share&expected_price_currency=brl&expected_price=3523&marker=790537"
     },
     "23": {
      "preco": 4539,
@@ -1057,7 +1090,7 @@
    "2026-11": {},
    "2026-12": {
     "01": {
-     "preco": 8467,
+     "preco": 8443,
      "cia": "G3",
      "escalas": 2,
      "saida": "2026-12-01T23:35",
@@ -1129,14 +1162,6 @@
      "saida": "2026-10-28T20:10",
      "duracao_min": 710,
      "link": "https://www.aviasales.com/search/OPO2810SAO1?t=AD17932182001793295000001460OPOMADVCP_ff9414b8efe827ef5727d6ed84286861_44268&search_date=10102026&expected_price_uuid=01a127bf-a2c3-8040-a64e-868a47c07b77&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=_t5r0iPCtkJUT76DB0Y3IA&expected_price_source=share&expected_price_currency=brl&expected_price=2592&marker=790537"
-    },
-    "30": {
-     "preco": 4398,
-     "cia": "AD",
-     "escalas": 1,
-     "saida": "2026-10-30T20:10",
-     "duracao_min": null,
-     "link": "https://www.aviasales.com/search/OPO3010SAO1?marker=790537"
     }
    },
    "2026-11": {
@@ -1155,6 +1180,14 @@
      "saida": "2026-11-06T07:00",
      "duracao_min": null,
      "link": "https://www.aviasales.com/search/OPO0611SAO1?marker=790537"
+    },
+    "08": {
+     "preco": 2733,
+     "cia": "AD",
+     "escalas": 1,
+     "saida": "2026-11-08T09:50",
+     "duracao_min": 695,
+     "link": "https://www.aviasales.com/search/OPO0811SAO1?t=AD17941314001794171000000840OPORECCGH_dd44f1dfba0cd886f8a53c267839d870_45473&search_date=15102026&expected_price_uuid=01a14067-15d8-8030-2322-76448caee1d5&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=CzMmmIaNSBS6MQUKtWKKCA&expected_price_source=share&expected_price_currency=brl&expected_price=2733&marker=790537"
     },
     "11": {
      "preco": 5027,
@@ -1197,12 +1230,12 @@
      "link": "https://www.aviasales.com/search/OPO1811SAO1?t=TP17949780001795031700001075OPOLISGRU_64ec2d850995e7a4ab8d61a7fe727532_35357&search_date=14102026&expected_price_uuid=01a13b11-ebde-8030-66ee-f9e0a3901a5c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rzIDfonKtaLHZOCpCYu1KA&expected_price_source=share&expected_price_currency=brl&expected_price=2120&marker=790537"
     },
     "20": {
-     "preco": 2176,
+     "preco": 2170,
      "cia": "AD",
      "escalas": 0,
      "saida": "2026-11-20T11:40",
      "duracao_min": 630,
-     "link": "https://www.aviasales.com/search/OPO2011SAO1?t=AD17951748001795201800000630OPOVCP_6ce13a57e92e1425d173fbd8a1125db2_36044&search_date=15102026&expected_price_uuid=01a13f96-179e-8031-6de5-8ca45a454741&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Mwxiy2fk3OHzDncckElaLw&expected_price_source=share&expected_price_currency=brl&expected_price=2176&marker=790537"
+     "link": "https://www.aviasales.com/search/OPO2011SAO1?t=AD17951748001795201800000630OPOVCP_6ce13a57e92e1425d173fbd8a1125db2_36044&search_date=15102026&expected_price_uuid=01a13f96-179e-8031-6de5-8ca45a454741&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Mwxiy2fk3OHzDncckElaLw&expected_price_source=share&expected_price_currency=brl&expected_price=2170&marker=790537"
     },
     "21": {
      "preco": 2176,
@@ -1295,12 +1328,12 @@
      "link": "https://www.aviasales.com/search/OPO2812SAO1?t=AD17984880001798659900003045OPOLISVCP_78280359694f2d70cfa5fd939e620390_47855&search_date=12102026&expected_price_uuid=01a131d0-0281-8031-6a96-049c4af7acc8&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=aIzohIZy_ddXk0zrMKAD8g&expected_price_source=share&expected_price_currency=brl&expected_price=2844&marker=790537"
     },
     "30": {
-     "preco": 2745,
+     "preco": 2737,
      "cia": "AD",
      "escalas": 0,
      "saida": "2026-12-30T11:20",
      "duracao_min": 630,
-     "link": "https://www.aviasales.com/search/OPO3012SAO1?t=AD17986296001798656600000630OPOVCP_e2f102dbdf2aa24000bcfeb2a6f28931_45468&search_date=15102026&expected_price_uuid=01a13f95-ada9-8030-6a09-1a0dd7ed693f&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=7nMElsmd-NT5LTFaumDlEg&expected_price_source=share&expected_price_currency=brl&expected_price=2745&marker=790537"
+     "link": "https://www.aviasales.com/search/OPO3012SAO1?t=AD17986296001798656600000630OPOVCP_e2f102dbdf2aa24000bcfeb2a6f28931_45468&search_date=15102026&expected_price_uuid=01a13f95-ada9-8030-6a09-1a0dd7ed693f&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=7nMElsmd-NT5LTFaumDlEg&expected_price_source=share&expected_price_currency=brl&expected_price=2737&marker=790537"
     }
    }
   },
@@ -1359,7 +1392,7 @@
      "link": "https://www.aviasales.com/search/LON1810SAO1?t=UA17923077001792402200001815LGWAMSIADGRU_5f93c9a85620df0af8ea23ee20227ae9_74414&search_date=09102026&expected_price_uuid=01a12015-190c-8031-27ed-66ec95da98d6&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qYIVh6MKL58w2l4tVKKzNQ&expected_price_source=share&expected_price_currency=brl&expected_price=4364&marker=790537"
     },
     "19": {
-     "preco": 6721,
+     "preco": 6701,
      "cia": "FR",
      "escalas": 2,
      "saida": "2026-10-19T10:00",
@@ -1375,12 +1408,12 @@
      "link": "https://www.aviasales.com/search/LON2010SAO1?t=AV17925339001792598700001320LHRBOGGRU_5aa865b68d62ff6f16601475619045f2_61046&search_date=11102026&expected_price_uuid=01a12be9-39d5-8031-67f7-ea82830e7a90&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=EzBEAmZ2UIluT-1gc1ZAKQ&expected_price_source=share&expected_price_currency=brl&expected_price=3578&marker=790537"
     },
     "21": {
-     "preco": 3784,
+     "preco": 3773,
      "cia": "EI",
      "escalas": 2,
      "saida": "2026-10-21T15:50",
      "duracao_min": 1160,
-     "link": "https://www.aviasales.com/search/LON2110SAO1?t=UA17925978001792747800002740LHRDUBIADGRU_8e0fbb7f193a8041071bff0d3559dc8a_62593&search_date=15102026&expected_price_uuid=01a13edd-3e8c-8040-a6e8-fa8b3f0fc3a2&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=mvvbgWqzXdWvgRZywoFmsw&expected_price_source=share&expected_price_currency=brl&expected_price=3784&marker=790537"
+     "link": "https://www.aviasales.com/search/LON2110SAO1?t=UA17925978001792747800002740LHRDUBIADGRU_8e0fbb7f193a8041071bff0d3559dc8a_62593&search_date=15102026&expected_price_uuid=01a13edd-3e8c-8040-a6e8-fa8b3f0fc3a2&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=mvvbgWqzXdWvgRZywoFmsw&expected_price_source=share&expected_price_currency=brl&expected_price=3773&marker=790537"
     },
     "23": {
      "preco": 4022,
@@ -1423,12 +1456,12 @@
      "link": "https://www.aviasales.com/search/LON2910SAO1?t=AV17933097001793400900001700LHRBOGGRU_1a8aeea2d902b05b8d46b5bdf8582f1f_55269&search_date=14102026&expected_price_uuid=01a1393b-b508-8030-a1ac-2c525669993c&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=prIez7iqD9RTOAUYJC-3aQ&expected_price_source=share&expected_price_currency=brl&expected_price=3319&marker=790537"
     },
     "30": {
-     "preco": 3295,
+     "preco": 3286,
      "cia": "FR",
      "escalas": 1,
      "saida": "2026-10-30T06:55",
      "duracao_min": 805,
-     "link": "https://www.aviasales.com/search/LON3010SAO1?t=AD17933433001793389500000950STNLISVCP_1451377096862127b428329610b9d807_54503&search_date=15102026&expected_price_uuid=01a13df1-fcac-8030-22ca-f70a40f8f2c4&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bQAfznSNqlh98ggIqgDraw&expected_price_source=share&expected_price_currency=brl&expected_price=3295&marker=790537"
+     "link": "https://www.aviasales.com/search/LON3010SAO1?t=AD17933433001793389500000950STNLISVCP_1451377096862127b428329610b9d807_54503&search_date=15102026&expected_price_uuid=01a13df1-fcac-8030-22ca-f70a40f8f2c4&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bQAfznSNqlh98ggIqgDraw&expected_price_source=share&expected_price_currency=brl&expected_price=3286&marker=790537"
     }
    },
    "2026-11": {
@@ -1714,12 +1747,12 @@
      "link": "https://www.aviasales.com/search/MAD2010SAO1?t=AV17924838001792535400001160MADBOGGRU_492ed903fb286da47ca7a9bc561405c5_63789&search_date=14102026&expected_price_uuid=01a13a1a-be76-8040-2c8b-5503f29c2bff&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=NDMsGJ_i5j4OlGXQxE9EFA&expected_price_source=share&expected_price_currency=brl&expected_price=3823&marker=790537"
     },
     "21": {
-     "preco": 4130,
+     "preco": 4118,
      "cia": "AV",
      "escalas": 1,
      "saida": "2026-10-21T11:05",
      "duracao_min": 960,
-     "link": "https://www.aviasales.com/search/MAD2110SAO1?t=AV17925807001792646700001400MADBOGGRU_70d215e1c1ca4cf5bffd719f3aa8d68a_68519&search_date=15102026&expected_price_uuid=01a1404a-ca98-8030-a2f5-dc482bfad3be&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=BBv_ea6Bpeh2lstZHqTr4w&expected_price_source=share&expected_price_currency=brl&expected_price=4130&marker=790537"
+     "link": "https://www.aviasales.com/search/MAD2110SAO1?t=AV17925807001792646700001400MADBOGGRU_70d215e1c1ca4cf5bffd719f3aa8d68a_68519&search_date=15102026&expected_price_uuid=01a1404a-ca98-8030-a2f5-dc482bfad3be&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=BBv_ea6Bpeh2lstZHqTr4w&expected_price_source=share&expected_price_currency=brl&expected_price=4118&marker=790537"
     },
     "22": {
      "preco": 2759,
@@ -1867,14 +1900,6 @@
      "duracao_min": 710,
      "link": "https://www.aviasales.com/search/MAD1211SAO1?t=TP17944788001794527700001055MADLISGRU_80914cc17c368c6f6b9df5dee117d865_41984&search_date=10102026&expected_price_uuid=01a12616-f77f-8031-632b-1d8d75b0d7d8&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=68D-e52Wa8yJh1f0zJ8MYA&expected_price_source=share&expected_price_currency=brl&expected_price=2459&marker=790537"
     },
-    "13": {
-     "preco": 2433,
-     "cia": "IB",
-     "escalas": 1,
-     "saida": "2026-11-13T23:00",
-     "duracao_min": 720,
-     "link": "https://www.aviasales.com/search/MAD1311SAO1?t=AD17946108001794674700001305MADLISVCP_df073f2f1130b100551ecbebda33fb2f_41204&search_date=08102026&expected_price_uuid=01a11c8e-7431-8040-61af-1c254121c4df&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=fkJKlSYcfjW87kCwkKqocQ&expected_price_source=share&expected_price_currency=brl&expected_price=2433&marker=790537"
-    },
     "14": {
      "preco": 2187,
      "cia": "UX",
@@ -1884,12 +1909,12 @@
      "link": "https://www.aviasales.com/search/MAD1411SAO1?t=AD17946378001794684300001015MADLISVCP_a61cde5bb676cc476ead02f8f05b3143_36367&search_date=14102026&expected_price_uuid=01a13bdd-a7dd-8031-2ac3-2931c2152d42&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=uQ6XbtrVT0EScGDSwyFl7w&expected_price_source=share&expected_price_currency=brl&expected_price=2187&marker=790537"
     },
     "15": {
-     "preco": 2638,
+     "preco": 2630,
      "cia": "NI",
      "escalas": 2,
      "saida": "2026-11-15T21:10",
      "duracao_min": 800,
-     "link": "https://www.aviasales.com/search/MAD1511SAO1?t=TP17947770001794952800003170MADLISOPOGRU_5062523e62525292dc0139824accc01b_43633&search_date=15102026&expected_price_uuid=01a13dc4-a718-8030-6f30-88b28706099b&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=HUgr6Q2w4jIjAO5p571F5Q&expected_price_source=share&expected_price_currency=brl&expected_price=2638&marker=790537"
+     "link": "https://www.aviasales.com/search/MAD1511SAO1?t=TP17947770001794952800003170MADLISOPOGRU_5062523e62525292dc0139824accc01b_43633&search_date=15102026&expected_price_uuid=01a13dc4-a718-8030-6f30-88b28706099b&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=HUgr6Q2w4jIjAO5p571F5Q&expected_price_source=share&expected_price_currency=brl&expected_price=2630&marker=790537"
     },
     "16": {
      "preco": 2432,
@@ -1964,20 +1989,20 @@
      "link": "https://www.aviasales.com/search/MAD2711SAO1?marker=790537"
     },
     "28": {
-     "preco": 2446,
-     "cia": "FR",
-     "escalas": 1,
-     "saida": "2026-11-28T21:40",
-     "duracao_min": 710,
-     "link": "https://www.aviasales.com/search/MAD2811SAO1?t=AD17959020001796065800002970MADOPOVCP_7fe48a09686e4594689babe25b10efb9_41418&search_date=08102026&expected_price_uuid=01a11c8a-0578-8030-ec0c-035bf15dfd95&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=MhS6frmxQIqr4QWQSXbnLA&expected_price_source=share&expected_price_currency=brl&expected_price=2446&marker=790537"
+     "preco": 2451,
+     "cia": "UX",
+     "escalas": 2,
+     "saida": "2026-11-28T06:30",
+     "duracao_min": 760,
+     "link": "https://www.aviasales.com/search/MAD2811SAO1?t=TP17958474001795982100002485MADOPOLISGRU_2988a2ba3661739969f723d2bb5d6935_41822&search_date=11102026&expected_price_uuid=01a12b11-a36b-8031-2c93-2ce5ccc18903&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=MIWcnT1DuV32IgSDzf93xg&expected_price_source=share&expected_price_currency=brl&expected_price=2451&marker=790537"
     },
     "29": {
-     "preco": 2629,
+     "preco": 2621,
      "cia": "FR",
      "escalas": 1,
      "saida": "2026-11-29T11:15",
      "duracao_min": 735,
-     "link": "https://www.aviasales.com/search/MAD2911SAO1?t=TP17959509001796162400003765MADOPOGRU_46c7208c90eea152fa662052f5f416eb_43614&search_date=15102026&expected_price_uuid=01a1404b-3a93-8030-6ccb-6cf8cc49d52a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=0c-zMKuMZ6zjzyZ63MklxQ&expected_price_source=share&expected_price_currency=brl&expected_price=2629&marker=790537"
+     "link": "https://www.aviasales.com/search/MAD2911SAO1?t=TP17959509001796162400003765MADOPOGRU_46c7208c90eea152fa662052f5f416eb_43614&search_date=15102026&expected_price_uuid=01a1404b-3a93-8030-6ccb-6cf8cc49d52a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=0c-zMKuMZ6zjzyZ63MklxQ&expected_price_source=share&expected_price_currency=brl&expected_price=2621&marker=790537"
     },
     "30": {
      "preco": 2568,
@@ -2191,12 +2216,12 @@
      "link": "https://www.aviasales.com/search/BCN2910SAO1?marker=790537"
     },
     "30": {
-     "preco": 3673,
+     "preco": 3662,
      "cia": "VY",
      "escalas": 1,
      "saida": "2026-10-30T07:15",
      "duracao_min": 770,
-     "link": "https://www.aviasales.com/search/BCN3010SAO1?t=AD17933445001793389500000990BCNLISVCP_c0a255f3361b794fdba3b282ace212e1_60755&search_date=15102026&expected_price_uuid=01a13e52-7804-8031-66a5-f92139d6507f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TeRkDkL8WJkh7JNN06tgJQ&expected_price_source=share&expected_price_currency=brl&expected_price=3673&marker=790537"
+     "link": "https://www.aviasales.com/search/BCN3010SAO1?t=AD17933445001793389500000990BCNLISVCP_c0a255f3361b794fdba3b282ace212e1_60755&search_date=15102026&expected_price_uuid=01a13e52-7804-8031-66a5-f92139d6507f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TeRkDkL8WJkh7JNN06tgJQ&expected_price_source=share&expected_price_currency=brl&expected_price=3662&marker=790537"
     }
    },
    "2026-11": {
@@ -2307,12 +2332,12 @@
    },
    "2026-12": {
     "09": {
-     "preco": 2916,
+     "preco": 2908,
      "cia": "VY",
      "escalas": 1,
      "saida": "2026-12-09T07:15",
      "duracao_min": 770,
-     "link": "https://www.aviasales.com/search/BCN0912SAO1?t=AD17968005001796845500000990BCNLISVCP_0aef0efe2d9685c778795ff1285e31c0_48235&search_date=15102026&expected_price_uuid=01a13ed2-82b5-8031-6027-a76940d753ec&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TeRkDkL8WJkh7JNN06tgJQ&expected_price_source=share&expected_price_currency=brl&expected_price=2916&marker=790537"
+     "link": "https://www.aviasales.com/search/BCN0912SAO1?t=AD17968005001796845500000990BCNLISVCP_0aef0efe2d9685c778795ff1285e31c0_48235&search_date=15102026&expected_price_uuid=01a13ed2-82b5-8031-6027-a76940d753ec&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TeRkDkL8WJkh7JNN06tgJQ&expected_price_source=share&expected_price_currency=brl&expected_price=2908&marker=790537"
     },
     "13": {
      "preco": 3428,
@@ -2476,12 +2501,12 @@
      "link": "https://www.aviasales.com/search/ROM1711SAO1?t=AD17948955001794943500001040FCOLISVCP_179bd8bb0324e0ae67f2f27bd36930fb_40568&search_date=10102026&expected_price_uuid=01a12587-5105-8030-e50f-5e97335d5515&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=K0zWhkp-ZcKDxllImGa-8Q&expected_price_source=share&expected_price_currency=brl&expected_price=2376&marker=790537"
     },
     "18": {
-     "preco": 2215,
+     "preco": 2209,
      "cia": "TP",
      "escalas": 2,
      "saida": "2026-11-18T19:35",
      "duracao_min": 900,
-     "link": "https://www.aviasales.com/search/ROM1811SAO1?t=TP17950305001795125900001830FCOLISOPOGRU_2a1de22bcf4e405ff0fef4d08079ee38_36645&search_date=15102026&expected_price_uuid=01a13e40-48d4-8031-224a-7002d6b4ba5b&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=M1MttG7oWIyvhPwP3bdhyQ&expected_price_source=share&expected_price_currency=brl&expected_price=2215&marker=790537"
+     "link": "https://www.aviasales.com/search/ROM1811SAO1?t=TP17950305001795125900001830FCOLISOPOGRU_2a1de22bcf4e405ff0fef4d08079ee38_36645&search_date=15102026&expected_price_uuid=01a13e40-48d4-8031-224a-7002d6b4ba5b&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=M1MttG7oWIyvhPwP3bdhyQ&expected_price_source=share&expected_price_currency=brl&expected_price=2209&marker=790537"
     },
     "23": {
      "preco": 2272,
@@ -2526,12 +2551,12 @@
      "link": "https://www.aviasales.com/search/ROM1912SAO1?t=AD17976810001797880200003560FCOOPOVCP_04836dc4b64ae05f9eb1d1a70551c227_75163&search_date=12102026&expected_price_uuid=01a130a2-dd13-8030-e468-fab1ee20c846&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=nKJ55CBUjk5Ik75DCap5bQ&expected_price_source=share&expected_price_currency=brl&expected_price=4470&marker=790537"
     },
     "20": {
-     "preco": 4062,
+     "preco": 4050,
      "cia": "TO",
      "escalas": 2,
      "saida": "2026-12-20T19:20",
      "duracao_min": 910,
-     "link": "https://www.aviasales.com/search/ROM2012SAO1?t=AD17977944001797962400003040FCOORYMADVCP_ef8c77b45c393aeae075861b8d29f49c_67294&search_date=15102026&expected_price_uuid=01a14000-d2a9-8030-ae54-f54c6e70a43e&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=v9atCva4-X7adIj7v-M_3w&expected_price_source=share&expected_price_currency=brl&expected_price=4062&marker=790537"
+     "link": "https://www.aviasales.com/search/ROM2012SAO1?t=AD17977944001797962400003040FCOORYMADVCP_ef8c77b45c393aeae075861b8d29f49c_67294&search_date=15102026&expected_price_uuid=01a14000-d2a9-8030-ae54-f54c6e70a43e&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=v9atCva4-X7adIj7v-M_3w&expected_price_source=share&expected_price_currency=brl&expected_price=4050&marker=790537"
     }
    }
   },
@@ -2752,7 +2777,7 @@
      "link": "https://www.aviasales.com/search/MIL2012SAO1?t=AD17978016001797962400002920BGYBVAORYMADVCP_093d70b0994dd64c3730c655afa3ff12_55746&search_date=11102026&expected_price_uuid=01a12c7a-e4a8-8040-6ee7-389ac6e1e7c7&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1VEmZFs2KbjxckfD2xQOHw&expected_price_source=share&expected_price_currency=brl&expected_price=3267&marker=790537"
     },
     "26": {
-     "preco": 8498,
+     "preco": 8473,
      "cia": "AL",
      "escalas": 2,
      "saida": "2026-12-26T07:15",
@@ -2800,12 +2825,12 @@
      "link": "https://www.aviasales.com/search/PAR1610SAO1?t=AV17921409001792214700001530CDGBOGGRU_8496148ec495dbabe060461b04da7a25_93389&search_date=14102026&expected_price_uuid=01a13b4e-2454-8040-22cb-faaa871ef0c1&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ZLIDraBeKJyov3XiOsDHHA&expected_price_source=share&expected_price_currency=brl&expected_price=5617&marker=790537"
     },
     "17": {
-     "preco": 3700,
-     "cia": "TO",
+     "preco": 7061,
+     "cia": "UX",
      "escalas": 1,
-     "saida": "2026-10-17T06:00",
-     "duracao_min": 770,
-     "link": "https://www.aviasales.com/search/PAR1710SAO1?t=AD17922168001792256700000965ORYMADVCP_7c24c7774ed708f5bee3a8943577edca_62247&search_date=12102026&expected_price_uuid=01a13140-ad79-8040-2021-165d5b3865d6&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=5L-ktl5455kn65dpxWwDSw&expected_price_source=share&expected_price_currency=brl&expected_price=3700&marker=790537"
+     "saida": "2026-10-17T19:25",
+     "duracao_min": 755,
+     "link": "https://www.aviasales.com/search/PAR1710SAO1?t=LA17922651001792354800001795ORYMADGRU_29f7ee8f766b2c075e10838b224f1385_117475&search_date=15102026&expected_price_uuid=01a1408d-dd7a-8031-6037-b76ecfb1e43c&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=y0oWfuGz9aymC2zEMXLjxw&expected_price_source=share&expected_price_currency=brl&expected_price=7061&marker=790537"
     },
     "18": {
      "preco": 3895,
@@ -2822,6 +2847,14 @@
      "saida": "2026-10-19T10:20",
      "duracao_min": null,
      "link": "https://www.aviasales.com/search/PAR1910SAO1?marker=790537"
+    },
+    "22": {
+     "preco": 3729,
+     "cia": "UA",
+     "escalas": 1,
+     "saida": "2026-10-22T11:15",
+     "duracao_min": 1150,
+     "link": "https://www.aviasales.com/search/PAR2210SAO1?t=UA17926677001792748400001645CDGORDGRU_69d276797d4f994cd37791a9b9abfe7f_62050&search_date=15102026&expected_price_uuid=01a1405c-2c11-8031-20a2-0296acaae609&static_fare_key=TY%7CP1%7CH0%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=CmpqGFty0WktLxLPZTt5lg&expected_price_source=share&expected_price_currency=brl&expected_price=3729&marker=790537"
     },
     "25": {
      "preco": 3914,
@@ -2906,12 +2939,12 @@
      "link": "https://www.aviasales.com/search/PAR0911SAO1?t=TP17942433001794348000001985BVAOPOGRU_333c069e92685a9397f8d6835b0daac7_40877&search_date=12102026&expected_price_uuid=01a131a1-ec14-8030-e05c-151be148864f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=cBJo7nZLYob0pVUy7bNRFg&expected_price_source=share&expected_price_currency=brl&expected_price=2429&marker=790537"
     },
     "14": {
-     "preco": 2533,
+     "preco": 2526,
      "cia": "FR",
      "escalas": 2,
      "saida": "2026-11-14T22:25",
      "duracao_min": 825,
-     "link": "https://www.aviasales.com/search/PAR1411SAO1?t=AD17946951001794811200002175BVAOPORECCGH_1501edff45848e0bbece7fa9ca7d85ea_41894&search_date=15102026&expected_price_uuid=01a13d99-36f1-8040-aa5f-f09c39e99ae3&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ns6gCXhkDAEozTlaKJY5Ew&expected_price_source=share&expected_price_currency=brl&expected_price=2533&marker=790537"
+     "link": "https://www.aviasales.com/search/PAR1411SAO1?t=AD17946951001794811200002175BVAOPORECCGH_1501edff45848e0bbece7fa9ca7d85ea_41894&search_date=15102026&expected_price_uuid=01a13d99-36f1-8040-aa5f-f09c39e99ae3&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ns6gCXhkDAEozTlaKJY5Ew&expected_price_source=share&expected_price_currency=brl&expected_price=2526&marker=790537"
     },
     "16": {
      "preco": 2377,
@@ -2972,12 +3005,12 @@
    },
    "2026-12": {
     "01": {
-     "preco": 2549,
+     "preco": 2542,
      "cia": "TP",
      "escalas": 1,
      "saida": "2026-12-01T10:20",
      "duracao_min": 790,
-     "link": "https://www.aviasales.com/search/PAR0112SAO1?t=TP17961204001796162400000940ORYOPOGRU_119dd5df0cb3d4ce57828ab73a32b77a_42171&search_date=15102026&expected_price_uuid=01a13e51-f559-8031-2355-d37e94a4aae2&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=9brZTd5MHS1tbjXo29E2-A&expected_price_source=share&expected_price_currency=brl&expected_price=2549&marker=790537"
+     "link": "https://www.aviasales.com/search/PAR0112SAO1?t=TP17961204001796162400000940ORYOPOGRU_119dd5df0cb3d4ce57828ab73a32b77a_42171&search_date=15102026&expected_price_uuid=01a13e51-f559-8031-2355-d37e94a4aae2&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=9brZTd5MHS1tbjXo29E2-A&expected_price_source=share&expected_price_currency=brl&expected_price=2542&marker=790537"
     },
     "17": {
      "preco": 4385,
@@ -3087,20 +3120,28 @@
      "link": "https://www.aviasales.com/search/MIA1011RIO1?t=DM17943405001794520200002875MIASJUPUJGRUSDU_474f580a12f4580582765218289ab5d6_36431&search_date=14102026&expected_price_uuid=01a138cc-6d58-8040-2b1a-a4ce583befd7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=j6WlWH1rw4-kpZw3jINBcw&expected_price_source=share&expected_price_currency=brl&expected_price=2185&marker=790537"
     },
     "12": {
-     "preco": 2275,
+     "preco": 2269,
      "cia": "F9",
      "escalas": 3,
      "saida": "2026-11-12T16:18",
      "duracao_min": 858,
-     "link": "https://www.aviasales.com/search/MIA1211RIO1?t=CM17945002801794643200002262MIAATLTPAPTYGIG_0d7d4a098f8aad69e74a829ffb4726ae_37669&search_date=15102026&expected_price_uuid=01a13fe2-2f2b-8030-ee50-a3c5f26dd790&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=lGdD5fpBv1Zkzg93x_2Q_A&expected_price_source=share&expected_price_currency=brl&expected_price=2275&marker=790537"
+     "link": "https://www.aviasales.com/search/MIA1211RIO1?t=CM17945002801794643200002262MIAATLTPAPTYGIG_0d7d4a098f8aad69e74a829ffb4726ae_37669&search_date=15102026&expected_price_uuid=01a13fe2-2f2b-8030-ee50-a3c5f26dd790&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=lGdD5fpBv1Zkzg93x_2Q_A&expected_price_source=share&expected_price_currency=brl&expected_price=2269&marker=790537"
     },
     "13": {
-     "preco": 2242,
+     "preco": 2235,
      "cia": "F9",
      "escalas": 3,
      "saida": "2026-11-13T22:55",
      "duracao_min": 859,
-     "link": "https://www.aviasales.com/search/MIA1311RIO1?t=CM17946105001794789000002855MIAATLTPAPTYGIG_6efd7f80bb281e5443b9f97a114d90ef_37117&search_date=15102026&expected_price_uuid=01a13fe1-614e-8030-6ac1-23d52a685ec4&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=uacG2jxCnm-QVcGt7U9SOg&expected_price_source=share&expected_price_currency=brl&expected_price=2242&marker=790537"
+     "link": "https://www.aviasales.com/search/MIA1311RIO1?t=CM17946105001794789000002855MIAATLTPAPTYGIG_6efd7f80bb281e5443b9f97a114d90ef_37117&search_date=15102026&expected_price_uuid=01a13fe1-614e-8030-6ac1-23d52a685ec4&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=uacG2jxCnm-QVcGt7U9SOg&expected_price_source=share&expected_price_currency=brl&expected_price=2235&marker=790537"
+    },
+    "24": {
+     "preco": 4579,
+     "cia": "G3",
+     "escalas": 1,
+     "saida": "2026-11-24T21:35",
+     "duracao_min": null,
+     "link": "https://www.aviasales.com/search/MIA2411RIO1?marker=790537"
     }
    },
    "2026-12": {
@@ -3336,12 +3377,12 @@
      "link": "https://www.aviasales.com/search/LIS2210RIO1?t=TP17926899001792801500002100LISBELVCPGIG_369089427b09d5eaaeee194a85119032_63352&search_date=14102026&expected_price_uuid=01a13c6f-4709-8040-a78d-2f431ca28693&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=X1RDK_v427ef4cYrzKF6Xg&expected_price_source=share&expected_price_currency=brl&expected_price=3810&marker=790537"
     },
     "23": {
-     "preco": 4146,
+     "preco": 4134,
      "cia": "TP",
      "escalas": 2,
      "saida": "2026-10-23T09:30",
      "duracao_min": 785,
-     "link": "https://www.aviasales.com/search/LIS2310RIO1?t=TP17927478001792801500001135LISBELVCPGIG_9150bef95111a244b480279ecd48c78f_68675&search_date=15102026&expected_price_uuid=01a13fb9-217c-8040-2279-1789545a6904&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=4v-QPbCqGtE3W_HGSsJVhg&expected_price_source=share&expected_price_currency=brl&expected_price=4146&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2310RIO1?t=TP17927478001792801500001135LISBELVCPGIG_9150bef95111a244b480279ecd48c78f_68675&search_date=15102026&expected_price_uuid=01a13fb9-217c-8040-2279-1789545a6904&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=4v-QPbCqGtE3W_HGSsJVhg&expected_price_source=share&expected_price_currency=brl&expected_price=4134&marker=790537"
     },
     "25": {
      "preco": 5352,
@@ -3426,12 +3467,12 @@
      "link": "https://www.aviasales.com/search/LIS0811RIO1?t=AD17941608001794270300002005LISOPOVCPGIG_ef382b03fa5675b87cd942abce43325e_48920&search_date=13102026&expected_price_uuid=01a135cc-a30d-8040-aa2a-9df62ca81321&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Cnsm6n3fz3wQ_RYd8wZxzA&expected_price_source=share&expected_price_currency=brl&expected_price=2931&marker=790537"
     },
     "09": {
-     "preco": 2583,
+     "preco": 2575,
      "cia": "LA",
      "escalas": 1,
      "saida": "2026-11-09T08:50",
      "duracao_min": 670,
-     "link": "https://www.aviasales.com/search/LIS0911RIO1?t=LA17942142001794259500000935LISGRUGIG_0d9e8c988bddedd25b5242d8bdab4c2d_42785&search_date=15102026&expected_price_uuid=01a14013-9933-8040-a696-0be4a8cf50cc&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=dpJTy8HUQpZ_mLwx6xy7Sw&expected_price_source=share&expected_price_currency=brl&expected_price=2583&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS0911RIO1?t=LA17942142001794259500000935LISGRUGIG_0d9e8c988bddedd25b5242d8bdab4c2d_42785&search_date=15102026&expected_price_uuid=01a14013-9933-8040-a696-0be4a8cf50cc&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=dpJTy8HUQpZ_mLwx6xy7Sw&expected_price_source=share&expected_price_currency=brl&expected_price=2575&marker=790537"
     },
     "10": {
      "preco": 2494,
@@ -3449,37 +3490,29 @@
      "duracao_min": 750,
      "link": "https://www.aviasales.com/search/LIS1111RIO1?t=LA17943870001794434100000965LISGRUCWBGIG_64847807e8d23f1ffe964688d24cce13_38811&search_date=14102026&expected_price_uuid=01a13c32-db18-8030-2805-137ac3c7ef6e&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=_JrdSPjrindPbVF9DQILRg&expected_price_source=share&expected_price_currency=brl&expected_price=2334&marker=790537"
     },
-    "13": {
-     "preco": 2568,
-     "cia": "LA",
-     "escalas": 1,
-     "saida": "2026-11-13T14:35",
-     "duracao_min": 680,
-     "link": "https://www.aviasales.com/search/LIS1311RIO1?t=LA17945805001794648300001310LISGRUSDU_77a74171ade13acaa766040cd892e67a_43484&search_date=08102026&expected_price_uuid=01a11c75-9781-8030-a3f6-aa369c6fa8b6&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=yrhbMk7XFbgkcZY1Sq_06A&expected_price_source=share&expected_price_currency=brl&expected_price=2568&marker=790537"
-    },
     "14": {
-     "preco": 2442,
+     "preco": 2339,
      "cia": "AD",
      "escalas": 1,
      "saida": "2026-11-14T09:10",
      "duracao_min": 700,
-     "link": "https://www.aviasales.com/search/LIS1411RIO1?t=AD17946474001794695100000975LISVCPSDU_825fc87c59da5917710dfde4ef0b55c3_41348&search_date=08102026&expected_price_uuid=01a11c75-86eb-8031-6f67-61267ffb9013&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1S86VkHBkQymFG-8LZlZ0g&expected_price_source=share&expected_price_currency=brl&expected_price=2442&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1411RIO1?t=AD17946474001794695100000975LISVCPSDU_825fc87c59da5917710dfde4ef0b55c3_39901&search_date=11102026&expected_price_uuid=01a12ba8-3a49-8030-e314-58d067ef10cc&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1S86VkHBkQymFG-8LZlZ0g&expected_price_source=share&expected_price_currency=brl&expected_price=2339&marker=790537"
     },
     "15": {
-     "preco": 3317,
+     "preco": 3307,
      "cia": "X5",
      "escalas": 2,
      "saida": "2026-11-15T11:35",
      "duracao_min": 755,
-     "link": "https://www.aviasales.com/search/LIS1511RIO1?t=UX17947425001794813900001370LISMADSSAGIG_777eb119920137ca9e4ac2bd7db85619_54914&search_date=15102026&expected_price_uuid=01a13fe0-201c-8030-ab80-65ba81dbcbce&static_fare_key=TY%7CP0%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=1_JRNjCOFNu2eWQOfiPgow&expected_price_source=share&expected_price_currency=brl&expected_price=3317&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1511RIO1?t=UX17947425001794813900001370LISMADSSAGIG_777eb119920137ca9e4ac2bd7db85619_54914&search_date=15102026&expected_price_uuid=01a13fe0-201c-8030-ab80-65ba81dbcbce&static_fare_key=TY%7CP0%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=1_JRNjCOFNu2eWQOfiPgow&expected_price_source=share&expected_price_currency=brl&expected_price=3307&marker=790537"
     },
     "17": {
-     "preco": 2478,
+     "preco": 2471,
      "cia": "TP",
      "escalas": 1,
      "saida": "2026-11-17T23:30",
      "duracao_min": 695,
-     "link": "https://www.aviasales.com/search/LIS1711RIO1?t=TP17949582001795040400001550LISOPOGIG_0eaee18fe0ca1eca8be8eb8a8a27ec50_41033&search_date=15102026&expected_price_uuid=01a13fe1-900b-8031-2435-1aa8975a26d4&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TZ2WzGyM57uWA0YO67x5jg&expected_price_source=share&expected_price_currency=brl&expected_price=2478&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1711RIO1?t=TP17949582001795040400001550LISOPOGIG_0eaee18fe0ca1eca8be8eb8a8a27ec50_41033&search_date=15102026&expected_price_uuid=01a13fe1-900b-8031-2435-1aa8975a26d4&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=TZ2WzGyM57uWA0YO67x5jg&expected_price_source=share&expected_price_currency=brl&expected_price=2471&marker=790537"
     },
     "18": {
      "preco": 2378,
@@ -3522,20 +3555,12 @@
      "link": "https://www.aviasales.com/search/LIS2511RIO1?t=VR17956170001795729800002060LISRAIRECGRUSDU_5ce6e7ed9f984604e3a5808a42f011cd_43106&search_date=08102026&expected_price_uuid=01a11cb9-0797-8030-653f-df1d6cc272ae&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=4dfUoODt9GXa3_lABJjRtw&expected_price_source=share&expected_price_currency=brl&expected_price=2546&marker=790537"
     },
     "27": {
-     "preco": 2567,
-     "cia": "JJ",
+     "preco": 4347,
+     "cia": "LA",
      "escalas": 1,
      "saida": "2026-11-27T14:35",
-     "duracao_min": 670,
-     "link": "https://www.aviasales.com/search/LIS2711RIO1?t=LA17957901001795855500001270LISGRUGIG_d50304a90fca7aae9d0a88fcdacf2cb6_43473&search_date=08102026&expected_price_uuid=01a11c53-9a5f-8030-a0aa-614c2582598e&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bEBF3Ls6Bs8ulRm8Rt0oAg&expected_price_source=share&expected_price_currency=brl&expected_price=2567&marker=790537"
-    },
-    "28": {
-     "preco": 2567,
-     "cia": "JJ",
-     "escalas": 1,
-     "saida": "2026-11-28T08:50",
-     "duracao_min": 670,
-     "link": "https://www.aviasales.com/search/LIS2811RIO1?t=LA17958558001795891500000775LISGRUGIG_d9b4dc9d3d07fde77ba64979b62729cd_43473&search_date=08102026&expected_price_uuid=01a11c52-8217-8030-6b32-9a627eac219c&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=wPhBTjA_wI1NJrkmrkzB5w&expected_price_source=share&expected_price_currency=brl&expected_price=2567&marker=790537"
+     "duracao_min": null,
+     "link": "https://www.aviasales.com/search/LIS2711RIO1?marker=790537"
     },
     "30": {
      "preco": 2457,
@@ -3588,20 +3613,20 @@
      "link": "https://www.aviasales.com/search/LIS0912RIO1?t=AD17968077001796855100000970LISVCPSDU_1700f4caa20cd579c19e1140f9f56588_49333&search_date=10102026&expected_price_uuid=01a12587-b5da-8030-286b-f37fec09c2f2&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=H6YDyDeOIXeYzeWNwAvpHw&expected_price_source=share&expected_price_currency=brl&expected_price=2889&marker=790537"
     },
     "10": {
-     "preco": 3383,
+     "preco": 3374,
      "cia": "YU",
      "escalas": 1,
      "saida": "2026-12-10T09:20",
      "duracao_min": 685,
-     "link": "https://www.aviasales.com/search/LIS1012RIO1?t=AD17968944001796932800000820LISVCPGIG_cffe1868569b59f1d94228a5cfa52895_55962&search_date=15102026&expected_price_uuid=01a13df2-b371-8030-6ae1-8f54931badc4&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Prdd3AMN4qgMMfzCEgbIjw&expected_price_source=share&expected_price_currency=brl&expected_price=3383&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1012RIO1?t=AD17968944001796932800000820LISVCPGIG_cffe1868569b59f1d94228a5cfa52895_55962&search_date=15102026&expected_price_uuid=01a13df2-b371-8030-6ae1-8f54931badc4&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Prdd3AMN4qgMMfzCEgbIjw&expected_price_source=share&expected_price_currency=brl&expected_price=3374&marker=790537"
     },
     "12": {
-     "preco": 3105,
+     "preco": 3096,
      "cia": "U2",
      "escalas": 3,
      "saida": "2026-12-12T13:30",
      "duracao_min": 770,
-     "link": "https://www.aviasales.com/search/LIS1212RIO1?t=U217970822001797156000001410LISSIDRECCGHSDU_6cc061dc8c0196b9d00bd11a48f682f8_51362&search_date=15102026&expected_price_uuid=01a13e08-6bd7-8030-607f-1bec31d7550d&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=edqmoOb87qM0xlFDsXW4Dg&expected_price_source=share&expected_price_currency=brl&expected_price=3105&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1212RIO1?t=U217970822001797156000001410LISSIDRECCGHSDU_6cc061dc8c0196b9d00bd11a48f682f8_51362&search_date=15102026&expected_price_uuid=01a13e08-6bd7-8030-607f-1bec31d7550d&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=edqmoOb87qM0xlFDsXW4Dg&expected_price_source=share&expected_price_currency=brl&expected_price=3096&marker=790537"
     },
     "14": {
      "preco": 3812,
@@ -3620,20 +3645,20 @@
      "link": "https://www.aviasales.com/search/LIS1712RIO1?t=AD17974872001797546300001165LISMADVCPSDU_fc7de92d695c0e82694fd9b6315a7464_69815&search_date=09102026&expected_price_uuid=01a122fb-c05f-8040-2011-8189ab3aadda&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=jzSCtibV2qo4i2G8UqErVQ&expected_price_source=share&expected_price_currency=brl&expected_price=4088&marker=790537"
     },
     "19": {
-     "preco": 4368,
+     "preco": 4356,
      "cia": "AD",
      "escalas": 1,
      "saida": "2026-12-19T09:10",
      "duracao_min": 700,
-     "link": "https://www.aviasales.com/search/LIS1912RIO1?t=AD17976714001797719100000975LISVCPSDU_2c4a1993e7013b09c28ae9e13e2850a7_72252&search_date=15102026&expected_price_uuid=01a13f18-2b16-8040-a537-3edaef8bcdfd&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1S86VkHBkQymFG-8LZlZ0g&expected_price_source=share&expected_price_currency=brl&expected_price=4368&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1912RIO1?t=AD17976714001797719100000975LISVCPSDU_2c4a1993e7013b09c28ae9e13e2850a7_72252&search_date=15102026&expected_price_uuid=01a13f18-2b16-8040-a537-3edaef8bcdfd&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=1S86VkHBkQymFG-8LZlZ0g&expected_price_source=share&expected_price_currency=brl&expected_price=4356&marker=790537"
     },
     "20": {
-     "preco": 4368,
+     "preco": 4356,
      "cia": "AD",
      "escalas": 1,
      "saida": "2026-12-20T09:20",
      "duracao_min": 700,
-     "link": "https://www.aviasales.com/search/LIS2012RIO1?t=AD17977584001797798300000845LISVCPSDU_60eec070b2b11866b9decb29d5634cbf_72252&search_date=15102026&expected_price_uuid=01a13f18-76fe-8040-a6f5-52582671e30c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=SazwNsvp7Pnm1sr_G_dBEA&expected_price_source=share&expected_price_currency=brl&expected_price=4368&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2012RIO1?t=AD17977584001797798300000845LISVCPSDU_60eec070b2b11866b9decb29d5634cbf_72252&search_date=15102026&expected_price_uuid=01a13f18-76fe-8040-a6f5-52582671e30c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=SazwNsvp7Pnm1sr_G_dBEA&expected_price_source=share&expected_price_currency=brl&expected_price=4356&marker=790537"
     },
     "21": {
      "preco": 4042,
@@ -3644,12 +3669,12 @@
      "link": "https://www.aviasales.com/search/LIS2112RIO1?t=G317978958001797921000000600LISGIG_4d7d77b441f6de0f9cb324f7fc01f1d8_68731&search_date=09102026&expected_price_uuid=01a120b1-3e65-8030-a0cd-f002dd881404&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=cvM5WZ0ulGBnUjh1Tm5BAA&expected_price_source=share&expected_price_currency=brl&expected_price=4042&marker=790537"
     },
     "22": {
-     "preco": 3423,
+     "preco": 3413,
      "cia": "G3",
      "escalas": 0,
      "saida": "2026-12-22T23:35",
      "duracao_min": 600,
-     "link": "https://www.aviasales.com/search/LIS2212RIO1?t=G317979825001798007700000600LISGIG_d67ea607a7d993572625dea433de7de0_56647&search_date=15102026&expected_price_uuid=01a13f23-f69b-8040-67ba-db6e6cd4f553&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=QyyPX3NMiLjvNwPoL7JYoA&expected_price_source=share&expected_price_currency=brl&expected_price=3423&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2212RIO1?t=G317979825001798007700000600LISGIG_d67ea607a7d993572625dea433de7de0_56647&search_date=15102026&expected_price_uuid=01a13f23-f69b-8040-67ba-db6e6cd4f553&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=QyyPX3NMiLjvNwPoL7JYoA&expected_price_source=share&expected_price_currency=brl&expected_price=3413&marker=790537"
     },
     "23": {
      "preco": 3759,
@@ -3703,14 +3728,6 @@
   },
   "LIS-SSA": {
    "2026-10": {
-    "15": {
-     "preco": 4620,
-     "cia": "TP",
-     "escalas": 0,
-     "saida": "2026-10-15T17:20",
-     "duracao_min": 520,
-     "link": "https://www.aviasales.com/search/LIS1510SSA1?t=TP17920848001792101600000520LISSSA_0b7e7d5e9140fbdf40e22c626a3838b3_78833&search_date=11102026&expected_price_uuid=01a12c7e-e5a5-8040-a0ec-430137112b07&static_fare_key=TY%7CP0%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=gkF5VX-4CAp02CcKh2xm1w&expected_price_source=share&expected_price_currency=brl&expected_price=4620&marker=790537"
-    },
     "16": {
      "preco": 4432,
      "cia": "VY",
@@ -3872,7 +3889,7 @@
      "link": "https://www.aviasales.com/search/LIS1810REC1?marker=790537"
     },
     "19": {
-     "preco": 5284,
+     "preco": 5269,
      "cia": "LA",
      "escalas": 1,
      "saida": "2026-10-19T19:20",
@@ -3922,12 +3939,12 @@
      "link": "https://www.aviasales.com/search/LIS0511REC1?t=AD17939055001793977200001375LISMADREC_a6aeb103e6d0c017ff824dc997d2780d_31335&search_date=08102026&expected_price_uuid=01a11ce6-a63e-8031-67ee-645a0e287545&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=G4t3q9VuDCqTdJz_zYuiMA&expected_price_source=share&expected_price_currency=brl&expected_price=1850&marker=790537"
     },
     "06": {
-     "preco": 2343,
+     "preco": 2336,
      "cia": "FR",
      "escalas": 3,
      "saida": "2026-11-06T21:40",
      "duracao_min": 745,
-     "link": "https://www.aviasales.com/search/LIS0611REC1?t=AD17940012001794150000002660LISVLCOPOREC_b381da74392838a0c50c57a0fbf29e19_38749&search_date=15102026&expected_price_uuid=01a13e39-5996-8040-a1b6-d4f1deca75e8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=oc9oBBypPnB9qg2uX-37GQ&expected_price_source=share&expected_price_currency=brl&expected_price=2343&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS0611REC1?t=AD17940012001794150000002660LISVLCOPOREC_b381da74392838a0c50c57a0fbf29e19_38749&search_date=15102026&expected_price_uuid=01a13e39-5996-8040-a1b6-d4f1deca75e8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=oc9oBBypPnB9qg2uX-37GQ&expected_price_source=share&expected_price_currency=brl&expected_price=2336&marker=790537"
     },
     "11": {
      "preco": 2435,
@@ -4035,28 +4052,28 @@
      "link": "https://www.aviasales.com/search/LIS0412FOR1?marker=790537"
     },
     "12": {
-     "preco": 2722,
+     "preco": 2714,
      "cia": "U2",
      "escalas": 2,
      "saida": "2026-12-12T13:30",
      "duracao_min": 595,
-     "link": "https://www.aviasales.com/search/LIS1212FOR1?t=U217970822001797153900001375LISSIDRECFOR_d25fc9cd0b38df7fe386d8fe942e0d61_45029&search_date=15102026&expected_price_uuid=01a13e02-f3a1-8040-a488-0196f1c737d2&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=40sPQk8QDYdeQfVseO7P5g&expected_price_source=share&expected_price_currency=brl&expected_price=2722&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1212FOR1?t=U217970822001797153900001375LISSIDRECFOR_d25fc9cd0b38df7fe386d8fe942e0d61_45029&search_date=15102026&expected_price_uuid=01a13e02-f3a1-8040-a488-0196f1c737d2&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=40sPQk8QDYdeQfVseO7P5g&expected_price_source=share&expected_price_currency=brl&expected_price=2714&marker=790537"
     },
     "14": {
-     "preco": 3377,
+     "preco": 3367,
      "cia": "G3",
      "escalas": 2,
      "saida": "2026-12-14T23:30",
      "duracao_min": 880,
-     "link": "https://www.aviasales.com/search/LIS1412FOR1?t=G317972910001797380700001675LISGIGCGHFOR_19dc27865e1e8c239b6ffbf7cb4c9758_55860&search_date=15102026&expected_price_uuid=01a13e91-976c-8040-2633-346811753ede&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR1%7CTBC0&itinerary_key=1PnuLReUPNsukqR2k7oRdA&expected_price_source=share&expected_price_currency=brl&expected_price=3377&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1412FOR1?t=G317972910001797380700001675LISGIGCGHFOR_19dc27865e1e8c239b6ffbf7cb4c9758_55860&search_date=15102026&expected_price_uuid=01a13e91-976c-8040-2633-346811753ede&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR1%7CTBC0&itinerary_key=1PnuLReUPNsukqR2k7oRdA&expected_price_source=share&expected_price_currency=brl&expected_price=3367&marker=790537"
     },
     "15": {
-     "preco": 3457,
+     "preco": 3447,
      "cia": "LA",
      "escalas": 0,
      "saida": "2026-12-15T18:35",
      "duracao_min": 450,
-     "link": "https://www.aviasales.com/search/LIS1512FOR1?t=LA17973597001797375900000450LISFOR_0c904807cdf803c7fcda77f960973182_57188&search_date=15102026&expected_price_uuid=01a13e04-11ea-8040-2198-7dc11e2ae990&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=G45qoX-1nAaVDIxf1NxBoQ&expected_price_source=share&expected_price_currency=brl&expected_price=3457&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS1512FOR1?t=LA17973597001797375900000450LISFOR_0c904807cdf803c7fcda77f960973182_57188&search_date=15102026&expected_price_uuid=01a13e04-11ea-8040-2198-7dc11e2ae990&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=G45qoX-1nAaVDIxf1NxBoQ&expected_price_source=share&expected_price_currency=brl&expected_price=3447&marker=790537"
     },
     "18": {
      "preco": 4519,
@@ -4122,20 +4139,20 @@
      "link": "https://www.aviasales.com/search/LIS1412BSB1?t=LA17972754001797320400000930LISFORBSB_c11032b19be464f7d3b0e5fece5a8af1_55585&search_date=12102026&expected_price_uuid=01a1325f-f9c2-8040-aebd-8cad460ef54c&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=DBkSbX_mH4jzwpWH3hDhzw&expected_price_source=share&expected_price_currency=brl&expected_price=3303&marker=790537"
     },
     "20": {
-     "preco": 4209,
+     "preco": 4197,
      "cia": "FR",
      "escalas": 3,
      "saida": "2026-12-20T21:40",
      "duracao_min": 910,
-     "link": "https://www.aviasales.com/search/LIS2012BSB1?t=AD17978028001797891300001655LISMADRECCGHBSB_8e939625bf89113de2f56119c4c94b38_69692&search_date=15102026&expected_price_uuid=01a13fd1-70ce-8040-6968-0006d26cc5dc&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=emeWjOZUgXR3f58kGQZjPA&expected_price_source=share&expected_price_currency=brl&expected_price=4209&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2012BSB1?t=AD17978028001797891300001655LISMADRECCGHBSB_8e939625bf89113de2f56119c4c94b38_69692&search_date=15102026&expected_price_uuid=01a13fd1-70ce-8040-6968-0006d26cc5dc&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=emeWjOZUgXR3f58kGQZjPA&expected_price_source=share&expected_price_currency=brl&expected_price=4197&marker=790537"
     },
     "21": {
-     "preco": 4283,
+     "preco": 4271,
      "cia": "LA",
      "escalas": 1,
      "saida": "2026-12-21T19:10",
      "duracao_min": 610,
-     "link": "https://www.aviasales.com/search/LIS2112BSB1?t=LA17978802001797957600001470LISFORBSB_4e67863b6266e463b71e72bc488e32d2_70917&search_date=15102026&expected_price_uuid=01a13fcf-ff14-8040-aa68-ce411e27e5e2&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=hXK6jSxHgSidKOMPqolLnA&expected_price_source=share&expected_price_currency=brl&expected_price=4283&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2112BSB1?t=LA17978802001797957600001470LISFORBSB_4e67863b6266e463b71e72bc488e32d2_70917&search_date=15102026&expected_price_uuid=01a13fcf-ff14-8040-aa68-ce411e27e5e2&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=hXK6jSxHgSidKOMPqolLnA&expected_price_source=share&expected_price_currency=brl&expected_price=4271&marker=790537"
     },
     "23": {
      "preco": 7419,
@@ -4146,12 +4163,12 @@
      "link": "https://www.aviasales.com/search/LIS2312BSB1?marker=790537"
     },
     "25": {
-     "preco": 3084,
+     "preco": 3075,
      "cia": "AD",
      "escalas": 1,
      "saida": "2026-12-25T12:10",
      "duracao_min": 730,
-     "link": "https://www.aviasales.com/search/LIS2512BSB1?t=AD17982006001798246200000940LISVCPBSB_57722c341ab020f8a6a597b663229722_51063&search_date=15102026&expected_price_uuid=01a13fd4-9f06-8040-aef6-d8193fdd1a71&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=tnr1XnVJU3Kt_MCaf0LUow&expected_price_source=share&expected_price_currency=brl&expected_price=3084&marker=790537"
+     "link": "https://www.aviasales.com/search/LIS2512BSB1?t=AD17982006001798246200000940LISVCPBSB_57722c341ab020f8a6a597b663229722_51063&search_date=15102026&expected_price_uuid=01a13fd4-9f06-8040-aef6-d8193fdd1a71&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=tnr1XnVJU3Kt_MCaf0LUow&expected_price_source=share&expected_price_currency=brl&expected_price=3075&marker=790537"
     }
    }
   },
@@ -4214,7 +4231,7 @@
      "link": "https://www.aviasales.com/search/LON3010RIO1?marker=790537"
     },
     "31": {
-     "preco": 6248,
+     "preco": 6230,
      "cia": "AA",
      "escalas": 1,
      "saida": "2026-10-31T15:35",
@@ -4240,7 +4257,7 @@
      "link": "https://www.aviasales.com/search/LON0811RIO1?t=TP17941731001794260700001640LGWOPOGIG_d1994b85d9d1ffd944ecde11cd92ada0_52926&search_date=12102026&expected_price_uuid=01a13159-8d15-8030-227b-7d5c8e7ea00e&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=05P7yOpQVFDSG_I2aoF6yA&expected_price_source=share&expected_price_currency=brl&expected_price=3146&marker=790537"
     },
     "20": {
-     "preco": 4840,
+     "preco": 4826,
      "cia": "W4",
      "escalas": 3,
      "saida": "2026-11-20T21:30",
@@ -4470,20 +4487,6 @@
    "link": "https://www.aviasales.com/search/NYC1211BHZ1?t=CM17944497001794529500001210JFKPTYCNF_0520442380bc01069c8b19935def0d5a_23930&search_date=09102026&expected_price_uuid=01a1230a-c7d9-8030-2c92-31c98e3925bd&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=3pK-dlLZxVyYXd71CWSqKw&expected_price_source=share&expected_price_currency=brl&expected_price=1401&marker=790537"
   },
   {
-   "rota": "NYC-SAO",
-   "origem": "NYC",
-   "destino": "SAO",
-   "origem_nome": "Nova York",
-   "destino_nome": "São Paulo",
-   "data": "2026-12-07",
-   "preco": 1499,
-   "cia": "AV",
-   "escalas": 2,
-   "saida": "2026-12-07T06:30",
-   "duracao_min": 830,
-   "link": "https://www.aviasales.com/search/NYC0712SAO1?t=AV17966250001796723700001525JFKBOGGIGGRU_954efa28982f999e18206963b8efe3a5_25482&search_date=09102026&expected_price_uuid=01a120af-c19f-8040-a63e-4bcf0bb0a0e1&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=o2pSrp4kyLJJsLbGOz4Rpw&expected_price_source=share&expected_price_currency=brl&expected_price=1499&marker=790537"
-  },
-  {
    "rota": "MIA-SAO",
    "origem": "MIA",
    "destino": "SAO",
@@ -4524,6 +4527,20 @@
    "saida": "2026-11-12T13:15",
    "duracao_min": 600,
    "link": "https://www.aviasales.com/search/LIS1211REC1?t=AD17944893001794582000001725LISMADREC_2131f8c8e160b2e591522747cf1177d4_29295&search_date=10102026&expected_price_uuid=01a12549-a584-8040-6926-770d62698c94&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=UT4lVpWFigoGYZ5v0KYDeQ&expected_price_source=share&expected_price_currency=brl&expected_price=1716&marker=790537"
+  },
+  {
+   "rota": "NYC-SAO",
+   "origem": "NYC",
+   "destino": "SAO",
+   "origem_nome": "Nova York",
+   "destino_nome": "São Paulo",
+   "data": "2026-12-25",
+   "preco": 1754,
+   "cia": "UA",
+   "escalas": 1,
+   "saida": "2026-12-25T10:29",
+   "duracao_min": 681,
+   "link": "https://www.aviasales.com/search/NYC2512SAO1?t=UA17981945401798280400001311LGAIADGRU_d0e1cb1e865ae0800213f4d13648a756_29820&search_date=09102026&expected_price_uuid=01a120b1-67d1-8040-6b48-a1fd5a0b2597&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=iSnX3EwrRLi8sJgHFifhfQ&expected_price_source=share&expected_price_currency=brl&expected_price=1754&marker=790537"
   },
   {
    "rota": "ORL-BSB",
