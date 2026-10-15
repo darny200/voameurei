@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guardado: post para grupo</title></head>
+<body>
+<!--
+  CÓDIGO GUARDADO (removido do index.html em 15/10/2026 a pedido do dono).
+  Serve para reaproveitar daqui a ~1 mês, quando o canal/grupo existir.
+  Não é uma página para o público: é só um "baú" de peças para colar de volta no index.html.
+
+  Como recolocar:
+   1. CSS: colar o bloco <style> abaixo dentro do <style> do index.html.
+   2. HTML: colar a <section id="post"> depois da seção de promoções, o botão
+      "Fazer post para o grupo" no .embarque-canhoto e o botão flutuante antes do <script>.
+   3. JS: colar o bloco <script> abaixo no fim do script do index.html, acrescentar
+      WHATSAPP_CHANNEL_URL e SITE_URL no CONFIG, e chamar atualizarPost() no fim de mostrarResultado()
+      e "$('btn-canal').href = CONFIG.WHATSAPP_CHANNEL_URL;" no começo de iniciar().
+-->
+
+<style>
+/* Gerador de post */
+.gerador { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.balao {
+  background: var(--verde-suave); border-radius: var(--raio) var(--raio) var(--raio) 4px; padding: 16px; display: grid; gap: 10px;
+}
+.balao label { font-size: var(--t-s); font-weight: 600; color: var(--tinta-2); }
+textarea {
+  font: inherit; font-size: var(--t-m); color: var(--tinta); background: var(--superficie); border: 2px solid var(--linha);
+  border-radius: var(--raio-p); padding: 12px; width: 100%; min-height: 220px; resize: vertical; line-height: 1.5;
+}
+.gerador-acoes { display: grid; gap: 10px; }
+.feedback { min-height: 1.5em; font-weight: 700; color: var(--verde-forte); }
+.gerador-acoes p { color: var(--tinta-2); font-size: var(--t-s); }
+
+/* Botão flutuante do canal */
+.flutuante {
+  position: fixed; z-index: 20;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  background: var(--verde); color: #fff; border-radius: 999px; padding: 14px 20px; min-height: 52px;
+  font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.28); max-width: calc(100vw - 32px);
+}
+.flutuante svg { flex: none; }
+@media (max-width: 760px) {
+  /* No celular: só o ícone, para não cobrir a busca nem os botões */
+  .flutuante { padding: 0; width: 56px; height: 56px; justify-content: center; }
+  .flutuante-texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+/* (no @media celular, ".gerador" também ia para 1 coluna) */
+</style>
+
+<!-- Botão que ficava no cartão principal (.embarque-canhoto) -->
+          <a class="btn btn-contorno" href="#post">Fazer post para o grupo</a>
+
+<!-- Seção do gerador de post -->
+  <!-- GERADOR DE POST -->
+  <section id="post">
+    <div class="wrap">
+      <div class="secao-titulo">
+        <h2>Post pronto para o WhatsApp</h2>
+        <p>O texto se monta sozinho com a rota que você está vendo. Copie e cole no grupo, ou mande direto pelo WhatsApp.</p>
+      </div>
+      <div class="gerador">
+        <div class="balao">
+          <label for="texto-post">Texto do post (pode editar)</label>
+          <textarea id="texto-post" spellcheck="false"></textarea>
+        </div>
+        <div class="gerador-acoes">
+          <button type="button" class="btn btn-sol btn-grande" id="btn-copiar">Copiar texto</button>
+          <a class="btn btn-verde btn-grande" id="btn-whats" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a>
+          <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+          <p>Quer outra rota? Mude a busca lá em cima ou toque em "Ver calendário" numa promoção. O texto acompanha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Botão flutuante do canal -->
+<a class="flutuante" id="btn-canal" aria-label="Entrar no canal do WhatsApp" href="#" target="_blank" rel="noopener">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  <span class="flutuante-texto">Entrar no canal do WhatsApp</span>
+</a>
+
+<script>
+/* Itens que estavam no CONFIG:
+  // Link do canal do WhatsApp do Baianinho (TROQUE quando o canal existir).
+  WHATSAPP_CHANNEL_URL: 'https://whatsapp.com/channel/SEU_CANAL_AQUI',
+
+  // Endereço do site (vai no texto do post do WhatsApp).
+  SITE_URL: 'https://voameurei.com'
+*/
+/* ---------- Gerador de post ---------- */
+function montarTextoPost(dados) {
+  const dois = [...dados.dias].sort((a, b) => a.preco - b.preco).slice(0, 2)
+    .sort((a, b) => a.data.localeCompare(b.data));
+  const indoParaBrasil = CIDADES[dados.destino].regiao === 'Brasil';
+  const chamada = indoParaBrasil ? 'viagem para o Brasil!' : 'viagem para ' + CIDADES[dados.destino].nome + '!';
+  return '✈️ Olha, pessoal, aproveita essa promoção: ' + chamada + '\n'
+    + nomeRota(dados.origem, dados.destino) + '\n'
+    + dois.map((d) => '📅 ' + dataCurta(d.data) + ' — ' + reais(d.preco)).join('\n') + '\n'
+    + 'Compra agora, porque vai aumentar. Entra no site: ' + CONFIG.SITE_URL;
+}
+function atualizarPost() {
+  if (!resultadoAtual) return;
+  $('texto-post').value = montarTextoPost(resultadoAtual);
+  atualizarLinkWhats();
+  $('feedback').textContent = '';
+}
+function atualizarLinkWhats() {
+  $('btn-whats').href = 'https://wa.me/?text=' + encodeURIComponent($('texto-post').value);
+}
+$('texto-post').addEventListener('input', atualizarLinkWhats);
+
+$('btn-copiar').addEventListener('click', async () => {
+  const caixa = $('texto-post');
+  const texto = caixa.value;
+  let deu = false;
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) { await navigator.clipboard.writeText(texto); deu = true; }
+  } catch (e) { deu = false; }
+  if (!deu) {                      // plano B: seleciona o texto e usa o copiar antigo
+    caixa.focus(); caixa.select();
+    try { deu = document.execCommand('copy'); } catch (e) { deu = false; }
+  }
+  $('feedback').textContent = deu ? 'Copiado! Agora é só colar no grupo.' : 'O texto ficou selecionado. Segure em cima dele e toque em Copiar.';
+  setTimeout(() => { $('feedback').textContent = ''; }, 4000);
+});
+</script>
+</body>
+</html>

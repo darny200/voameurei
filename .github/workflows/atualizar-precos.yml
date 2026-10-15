@@ -15,6 +15,7 @@ concurrency:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 30   # o script leva ~12 min e para os extras sozinho aos 17 min
     steps:
       - name: Baixar o site
         uses: actions/checkout@v4

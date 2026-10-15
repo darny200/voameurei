@@ -15,6 +15,7 @@ document.head.appendChild(script);
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Baianinho das Passagens</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" href="data:,">
 <meta name="description" content="Voa, meu rei! O Baianinho mostra a rota e o dia mais barato para voar entre o Brasil, os EUA e a Europa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,7 +133,7 @@ select:focus-visible { border-color: var(--mar); outline-offset: 0; }
   font: inherit; font-size: var(--t-s); font-weight: 600; border: 2px solid var(--sol); background: var(--sol-suave);
   color: var(--tinta); border-radius: 999px; padding: 8px 14px; cursor: pointer; min-height: 40px;
 }
-.chip:hover { background: var(--sol); color: var(--sobre-sol); }
+.chip:hover, .chip[aria-pressed="true"] { background: var(--sol); color: var(--sobre-sol); }
 
 .btn {
   font: inherit; font-weight: 700; font-size: var(--t-m); border: 0; border-radius: 999px; cursor: pointer;
@@ -231,16 +232,27 @@ details[open] .chevron { transform: rotate(180deg); }
 .dia.campeao .estrela { position: absolute; top: -9px; right: -5px; background: var(--sol); color: var(--sobre-sol); border-radius: 999px; font-size: .62rem; font-weight: 800; padding: 1px 5px; }
 .dia.escolhido { outline: 3px solid var(--sol); outline-offset: 1px; }
 .dia.vazio { visibility: hidden; }
-.dia.sem { cursor: default; background: transparent; border: 1px dashed var(--linha); }
-.dia.sem:hover { border-color: var(--linha); }
-.dia.sem .n { color: var(--tinta-2); font-weight: 600; }
-.dia.sem .p { color: var(--linha); }
+/* Dia sem preço guardado: continua clicável e abre a busca ao vivo */
+.dia.sem { background: var(--superficie); border: 2px dashed var(--linha); }
+.dia.sem:hover { border-color: var(--mar); }
+.dia.sem .n { color: var(--tinta); font-weight: 600; }
+.dia.sem .p { color: var(--mar); font-weight: 700; display: inline-flex; align-items: center; gap: 2px; }
+:root[data-theme="dark"] .dia.sem .p { color: var(--sobre-mar-2); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dia.sem .p { color: var(--sobre-mar-2); } }
+/* Dia que já passou */
+.dia.passado { cursor: not-allowed; background: transparent; border: 1px solid transparent; opacity: .38; }
+.dia.passado:hover { border-color: transparent; }
+.poucos { margin: 0 0 12px; font-size: var(--t-s); color: var(--tinta-2); background: var(--superficie-2); border-radius: var(--raio-p); padding: 8px 12px; }
+.aviso-parceiro { font-size: var(--t-xs); line-height: 1.4; color: var(--tinta-2); margin: 0; }
+.escolha-compra { display: grid; gap: 6px; justify-items: end; max-width: 340px; }
+.escolha-compra .aviso-parceiro { text-align: right; }
 .legenda { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; font-size: var(--t-s); color: var(--tinta-2); }
 .legenda span { display: inline-flex; align-items: center; gap: 6px; }
 .bolinha { width: 14px; height: 14px; border-radius: 4px; display: inline-block; border: 2px solid transparent; }
 .bolinha.b1 { background: var(--verde); }
 .bolinha.b2 { background: var(--verde-suave); border-color: var(--verde); }
 .bolinha.b3 { background: var(--superficie-2); border-color: var(--laranja); }
+.bolinha.b4 { background: var(--superficie); border: 2px dashed var(--linha); }
 .escolha { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--linha); }
 .escolha strong { font-variant-numeric: tabular-nums; }
 
@@ -258,21 +270,8 @@ details[open] .chevron { transform: rotate(180deg); }
 .promo-dia { grid-column: 1 / -1; font-size: var(--t-l); font-weight: 600; }
 .promo-mais { padding: 0 18px 18px; display: grid; gap: 14px; border-top: 1px dashed var(--linha); padding-top: 14px; margin: 0 18px; padding-left: 0; padding-right: 0; }
 .promo-botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.promo-botoes .aviso-parceiro { grid-column: 1 / -1; }
 .promo-botoes .btn { padding: 12px 10px; font-size: var(--t-s); min-height: 48px; }
-
-/* Gerador de post */
-.gerador { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 18px; align-items: start; }
-.balao {
-  background: var(--verde-suave); border-radius: var(--raio) var(--raio) var(--raio) 4px; padding: 16px; display: grid; gap: 10px;
-}
-.balao label { font-size: var(--t-s); font-weight: 600; color: var(--tinta-2); }
-textarea {
-  font: inherit; font-size: var(--t-m); color: var(--tinta); background: var(--superficie); border: 2px solid var(--linha);
-  border-radius: var(--raio-p); padding: 12px; width: 100%; min-height: 220px; resize: vertical; line-height: 1.5;
-}
-.gerador-acoes { display: grid; gap: 10px; }
-.feedback { min-height: 1.5em; font-weight: 700; color: var(--verde-forte); }
-.gerador-acoes p { color: var(--tinta-2); font-size: var(--t-s); }
 
 /* Como funciona / Por quê */
 .passos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; counter-reset: passo; }
@@ -289,24 +288,8 @@ textarea {
 
 /* Rodapé */
 footer { background: var(--mar-fundo); color: var(--sobre-mar-2); }
-footer .wrap { padding-block: 28px 110px; display: grid; gap: 10px; font-size: var(--t-s); }
+footer .wrap { padding-block: 28px 40px; display: grid; gap: 10px; font-size: var(--t-s); }
 footer strong { color: var(--sobre-mar); }
-
-/* Botão flutuante do canal */
-.flutuante {
-  position: fixed; z-index: 20;
-  right: calc(16px + env(safe-area-inset-right, 0px));
-  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-  background: var(--verde); color: #fff; border-radius: 999px; padding: 14px 20px; min-height: 52px;
-  font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.28); max-width: calc(100vw - 32px);
-}
-.flutuante svg { flex: none; }
-@media (max-width: 760px) {
-  /* No celular: só o ícone, para não cobrir a busca nem os botões */
-  .flutuante { padding: 0; width: 56px; height: 56px; justify-content: center; }
-  .flutuante-texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-}
 
 /* Celular */
 @media (max-width: 760px) {
@@ -315,13 +298,15 @@ footer strong { color: var(--sobre-mar); }
   .embarque-canhoto { border-left: 0; border-top: 2px dashed var(--linha); min-width: 0; }
   .embarque-canhoto::before, .embarque-canhoto::after { top: -12px; bottom: auto; }
   .embarque-canhoto::before { left: -11px; } .embarque-canhoto::after { left: auto; right: -11px; }
-  .gerador, .porque, .passos { grid-template-columns: minmax(0, 1fr); }
+  .porque, .passos { grid-template-columns: minmax(0, 1fr); }
   .busca-linha { grid-template-columns: minmax(0, 1fr); }
   .inverter { justify-self: center; transform: rotate(90deg); width: 44px; height: 44px; }
   .calendario-caixa { padding: 12px 10px; }
   .cal { gap: 4px; }
   .dia { min-height: 56px; }
   .dia .p { font-size: .68rem; letter-spacing: -.02em; }
+  .escolha-compra { justify-items: stretch; max-width: none; width: 100%; }
+  .escolha-compra .aviso-parceiro { text-align: left; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .cal .dia { animation: entra .35s ease both; animation-delay: calc(var(--i, 0) * 12ms); }
@@ -331,10 +316,10 @@ footer strong { color: var(--sobre-mar); }
 </head>
 <body>
 
-<header class="hero">
+<header class="hero" id="topo">
   <div class="wrap">
     <div class="marca">
-      <a class="logo" href="#topo" id="topo">
+      <a class="logo" href="#topo">
         <span class="logo-sol" aria-hidden="true">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
         </span>
@@ -383,7 +368,7 @@ footer strong { color: var(--sobre-mar); }
 
       <div class="sem-dados" id="sem-dados" hidden>
         <h3>Poxa, meu rei…</h3>
-        <p>Ainda não temos preços para essa rota neste mês. Tente outro mês ou outra cidade.</p>
+        <p>Ainda não temos preços guardados para essa rota neste mês. Toque em qualquer dia do calendário aqui embaixo para ver o preço ao vivo, ou veja estas opções:</p>
         <div class="sugestoes" id="sugestoes" aria-label="Sugestões com preço"></div>
       </div>
 
@@ -396,8 +381,8 @@ footer strong { color: var(--sobre-mar); }
           <span class="selo">Dia mais barato do mês</span>
         </div>
         <div class="embarque-canhoto">
-          <a class="btn btn-verde btn-grande" id="melhor-link" href="#" target="_blank" rel="noopener sponsored">Comprar pelo link</a>
-          <a class="btn btn-contorno" href="#post">Fazer post para o grupo</a>
+          <p class="aviso-parceiro">Você vai para a Aviasales, nossa parceira. Lá o site é em inglês e o preço aparece em dólar (US$).</p>
+          <a class="btn btn-verde btn-grande" id="melhor-link" href="https://www.aviasales.com/?marker=790537" target="_blank" rel="noopener sponsored">Comprar pelo link</a>
         </div>
         <details class="embarque-detalhes" id="melhor-detalhes-caixa">
           <summary>Ver detalhes do voo <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary>
@@ -407,23 +392,30 @@ footer strong { color: var(--sobre-mar); }
 
       <p class="dica" id="dica"><span aria-hidden="true">💡</span><span id="dica-texto">Dica: calculando…</span></p>
 
+      </div><!-- /com-dados -->
+
       <div class="calendario-caixa">
         <div class="cal-topo">
           <h3 id="cal-titulo">Calendário</h3>
-          <span>Preço em R$ por dia (— = sem preço ainda). Toque num dia para ver o link.</span>
+          <span>Preço em R$ por dia. Toque em qualquer dia para ver os voos.</span>
         </div>
-        <div class="cal" id="calendario" role="grid" aria-label="Preços por dia"></div>
+        <p class="poucos" id="poucos" hidden>Achamos poucos preços guardados para esta rota — toque em qualquer dia para ver o preço ao vivo.</p>
+        <div class="cal" id="calendario" role="group" aria-label="Preços por dia"></div>
         <div class="legenda">
           <span><i class="bolinha b1"></i> mais barato do mês</span>
           <span><i class="bolinha b2"></i> 3 dias mais baratos</span>
           <span><i class="bolinha b3"></i> dias mais caros</span>
+          <span><i class="bolinha b4"></i> "ver" = toque para ver o preço ao vivo</span>
+          <span><i class="bolinha" style="opacity:.4;border:1px solid var(--linha)"></i> dias que já passaram</span>
         </div>
         <div class="escolha" id="escolha" hidden>
           <span>Você escolheu <strong id="escolha-texto"></strong></span>
-          <a class="btn btn-sol" id="escolha-link" href="#" target="_blank" rel="noopener sponsored">Comprar este dia</a>
+          <div class="escolha-compra">
+            <p class="aviso-parceiro">Você vai para a Aviasales, nossa parceira. Lá o site é em inglês e o preço aparece em dólar (US$).</p>
+            <a class="btn btn-sol" id="escolha-link" href="https://www.aviasales.com/?marker=790537" target="_blank" rel="noopener sponsored">Comprar este dia</a>
+          </div>
         </div>
       </div>
-      </div><!-- /com-dados -->
     </div>
   </section>
 
@@ -438,28 +430,6 @@ footer strong { color: var(--sobre-mar); }
     </div>
   </section>
 
-  <!-- GERADOR DE POST -->
-  <section id="post">
-    <div class="wrap">
-      <div class="secao-titulo">
-        <h2>Post pronto para o WhatsApp</h2>
-        <p>O texto se monta sozinho com a rota que você está vendo. Copie e cole no grupo, ou mande direto pelo WhatsApp.</p>
-      </div>
-      <div class="gerador">
-        <div class="balao">
-          <label for="texto-post">Texto do post (pode editar)</label>
-          <textarea id="texto-post" spellcheck="false"></textarea>
-        </div>
-        <div class="gerador-acoes">
-          <button type="button" class="btn btn-sol btn-grande" id="btn-copiar">Copiar texto</button>
-          <a class="btn btn-verde btn-grande" id="btn-whats" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a>
-          <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
-          <p>Quer outra rota? Mude a busca lá em cima ou toque em "Ver calendário" numa promoção. O texto acompanha.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- COMO FUNCIONA -->
   <section class="promo-faixa" id="como-funciona">
     <div class="wrap">
@@ -467,7 +437,7 @@ footer strong { color: var(--sobre-mar); }
       <ol class="passos">
         <li><h3>Escolha a rota</h3><p>De onde você sai e para onde vai. Pode ser para o Brasil ou do Brasil para fora.</p></li>
         <li><h3>Veja o mês inteiro</h3><p>O calendário mostra o preço de cada dia. Os dias verdes são os mais baratos.</p></li>
-        <li><h3>Compre ou compartilhe</h3><p>Toque em comprar pelo link, ou copie o post e mande para a família e os grupos.</p></li>
+        <li><h3>Compre na parceira</h3><p>Toque em comprar: você vai para a Aviasales, nossa parceira, e termina a compra lá (site em inglês, preço em dólar).</p></li>
       </ol>
     </div>
   </section>
@@ -480,7 +450,7 @@ footer strong { color: var(--sobre-mar); }
         <ul>
           <li><strong>As rotas da nossa gente</strong><span>Miami, Boston e Nova York para BH, Goiânia e São Paulo. Lisboa e Londres para o Rio e São Paulo.</span></li>
           <li><strong>Sem complicação</strong><span>Uma tela só: rota, dia mais barato e o botão de comprar.</span></li>
-          <li><strong>Feito para o grupo</strong><span>Post pronto para o WhatsApp e o Facebook, em um toque.</span></li>
+          <li><strong>Qualquer dia, ao vivo</strong><span>Não achou preço guardado? Toque no dia e veja o preço na hora na Aviasales.</span></li>
         </ul>
       </div>
     </div>
@@ -495,11 +465,6 @@ footer strong { color: var(--sobre-mar); }
   </div>
 </footer>
 
-<a class="flutuante" id="btn-canal" aria-label="Entrar no canal do WhatsApp" href="#" target="_blank" rel="noopener">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
-  <span class="flutuante-texto">Entrar no canal do WhatsApp</span>
-</a>
-
 <script>
 /* =====================================================================
    CONFIG — mexa só aqui para trocar links.
@@ -512,13 +477,7 @@ const CONFIG = {
   AFFILIATE_LINK_TEMPLATE: 'https://www.aviasales.com/search/{ORIGEM}{DD}{MM}{DESTINO}1?marker=790537',
 
   // Arquivo com os preços reais (o robô do GitHub atualiza todo dia; o token fica escondido lá).
-  PRECOS_URL: 'precos.json',
-
-  // Link do canal do WhatsApp do Baianinho (TROQUE quando o canal existir).
-  WHATSAPP_CHANNEL_URL: 'https://whatsapp.com/channel/SEU_CANAL_AQUI',
-
-  // Endereço do site (vai no texto do post do WhatsApp).
-  SITE_URL: 'https://voameurei.com'
+  PRECOS_URL: 'precos.json'
 };
 
 /* Cidades (códigos de CIDADE, que juntam todos os aeroportos dela). */
@@ -585,7 +544,7 @@ async function buscarPrecos(origem, destino, mes) {
     const v = doMes[dd];
     const data = mes + '-' + dd;
     return {
-      data, preco: v.preco, link: v.link || montarLink(origem, destino, data),
+      data, preco: v.preco, link: (v.link && v.link.indexOf('https://') === 0) ? v.link : montarLink(origem, destino, data),
       voo: { cia: v.cia, escalas: v.escalas, saida: v.saida, duracaoMin: v.duracao_min }
     };
   });
@@ -718,7 +677,7 @@ document.querySelectorAll('.chip[data-cidade]').forEach((chip) => {
     const cod = chip.dataset.cidade;
     // Coloca a cidade brasileira no lado do Brasil, seja origem ou destino
     if (ladoDe(selOrigem.value) === 'brasil') selOrigem.value = cod; else selDestino.value = cod;
-    pesquisar();
+    pesquisar(true);   // rola até o resultado, para a pessoa ver que mudou
   });
 });
 $('form-busca').addEventListener('submit', (e) => { e.preventDefault(); pesquisar(true); });
@@ -726,9 +685,22 @@ $('form-busca').addEventListener('submit', (e) => { e.preventDefault(); pesquisa
 /* ---------- Resultado ---------- */
 let resultadoAtual = null;
 
+// Hoje no formato AAAA-MM-DD (hora do aparelho da pessoa)
+function hojeISO() {
+  const h = new Date();
+  return h.getFullYear() + '-' + String(h.getMonth() + 1).padStart(2, '0') + '-' + String(h.getDate()).padStart(2, '0');
+}
+
 async function pesquisar(rolar) {
   const dados = await buscarPrecos(selOrigem.value, selDestino.value, selMes.value);
+  const hoje = hojeISO();
+  dados.dias = dados.dias.filter((d) => d.data >= hoje);   // nunca mostra preço de dia que já passou
   if (dados.dias.length) mostrarResultado(dados); else await mostrarSemDados(dados);
+  montarCalendario(dados);
+  // Marca o "queridinho" que está escolhido
+  document.querySelectorAll('.chip[data-cidade]').forEach((c) => {
+    c.setAttribute('aria-pressed', String(c.dataset.cidade === selOrigem.value || c.dataset.cidade === selDestino.value));
+  });
   if (rolar) $('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
@@ -768,7 +740,7 @@ async function mostrarSemDados(dados) {
     b.type = 'button'; b.className = 'chip'; b.textContent = texto;
     if (so === o && sd === d) b.textContent = 'Ver ' + texto;
     else if (sm !== mes) b.textContent = texto + ' (' + nomeMes(sm) + ')';
-    b.addEventListener('click', () => irPara(so, sd, sm, false));
+    b.addEventListener('click', () => irPara(so, sd, sm, true));
     caixa.appendChild(b);
   });
 }
@@ -779,9 +751,6 @@ function mostrarResultado(dados) {
   $('sem-dados').hidden = true;
   const porPreco = [...dados.dias].sort((a, b) => a.preco - b.preco);
   const melhor = porPreco[0];
-  const tresMelhores = new Set(porPreco.slice(0, Math.min(3, porPreco.length)).map((d) => d.data));
-  const limiteCaro = porPreco.length >= 5 ? porPreco[Math.floor(porPreco.length * 0.8)].preco : Infinity;
-  const porData = new Map(dados.dias.map((d) => [d.data, d]));
 
   // Cartão da rota
   $('rota-nomes').innerHTML = CIDADES[dados.origem].nome + ' <span class="seta">→</span> ' + CIDADES[dados.destino].nome;
@@ -802,12 +771,25 @@ function mostrarResultado(dados) {
       + ' (média de ' + reais(media) + ').';
   } else {
     $('dica-texto').textContent = 'Dica: achamos preço em ' + dados.dias.length + (dados.dias.length === 1 ? ' dia' : ' dias')
-      + ' deste mês. Os outros dias ainda não foram pesquisados; vale conferir no link.';
+      + ' deste mês. Nos outros dias, toque em "ver" no calendário para ver o preço ao vivo.';
   }
+}
 
-  // Calendário (o mês inteiro; dias sem preço aparecem com "—")
+/* ---------- Calendário: TODO dia do mês é clicável ----------
+   Dia com preço  -> mostra o preço e o botão "Comprar este dia".
+   Dia sem preço  -> mostra "ver" e o botão "Ver voos deste dia" (busca ao vivo na Aviasales).
+   Dia que passou -> desabilitado e esmaecido. */
+function montarCalendario(dados) {
+  const porPreco = [...dados.dias].sort((a, b) => a.preco - b.preco);
+  const melhor = porPreco[0];
+  const tresMelhores = new Set(porPreco.slice(0, Math.min(3, porPreco.length)).map((d) => d.data));
+  const limiteCaro = porPreco.length >= 5 ? porPreco[Math.floor(porPreco.length * 0.8)].preco : Infinity;
+  const porData = new Map(dados.dias.map((d) => [d.data, d]));
+  const hoje = hojeISO();
+
   const [ano, m] = dados.mes.split('-').map(Number);
-  $('cal-titulo').textContent = nomeMes(dados.mes);
+  $('cal-titulo').textContent = nomeMes(dados.mes) + ' · ' + nomeRota(dados.origem, dados.destino);
+  $('poucos').hidden = dados.dias.length >= 5;
   const cal = $('calendario');
   cal.innerHTML = '';
   DIAS_CURTOS.forEach((n) => { const c = document.createElement('div'); c.className = 'cal-dow'; c.textContent = n; cal.appendChild(c); });
@@ -820,74 +802,50 @@ function mostrarResultado(dados) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'dia';
+    b.dataset.data = data;
     b.style.setProperty('--i', n - 1);
-    if (!d) {
-      b.classList.add('sem'); b.disabled = true;
-      b.innerHTML = '<span class="n">' + n + '</span><span class="p">—</span>';
-      b.setAttribute('aria-label', dataCurta(data) + ', sem preço');
-      cal.appendChild(b);
-      continue;
+    if (data < hoje) {
+      b.classList.add('passado'); b.disabled = true;
+      b.innerHTML = '<span class="n">' + n + '</span><span class="p">&nbsp;</span>';
+      b.setAttribute('aria-label', dataCurta(data) + ', dia que já passou');
+    } else if (!d) {
+      b.classList.add('sem');
+      b.innerHTML = '<span class="n">' + n + '</span><span class="p">'
+        + '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>ver</span>';
+      b.setAttribute('aria-label', dataCurta(data) + ', ver o preço ao vivo na Aviasales');
+      b.addEventListener('click', () => escolherDia({ data, preco: null, link: montarLink(dados.origem, dados.destino, data) }, b));
+    } else {
+      const ehMelhor = d.data === melhor.data;
+      if (tresMelhores.has(d.data)) b.classList.add('barato');
+      if (ehMelhor) b.classList.add('campeao');
+      if (!tresMelhores.has(d.data) && d.preco >= limiteCaro) b.classList.add('caro');
+      b.innerHTML = (ehMelhor ? '<span class="estrela">★</span>' : '')
+        + '<span class="n">' + n + '</span>'
+        + '<span class="p">' + formatoNumero.format(d.preco) + '</span>';
+      b.setAttribute('aria-label', dataCurta(d.data) + ', ' + reais(d.preco) + (ehMelhor ? ', mais barato do mês' : ''));
+      b.addEventListener('click', () => escolherDia(d, b));
     }
-    const ehMelhor = d.data === melhor.data;
-    if (tresMelhores.has(d.data)) b.classList.add('barato');
-    if (ehMelhor) b.classList.add('campeao');
-    if (!tresMelhores.has(d.data) && d.preco >= limiteCaro) b.classList.add('caro');
-    b.innerHTML = (ehMelhor ? '<span class="estrela">★</span>' : '')
-      + '<span class="n">' + n + '</span>'
-      + '<span class="p">' + formatoNumero.format(d.preco) + '</span>';
-    b.setAttribute('aria-label', dataCurta(d.data) + ', ' + reais(d.preco) + (ehMelhor ? ', mais barato do mês' : ''));
-    b.addEventListener('click', () => escolherDia(d, b));
     cal.appendChild(b);
   }
   $('escolha').hidden = true;
-
-  atualizarPost();
 }
 
+// Mostra o cartão do dia escolhido. Sem preço guardado = preço ao vivo na Aviasales.
 function escolherDia(d, botao) {
   document.querySelectorAll('.dia.escolhido').forEach((x) => x.classList.remove('escolhido'));
   botao.classList.add('escolhido');
-  $('escolha-texto').textContent = dataCurta(d.data) + ' — ' + reais(d.preco);
-  $('escolha-link').href = d.link;
-  $('escolha').hidden = false;
-}
-
-/* ---------- Gerador de post ---------- */
-function montarTextoPost(dados) {
-  const dois = [...dados.dias].sort((a, b) => a.preco - b.preco).slice(0, 2)
-    .sort((a, b) => a.data.localeCompare(b.data));
-  const indoParaBrasil = CIDADES[dados.destino].regiao === 'Brasil';
-  const chamada = indoParaBrasil ? 'viagem para o Brasil!' : 'viagem para ' + CIDADES[dados.destino].nome + '!';
-  return '✈️ Olha, pessoal, aproveita essa promoção: ' + chamada + '\n'
-    + nomeRota(dados.origem, dados.destino) + '\n'
-    + dois.map((d) => '📅 ' + dataCurta(d.data) + ' — ' + reais(d.preco)).join('\n') + '\n'
-    + 'Compra agora, porque vai aumentar. Entra no site: ' + CONFIG.SITE_URL;
-}
-function atualizarPost() {
-  if (!resultadoAtual) return;
-  $('texto-post').value = montarTextoPost(resultadoAtual);
-  atualizarLinkWhats();
-  $('feedback').textContent = '';
-}
-function atualizarLinkWhats() {
-  $('btn-whats').href = 'https://wa.me/?text=' + encodeURIComponent($('texto-post').value);
-}
-$('texto-post').addEventListener('input', atualizarLinkWhats);
-
-$('btn-copiar').addEventListener('click', async () => {
-  const caixa = $('texto-post');
-  const texto = caixa.value;
-  let deu = false;
-  try {
-    if (navigator.clipboard && navigator.clipboard.writeText) { await navigator.clipboard.writeText(texto); deu = true; }
-  } catch (e) { deu = false; }
-  if (!deu) {                      // plano B: seleciona o texto e usa o copiar antigo
-    caixa.focus(); caixa.select();
-    try { deu = document.execCommand('copy'); } catch (e) { deu = false; }
+  const link = d.link || montarLink(selOrigem.value, selDestino.value, d.data);
+  if (d.preco == null) {
+    $('escolha-texto').textContent = dataCurta(d.data) + ' — Preço ao vivo na Aviasales';
+    $('escolha-link').textContent = 'Ver voos deste dia';
+  } else {
+    $('escolha-texto').textContent = dataCurta(d.data) + ' — ' + reais(d.preco);
+    $('escolha-link').textContent = 'Comprar este dia';
   }
-  $('feedback').textContent = deu ? 'Copiado! Agora é só colar no grupo.' : 'O texto ficou selecionado. Segure em cima dele e toque em Copiar.';
-  setTimeout(() => { $('feedback').textContent = ''; }, 4000);
-});
+  $('escolha-link').href = link;
+  $('escolha').hidden = false;
+  if ($('escolha').scrollIntoView) $('escolha').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 
 /* ---------- Promoções de hoje (vêm prontas do precos.json) ---------- */
 async function montarPromocoes() {
@@ -899,7 +857,8 @@ async function montarPromocoes() {
   for (const p of lista) {
     const o = p.origem || p.rota.split('-')[0], d = p.destino || p.rota.split('-')[1];
     if (!CIDADES[o] || !CIDADES[d]) continue;
-    const dia = { data: p.data, preco: p.preco, link: p.link || montarLink(o, d, p.data),
+    if (!p.data || p.data < hojeISO()) continue;   // promoção de dia que já passou
+    const dia = { data: p.data, preco: p.preco, link: (p.link && p.link.indexOf('https://') === 0) ? p.link : montarLink(o, d, p.data),
       voo: { cia: p.cia, escalas: p.escalas, saida: p.saida, duracaoMin: p.duracao_min } };
     const card = document.createElement('details');
     card.className = 'promo';
@@ -913,6 +872,7 @@ async function montarPromocoes() {
       + '<div class="promo-mais">'
       + '<dl class="ficha">' + fichaDoVoo(o, d, dia) + '</dl>'
       + '<div class="promo-botoes">'
+      + '<p class="aviso-parceiro">Você vai para a Aviasales, nossa parceira. Lá o site é em inglês e o preço aparece em dólar (US$).</p>'
       + '<a class="btn btn-verde" href="' + dia.link + '" target="_blank" rel="noopener sponsored">Comprar pelo link</a>'
       + '<button type="button" class="btn btn-contorno">Ver calendário</button></div>'
       + '</div>';
@@ -923,7 +883,6 @@ async function montarPromocoes() {
 
 /* ---------- Início ---------- */
 async function iniciar() {
-  $('btn-canal').href = CONFIG.WHATSAPP_CHANNEL_URL;
   const json = await carregarPrecos();
   montarMeses(json.meses);
   if (json.atualizado_em) {
