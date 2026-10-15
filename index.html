@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!-- Travelpayouts Drive: código de afiliado instalado em 15/10/2026 (conta do Darny). Não remover. -->
+<script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
+(function () {
+var script = document.createElement("script");
+script.async = 1;
+script.setAttribute("data-cmp-ab","2");
+script.src = 'https://emrldco.com/NTg2MDg1.js?t=586085';
+document.head.appendChild(script);
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baianinho das Passagens</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Voa, meu rei! O Baianinho mostra a rota e o dia mais barato para voar entre o Brasil, os EUA e a Europa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+<style>
+/* Layout: faixa azul-mar no topo com a busca, fita do Bonfim como divisória,
+   depois um "cartão de embarque" com a rota e o calendário; seções em coluna única, largura máx. 1080px. */
+:root {
+  /* Cores — Bahia: sol, mar e um toque de laranja */
+  --sol: #F6B700;
+  --sol-suave: #FFF1C2;
+  --mar: #0A4D86;
+  --mar-fundo: #083E6C;
+  --laranja: #E4610F;
+  --verde: #12804A;
+  --verde-forte: #0B6B3C;
+  --verde-suave: #DDF3E6;
+  --fundo: #F8FAFC;
+  --superficie: #FFFFFF;
+  --superficie-2: #EEF3F8;
+  --tinta: #0E2A47;
+  --tinta-2: #4A607A;
+  --linha: #D6E0EA;
+  --sobre-mar: #FFFFFF;
+  --sobre-mar-2: #CFE2F3;
+  --sobre-sol: #2A1E00;
+  --sombra: rgba(10, 45, 80, .12);
+  /* Fita do Bonfim */
+  --fita-1: #12804A; --fita-2: #F6B700; --fita-3: #1E6FD9; --fita-4: #D7263D; --fita-5: #FFFFFF; --fita-6: #E4610F;
+  /* Tipografia */
+  --fonte: "Bricolage Grotesque", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --t-xs: .78rem; --t-s: .9rem; --t-m: 1rem; --t-l: 1.25rem; --t-xl: 1.6rem; --t-2xl: clamp(2.1rem, 7vw, 3.6rem);
+  --raio: 18px; --raio-p: 10px;
+  color-scheme: light;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sol: #FFC629; --sol-suave: #3A3110; --mar: #0D3A63; --mar-fundo: #082A4A; --laranja: #FF8A3D;
+    --verde: #2FBF71; --verde-forte: #49D98A; --verde-suave: #123826;
+    --fundo: #071A2C; --superficie: #0F2740; --superficie-2: #15324F; --tinta: #EEF4FA; --tinta-2: #A5B8CC;
+    --linha: #24425F; --sobre-mar: #FFFFFF; --sobre-mar-2: #B7CFE6; --sobre-sol: #2A1E00; --sombra: rgba(0,0,0,.35);
+    --fita-5: #EEF4FA;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --sol: #FFC629; --sol-suave: #3A3110; --mar: #0D3A63; --mar-fundo: #082A4A; --laranja: #FF8A3D;
+  --verde: #2FBF71; --verde-forte: #49D98A; --verde-suave: #123826;
+  --fundo: #071A2C; --superficie: #0F2740; --superficie-2: #15324F; --tinta: #EEF4FA; --tinta-2: #A5B8CC;
+  --linha: #24425F; --sobre-mar: #FFFFFF; --sobre-mar-2: #B7CFE6; --sobre-sol: #2A1E00; --sombra: rgba(0,0,0,.35);
+  --fita-5: #EEF4FA;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fundo); color: var(--tinta);
+  font-family: var(--fonte); font-size: var(--t-m); line-height: 1.5;
+  overflow-x: hidden;
+}
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.12; margin: 0; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--sol); outline-offset: 2px; }
+
+/* Faixa com gutter lateral (cada faixa tem o seu wrapper interno) */
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* ---------- Topo / hero ---------- */
+.hero { background: var(--mar-fundo); color: var(--sobre-mar); }
+.hero .wrap { padding-block: 10px 18px; display: grid; gap: 12px; }
+/* Cabeçalho de uma linha: marca à esquerda, slogan à direita */
+.marca { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 40px; }
+.logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: var(--t-m); letter-spacing: -.01em; text-decoration: none; white-space: nowrap; min-width: 0; }
+.logo-sol { width: 28px; height: 28px; border-radius: 50%; background: var(--sol); display: grid; place-items: center; color: var(--sobre-sol); flex: none; }
+.slogan { color: var(--sol); font-weight: 800; font-size: var(--t-s); white-space: nowrap; }
+.busca h1 { font-size: var(--t-l); font-weight: 800; letter-spacing: -.01em; }
+.valor-frase { font-size: var(--t-s); color: var(--sobre-mar-2); }
+
+/* Busca */
+.busca {
+  background: var(--superficie); color: var(--tinta);
+  border-radius: var(--raio); padding: 18px; display: grid; gap: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+}
+.busca-linha { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 10px; align-items: end; }
+.campo { display: grid; gap: 6px; min-width: 0; }
+.campo label { font-size: var(--t-s); font-weight: 600; color: var(--tinta-2); }
+select {
+  font: inherit; font-size: var(--t-m); color: var(--tinta); background: var(--superficie-2);
+  border: 2px solid var(--linha); border-radius: var(--raio-p); padding: 12px 36px 12px 12px; min-height: 52px; width: 100%;
+  appearance: none; -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--tinta-2) 50%), linear-gradient(135deg, var(--tinta-2) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size: 6px 6px; background-repeat: no-repeat;
+  text-overflow: ellipsis;
+}
+select:focus-visible { border-color: var(--mar); outline-offset: 0; }
+.inverter {
+  width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--linha); background: var(--superficie);
+  color: var(--tinta); cursor: pointer; display: grid; place-items: center; font-size: 1.3rem;
+}
+.inverter:hover { border-color: var(--sol); }
+.busca-rodape { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: end; }
+.queridinhos { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: var(--t-s); color: var(--tinta-2); }
+.chip {
+  font: inherit; font-size: var(--t-s); font-weight: 600; border: 2px solid var(--sol); background: var(--sol-suave);
+  color: var(--tinta); border-radius: 999px; padding: 8px 14px; cursor: pointer; min-height: 40px;
+}
+.chip:hover { background: var(--sol); color: var(--sobre-sol); }
+
+.btn {
+  font: inherit; font-weight: 700; font-size: var(--t-m); border: 0; border-radius: 999px; cursor: pointer;
+  padding: 14px 22px; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  text-decoration: none; text-align: center;
+}
+.btn-sol { background: var(--sol); color: var(--sobre-sol); }
+.btn-sol:hover { filter: brightness(1.05); }
+.btn-verde { background: var(--verde); color: #fff; }
+.btn-contorno { background: transparent; color: var(--tinta); border: 2px solid var(--linha); }
+.btn-contorno:hover { border-color: var(--tinta-2); }
+.btn-grande { width: 100%; font-size: var(--t-l); }
+
+/* Fita do Bonfim */
+.fita {
+  height: 4px;
+  background: repeating-linear-gradient(90deg,
+    var(--fita-1) 0 40px, var(--fita-2) 40px 80px, var(--fita-3) 80px 120px,
+    var(--fita-4) 120px 160px, var(--fita-5) 160px 200px, var(--fita-6) 200px 240px);
+}
+
+/* ---------- Seções ---------- */
+main section .wrap { padding-block: 36px; }
+.secao-titulo { display: grid; gap: 6px; margin-bottom: 20px; }
+.secao-titulo h2 { font-size: var(--t-xl); font-weight: 800; letter-spacing: -.015em; }
+.secao-titulo p { color: var(--tinta-2); max-width: 40rem; }
+
+.aviso {
+  display: flex; gap: 10px; align-items: flex-start; background: var(--sol-suave); color: var(--tinta);
+  border-radius: var(--raio-p); padding: 10px 14px; font-size: var(--t-s); margin-bottom: 16px;
+}
+
+/* Cartão de embarque (rota + dia mais barato) */
+.embarque {
+  background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio);
+  box-shadow: 0 10px 30px var(--sombra); display: grid; grid-template-columns: minmax(0, 1fr) auto; overflow: hidden;
+}
+.embarque-info { padding: 20px; display: grid; gap: 10px; min-width: 0; }
+.rotulo { font-size: var(--t-xs); font-weight: 700; letter-spacing: .06em; color: var(--tinta-2); }
+.rota-grande { font-size: clamp(1.9rem, 7.5vw, 3rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.08; font-variation-settings: "opsz" 96; text-wrap: balance; }
+.seta { color: var(--laranja); }
+.selo { justify-self: start; background: var(--verde); color: #fff; font-weight: 700; font-size: var(--t-s); border-radius: 999px; padding: 4px 12px; }
+.rota-nomes { font-size: var(--t-l); font-weight: 600; }
+.embarque-dia { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; }
+.embarque-dia .valor { font-size: clamp(1.8rem, 7vw, 2.4rem); font-weight: 800; color: var(--verde-forte); font-variant-numeric: tabular-nums; }
+.embarque-dia .quando { font-size: var(--t-l); font-weight: 600; }
+/* Detalhes que abrem e fecham (aeroportos, horários, companhia) */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+.chevron { width: 28px; height: 28px; flex: none; border-radius: 50%; display: grid; place-items: center; color: var(--tinta-2); transition: transform .2s ease; }
+details[open] .chevron { transform: rotate(180deg); }
+.embarque-detalhes { grid-column: 1 / -1; border-top: 1px solid var(--linha); }
+.embarque-detalhes > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 20px; font-weight: 600; color: var(--tinta-2); min-height: 52px; }
+.embarque-detalhes > .ficha { padding: 0 20px 20px; }
+.ficha { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px 20px; margin: 0; }
+.ficha div { display: grid; gap: 2px; min-width: 0; }
+.ficha dt { font-size: var(--t-s); color: var(--tinta-2); }
+.ficha dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.ficha .obs { grid-column: 1 / -1; font-size: var(--t-s); color: var(--tinta-2); }
+.embarque-canhoto {
+  border-left: 2px dashed var(--linha); padding: 20px; display: grid; gap: 10px; align-content: center;
+  background: var(--superficie-2); min-width: 230px; position: relative;
+}
+.embarque-canhoto::before, .embarque-canhoto::after {
+  content: ""; position: absolute; left: -12px; width: 22px; height: 22px; border-radius: 50%; background: var(--fundo);
+}
+.embarque-canhoto::before { top: -11px; } .embarque-canhoto::after { bottom: -11px; }
+.dica { display: flex; gap: 10px; align-items: flex-start; margin-top: 14px; padding: 12px 14px; border-radius: var(--raio-p); background: var(--verde-suave); color: var(--tinta); }
+
+/* Calendário */
+.calendario-caixa { margin-top: 18px; background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio); padding: 16px; }
+.cal-topo { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.cal-topo h3 { font-size: var(--t-l); font-weight: 800; }
+.cal-topo span { font-size: var(--t-s); color: var(--tinta-2); }
+.cal { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.cal-dow { font-size: var(--t-xs); font-weight: 700; color: var(--tinta-2); text-align: center; padding-bottom: 4px; }
+.dia {
+  font: inherit; color: var(--tinta); background: var(--superficie-2); border: 2px solid transparent; border-radius: var(--raio-p);
+  min-height: 62px; padding: 6px 2px; display: grid; align-content: space-between; justify-items: center; gap: 2px;
+  cursor: pointer; min-width: 0; position: relative;
+}
+.dia:hover { border-color: var(--tinta-2); }
+.dia .n { font-size: var(--t-s); font-weight: 700; }
+.dia .p { font-size: .74rem; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--tinta-2); }
+.dia.caro .p { color: var(--laranja); }
+.dia.barato { background: var(--verde-suave); border-color: var(--verde); }
+.dia.barato .p { color: var(--verde-forte); font-weight: 800; }
+.dia.campeao { background: var(--verde); border-color: var(--verde); color: #fff; }
+.dia.campeao .p { color: #fff; }
+.dia.campeao .estrela { position: absolute; top: -9px; right: -5px; background: var(--sol); color: var(--sobre-sol); border-radius: 999px; font-size: .62rem; font-weight: 800; padding: 1px 5px; }
+.dia.escolhido { outline: 3px solid var(--sol); outline-offset: 1px; }
+.dia.vazio { visibility: hidden; }
+.legenda { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; font-size: var(--t-s); color: var(--tinta-2); }
+.legenda span { display: inline-flex; align-items: center; gap: 6px; }
+.bolinha { width: 14px; height: 14px; border-radius: 4px; display: inline-block; border: 2px solid transparent; }
+.bolinha.b1 { background: var(--verde); }
+.bolinha.b2 { background: var(--verde-suave); border-color: var(--verde); }
+.bolinha.b3 { background: var(--superficie-2); border-color: var(--laranja); }
+.escolha { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--linha); }
+.escolha strong { font-variant-numeric: tabular-nums; }
+
+/* Promoções */
+.promo-faixa { background: var(--superficie-2); }
+.promos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.promos { align-items: start; }
+.promo { background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio); }
+.promo[open] { border-color: var(--sol); box-shadow: 0 10px 26px var(--sombra); }
+.promo > summary { padding: 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 10px; align-items: start; border-radius: var(--raio); }
+.promo > summary:hover { background: var(--superficie-2); }
+.promo-rota { font-size: var(--t-xl); font-weight: 800; letter-spacing: -.015em; line-height: 1.15; grid-column: 1; }
+.promo .chevron { grid-column: 2; grid-row: 1; }
+.promo-valor { grid-column: 1 / -1; font-size: 2rem; font-weight: 800; color: var(--verde-forte); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.promo-dia { grid-column: 1 / -1; font-size: var(--t-l); font-weight: 600; }
+.promo-mais { padding: 0 18px 18px; display: grid; gap: 14px; border-top: 1px dashed var(--linha); padding-top: 14px; margin: 0 18px; padding-left: 0; padding-right: 0; }
+.promo-botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.promo-botoes .btn { padding: 12px 10px; font-size: var(--t-s); min-height: 48px; }
+
+/* Gerador de post */
+.gerador { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.balao {
+  background: var(--verde-suave); border-radius: var(--raio) var(--raio) var(--raio) 4px; padding: 16px; display: grid; gap: 10px;
+}
+.balao label { font-size: var(--t-s); font-weight: 600; color: var(--tinta-2); }
+textarea {
+  font: inherit; font-size: var(--t-m); color: var(--tinta); background: var(--superficie); border: 2px solid var(--linha);
+  border-radius: var(--raio-p); padding: 12px; width: 100%; min-height: 220px; resize: vertical; line-height: 1.5;
+}
+.gerador-acoes { display: grid; gap: 10px; }
+.feedback { min-height: 1.5em; font-weight: 700; color: var(--verde-forte); }
+.gerador-acoes p { color: var(--tinta-2); font-size: var(--t-s); }
+
+/* Como funciona / Por quê */
+.passos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 0; counter-reset: passo; }
+.passos li { counter-increment: passo; background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio); padding: 18px; display: grid; gap: 6px; align-content: start; }
+.passos li::before { content: counter(passo); width: 36px; height: 36px; border-radius: 50%; background: var(--sol); color: var(--sobre-sol); font-weight: 800; display: grid; place-items: center; }
+.passos h3 { font-size: var(--t-l); }
+.passos p { color: var(--tinta-2); }
+.porque { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.porque > p { font-size: var(--t-l); max-width: 34rem; }
+.porque ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.porque li { padding-left: 16px; border-left: 4px solid var(--sol); }
+.porque li strong { display: block; }
+.porque li span { color: var(--tinta-2); }
+
+/* Rodapé */
+footer { background: var(--mar-fundo); color: var(--sobre-mar-2); }
+footer .wrap { padding-block: 28px 110px; display: grid; gap: 10px; font-size: var(--t-s); }
+footer strong { color: var(--sobre-mar); }
+
+/* Botão flutuante do canal */
+.flutuante {
+  position: fixed; z-index: 20;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  background: var(--verde); color: #fff; border-radius: 999px; padding: 14px 20px; min-height: 52px;
+  font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.28); max-width: calc(100vw - 32px);
+}
+.flutuante svg { flex: none; }
+@media (max-width: 760px) {
+  /* No celular: só o ícone, para não cobrir a busca nem os botões */
+  .flutuante { padding: 0; width: 56px; height: 56px; justify-content: center; }
+  .flutuante-texto { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+/* Celular */
+@media (max-width: 760px) {
+  .busca-rodape { grid-template-columns: minmax(0, 1fr); }
+  .embarque { grid-template-columns: minmax(0, 1fr); }
+  .embarque-canhoto { border-left: 0; border-top: 2px dashed var(--linha); min-width: 0; }
+  .embarque-canhoto::before, .embarque-canhoto::after { top: -12px; bottom: auto; }
+  .embarque-canhoto::before { left: -11px; } .embarque-canhoto::after { left: auto; right: -11px; }
+  .gerador, .porque, .passos { grid-template-columns: minmax(0, 1fr); }
+  .busca-linha { grid-template-columns: minmax(0, 1fr); }
+  .inverter { justify-self: center; transform: rotate(90deg); width: 44px; height: 44px; }
+  .calendario-caixa { padding: 12px 10px; }
+  .cal { gap: 4px; }
+  .dia { min-height: 56px; }
+  .dia .p { font-size: .68rem; letter-spacing: -.02em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cal .dia { animation: entra .35s ease both; animation-delay: calc(var(--i, 0) * 12ms); }
+  @keyframes entra { from { transform: translateY(4px); opacity: .4; } to { transform: none; opacity: 1; } }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marca">
+      <a class="logo" href="#topo" id="topo">
+        <span class="logo-sol" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
+        </span>
+        <span>Baianinho das Passagens</span>
+      </a>
+      <span class="slogan">Voa, meu rei!</span>
+    </div>
+
+    <form class="busca" id="form-busca" aria-label="Buscar passagens">
+      <h1>De onde sai e para onde vai?</h1>
+      <div class="busca-linha">
+        <div class="campo">
+          <label for="origem">Saindo de</label>
+          <select id="origem" name="origem"></select>
+        </div>
+        <button type="button" class="inverter" id="btn-inverter" aria-label="Inverter origem e destino" title="Inverter origem e destino">⇄</button>
+        <div class="campo">
+          <label for="destino">Indo para</label>
+          <select id="destino" name="destino"></select>
+        </div>
+      </div>
+      <div class="busca-rodape">
+        <div class="campo">
+          <label for="mes">Mês da viagem</label>
+          <select id="mes" name="mes"></select>
+        </div>
+        <button type="submit" class="btn btn-sol" id="btn-buscar">Ver os dias mais baratos</button>
+      </div>
+      <div class="queridinhos" aria-label="Destinos mais procurados">
+        <span>Os queridinhos:</span>
+        <button type="button" class="chip" data-cidade="CNF">Belo Horizonte</button>
+        <button type="button" class="chip" data-cidade="GRU">São Paulo</button>
+        <button type="button" class="chip" data-cidade="GYN">Goiânia</button>
+      </div>
+    </form>
+    <p class="valor-frase">Mostramos o dia mais barato do mês para voar entre o Brasil, os EUA e a Europa.</p>
+  </div>
+</header>
+<div class="fita" aria-hidden="true"></div>
+
+<main>
+  <!-- RESULTADO -->
+  <section id="resultado" aria-live="polite">
+    <div class="wrap">
+      <div class="aviso" role="note"><span aria-hidden="true">ℹ️</span><span>Preços de exemplo — a conexão com a API de voos será feita na próxima etapa.</span></div>
+
+      <article class="embarque" aria-label="Rota e dia mais barato">
+        <div class="embarque-info">
+          <p class="rota-grande" id="rota-nomes">Miami → Belo Horizonte</p>
+          <div class="embarque-dia"><span class="valor" id="melhor-valor">—</span><span class="quando" id="melhor-quando">—</span></div>
+          <span class="selo">Dia mais barato do mês</span>
+        </div>
+        <div class="embarque-canhoto">
+          <a class="btn btn-verde btn-grande" id="melhor-link" href="#" target="_blank" rel="noopener sponsored">Comprar pelo link</a>
+          <a class="btn btn-contorno" href="#post">Fazer post para o grupo</a>
+        </div>
+        <details class="embarque-detalhes" id="melhor-detalhes-caixa">
+          <summary>Ver detalhes do voo <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <dl class="ficha" id="melhor-detalhes"></dl>
+        </details>
+      </article>
+
+      <p class="dica" id="dica"><span aria-hidden="true">💡</span><span id="dica-texto">Dica: calculando…</span></p>
+
+      <div class="calendario-caixa">
+        <div class="cal-topo">
+          <h3 id="cal-titulo">Calendário</h3>
+          <span>Preço em R$ em cada dia. Toque num dia para ver o link.</span>
+        </div>
+        <div class="cal" id="calendario" role="grid" aria-label="Preços por dia"></div>
+        <div class="legenda">
+          <span><i class="bolinha b1"></i> mais barato do mês</span>
+          <span><i class="bolinha b2"></i> 3 dias mais baratos</span>
+          <span><i class="bolinha b3"></i> dias mais caros</span>
+        </div>
+        <div class="escolha" id="escolha" hidden>
+          <span>Você escolheu <strong id="escolha-texto"></strong></span>
+          <a class="btn btn-sol" id="escolha-link" href="#" target="_blank" rel="noopener sponsored">Comprar este dia</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOÇÕES -->
+  <section class="promo-faixa" id="promocoes">
+    <div class="wrap">
+      <div class="secao-titulo">
+        <h2>Promoções de hoje</h2>
+        <p>As rotas que a nossa gente mais procura, com o dia mais barato do próximo mês.</p>
+      </div>
+      <div class="promos" id="promos"></div>
+    </div>
+  </section>
+
+  <!-- GERADOR DE POST -->
+  <section id="post">
+    <div class="wrap">
+      <div class="secao-titulo">
+        <h2>Post pronto para o WhatsApp</h2>
+        <p>O texto se monta sozinho com a rota que você está vendo. Copie e cole no grupo, ou mande direto pelo WhatsApp.</p>
+      </div>
+      <div class="gerador">
+        <div class="balao">
+          <label for="texto-post">Texto do post (pode editar)</label>
+          <textarea id="texto-post" spellcheck="false"></textarea>
+        </div>
+        <div class="gerador-acoes">
+          <button type="button" class="btn btn-sol btn-grande" id="btn-copiar">Copiar texto</button>
+          <a class="btn btn-verde btn-grande" id="btn-whats" href="#" target="_blank" rel="noopener">Compartilhar no WhatsApp</a>
+          <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+          <p>Quer outra rota? Mude a busca lá em cima ou toque em "Ver calendário" numa promoção. O texto acompanha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="promo-faixa" id="como-funciona">
+    <div class="wrap">
+      <div class="secao-titulo"><h2>Como funciona</h2></div>
+      <ol class="passos">
+        <li><h3>Escolha a rota</h3><p>De onde você sai e para onde vai. Pode ser para o Brasil ou do Brasil para fora.</p></li>
+        <li><h3>Veja o mês inteiro</h3><p>O calendário mostra o preço de cada dia. Os dias verdes são os mais baratos.</p></li>
+        <li><h3>Compre ou compartilhe</h3><p>Toque em comprar pelo link, ou copie o post e mande para a família e os grupos.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="porque">
+    <div class="wrap">
+      <div class="secao-titulo"><h2>Por que o Baianinho?</h2></div>
+      <div class="porque">
+        <p>Feito por brasileiro que mora fora, para brasileiro que mora fora. A gente sabe a saudade que dá e o susto que é o preço da passagem em dezembro.</p>
+        <ul>
+          <li><strong>As rotas da nossa gente</strong><span>Miami, Boston e Nova York para BH, Goiânia e São Paulo. Lisboa e Londres para o Rio e São Paulo.</span></li>
+          <li><strong>Sem complicação</strong><span>Uma tela só: rota, dia mais barato e o botão de comprar.</span></li>
+          <li><strong>Feito para o grupo</strong><span>Post pronto para o WhatsApp e o Facebook, em um toque.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Baianinho das Passagens · VoaMeuRei.com</strong>
+    <p>Preços de exemplo — a conexão com a API de voos será feita na próxima etapa. Quando estiver ligada, os preços virão das companhias e podem mudar a qualquer momento até a compra.</p>
+    <p>Alguns links podem ser de parceiros. Você paga o mesmo e ajuda o Baianinho a continuar de graça.</p>
+  </div>
+</footer>
+
+<a class="flutuante" id="btn-canal" aria-label="Entrar no canal do WhatsApp" href="#" target="_blank" rel="noopener">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+  <span class="flutuante-texto">Entrar no canal do WhatsApp</span>
+</a>
+
+<script>
+/* =====================================================================
+   CONFIG — mexa só aqui para trocar links e, depois, ligar a API.
+   ===================================================================== */
+const CONFIG = {
+  // Link de afiliado. As palavras entre chaves são trocadas sozinhas:
+  // {ORIGEM} e {DESTINO} = código do aeroporto (ex.: MIA, CNF)
+  // {DATA} = dia do voo no formato AAAA-MM-DD
+  // TROQUE pelo link que o programa de afiliados te der.
+  AFFILIATE_LINK_TEMPLATE: 'https://www.exemplo-parceiro.com/voos?de={ORIGEM}&para={DESTINO}&data={DATA}&afiliado=SEU_CODIGO',
+
+  // Link do canal do WhatsApp do Baianinho (TROQUE quando o canal existir).
+  WHATSAPP_CHANNEL_URL: 'https://whatsapp.com/channel/SEU_CANAL_AQUI',
+
+  // Endereço do site (usado se quiser divulgar o próprio site no post).
+  SITE_URL: 'https://voameurei.com'
+};
+
+/* Cidades: código do aeroporto, nome, região e um "fator" de preço
+   (só usado pelos preços de exemplo; a API real não precisa dele). */
+const CIDADES = {
+  // EUA
+  MIA: { nome: 'Miami', aeroporto: 'Miami Internacional', regiao: 'EUA', fator: 0.92 },
+  MCO: { nome: 'Orlando', aeroporto: 'Orlando Internacional', regiao: 'EUA', fator: 0.95 },
+  JFK: { nome: 'Nova York', aeroporto: 'JFK, Nova York', regiao: 'EUA', fator: 1.00 },
+  BOS: { nome: 'Boston', aeroporto: 'Logan, Boston', regiao: 'EUA', fator: 1.03 },
+  ATL: { nome: 'Atlanta', aeroporto: 'Hartsfield-Jackson, Atlanta', regiao: 'EUA', fator: 1.00 },
+  // Europa
+  LIS: { nome: 'Lisboa', aeroporto: 'Humberto Delgado, Lisboa', regiao: 'Europa', fator: 0.90 },
+  OPO: { nome: 'Porto', aeroporto: 'Francisco Sá Carneiro, Porto', regiao: 'Europa', fator: 0.95 },
+  LHR: { nome: 'Londres', aeroporto: 'Heathrow, Londres', regiao: 'Europa', fator: 1.05 },
+  MAD: { nome: 'Madri', aeroporto: 'Barajas, Madri', regiao: 'Europa', fator: 0.98 },
+  BCN: { nome: 'Barcelona', aeroporto: 'El Prat, Barcelona', regiao: 'Europa', fator: 1.02 },
+  FCO: { nome: 'Roma', aeroporto: 'Fiumicino, Roma', regiao: 'Europa', fator: 1.06 },
+  MXP: { nome: 'Milão', aeroporto: 'Malpensa, Milão', regiao: 'Europa', fator: 1.05 },
+  CDG: { nome: 'Paris', aeroporto: 'Charles de Gaulle, Paris', regiao: 'Europa', fator: 1.04 },
+  // Brasil (destaque = aparece com estrela na lista)
+  CNF: { nome: 'Belo Horizonte', aeroporto: 'Confins', regiao: 'Brasil', fator: 1.03, destaque: true },
+  GRU: { nome: 'São Paulo', aeroporto: 'Guarulhos', regiao: 'Brasil', fator: 0.94, destaque: true },
+  GYN: { nome: 'Goiânia', aeroporto: 'Santa Genoveva, Goiânia', regiao: 'Brasil', fator: 1.10, destaque: true },
+  GIG: { nome: 'Rio de Janeiro', aeroporto: 'Galeão, Rio', regiao: 'Brasil', fator: 0.98 },
+  SSA: { nome: 'Salvador', aeroporto: 'Salvador Internacional', regiao: 'Brasil', fator: 1.04 },
+  REC: { nome: 'Recife', aeroporto: 'Guararapes, Recife', regiao: 'Brasil', fator: 1.00 },
+  FOR: { nome: 'Fortaleza', aeroporto: 'Pinto Martins, Fortaleza', regiao: 'Brasil', fator: 0.98 },
+  BSB: { nome: 'Brasília', aeroporto: 'Brasília Internacional', regiao: 'Brasil', fator: 1.04 }
+};
+
+// Rotas que aparecem em "Promoções de hoje"
+const ROTAS_PROMO = [['MIA','CNF'], ['MCO','GRU'], ['BOS','CNF'], ['LIS','GRU'], ['LHR','GIG'], ['JFK','GYN']];
+
+/* =====================================================================
+   buscarPrecos — o ÚNICO lugar de onde o site tira preços.
+   Recebe: origem e destino (códigos, ex. 'MIA', 'CNF') e mes ('AAAA-MM').
+   Devolve: { origem, destino, mes, moeda, dias: [{ data:'AAAA-MM-DD', preco, link }] }
+   ===================================================================== */
+async function buscarPrecos(origem, destino, mes) {
+  // AQUI entra a chamada à API (Kiwi/Tequila, Amadeus ou Skyscanner).
+  // Exemplo do que será feito na próxima etapa:
+  //   const resposta = await fetch('https://SUA-API/precos?de=' + origem + '&para=' + destino + '&mes=' + mes);
+  //   const json = await resposta.json();
+  //   return converterParaNossoFormato(json);
+  // Por enquanto, devolvemos preços de EXEMPLO (sempre iguais para a mesma rota e mês).
+  return gerarPrecosDeExemplo(origem, destino, mes);
+}
+
+/* ---------- Preços de exemplo (apagar quando a API estiver ligada) ---------- */
+
+// Transforma um texto num número fixo (mesma rota + mês = mesmos preços)
+function numeroDoTexto(texto) {
+  let h = 2166136261;
+  for (let i = 0; i < texto.length; i++) { h ^= texto.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+// Sorteio "de mentirinha" que sempre repete a mesma sequência para a mesma semente
+function sorteador(semente) {
+  let a = semente;
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function gerarPrecosDeExemplo(origem, destino, mes) {
+  const [ano, m] = mes.split('-').map(Number);
+  const sorte = sorteador(numeroDoTexto(origem + '-' + destino + '-' + mes));
+  const cidadeFora = CIDADES[origem].regiao === 'Brasil' ? CIDADES[destino] : CIDADES[origem];
+  const cidadeBrasil = CIDADES[origem].regiao === 'Brasil' ? CIDADES[origem] : CIDADES[destino];
+  const ehEUA = cidadeFora.regiao === 'EUA';
+  const faixa = ehEUA ? [2000, 5500] : [2500, 6000];       // menor e maior preço possível
+  const base = (ehEUA ? 2450 : 3000) * cidadeFora.fator * cidadeBrasil.fator * (0.95 + sorte() * 0.1);
+  // Época do ano: dezembro e janeiro mais caros
+  const epoca = { 1: 1.18, 2: 1.06, 3: 0.92, 4: 0.94, 5: 0.9, 6: 1.0, 7: 1.15, 8: 1.02, 9: 0.93, 10: 0.95, 11: 0.98, 12: 1.24 }[m];
+  // Dia da semana (domingo=0): terça e quarta mais baratas, sexta e domingo mais caras
+  const semana = [1.17, 1.02, 0.88, 0.86, 0.97, 1.2, 1.05];
+  const totalDias = new Date(ano, m, 0).getDate();
+  const dias = [];
+  for (let d = 1; d <= totalDias; d++) {
+    const diaSemana = new Date(ano, m - 1, d).getDay();
+    let festa = 1;
+    if (m === 12 && d >= 18) festa = 1.12;   // perto do Natal
+    if (m === 1 && d <= 6) festa = 1.08;     // volta do Ano Novo
+    const ruido = 0.93 + sorte() * 0.14;
+    let preco = base * epoca * semana[diaSemana] * festa * ruido;
+    // Perto do limite, o preço vai "freando" sem nunca passar (assim os preços não ficam todos iguais)
+    if (preco < faixa[0] + 300) preco = faixa[0] + 300 * Math.exp((preco - faixa[0] - 300) / 300);
+    if (preco > faixa[1] - 300) preco = faixa[1] - 300 * Math.exp((faixa[1] - 300 - preco) / 300);
+    preco = Math.round(preco / 10) * 10;
+    const data = ano + '-' + String(m).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+    dias.push({ data, preco, link: montarLink(origem, destino, data), voo: vooDeExemplo(origem, destino, data) });
+  }
+  return { origem, destino, mes, moeda: 'BRL', dias };
+}
+
+// Detalhes do voo de exemplo: companhia, horários, escalas e duração.
+// A API real devolve isso pronto; aqui é só para mostrar como vai ficar.
+const HORAS_BASE = { MIA: 8, MCO: 8.5, ATL: 9.5, JFK: 10, BOS: 10.5, LIS: 9.5, OPO: 9.5, MAD: 10.5, BCN: 11, LHR: 11.5, CDG: 11.5, FCO: 12, MXP: 11.5 };
+const AJUSTE_BRASIL = { GRU: 0, GIG: 0, CNF: 0.5, BSB: 0.3, GYN: 0.8, SSA: -1, REC: -1.5, FOR: -1.5 };
+const FUSO = { EUA: -5, Brasil: -3, LIS: 0, OPO: 0, LHR: 0 };     // horas em relação a Londres (inverno)
+const DIRETOS = ['MIA-GRU', 'MIA-GIG', 'MCO-GRU', 'JFK-GRU', 'ATL-GRU', 'LIS-GRU', 'LIS-GIG', 'LIS-CNF', 'LIS-SSA', 'LIS-REC', 'LIS-FOR', 'LIS-BSB', 'OPO-GRU', 'LHR-GRU', 'LHR-GIG', 'MAD-GRU', 'CDG-GRU', 'CDG-GIG', 'FCO-GRU', 'MXP-GRU', 'BCN-GRU'];
+const CIAS = { EUA: ['LATAM', 'American Airlines', 'Azul', 'GOL', 'Delta', 'Copa Airlines'], Europa: ['TAP', 'LATAM', 'British Airways', 'Iberia', 'Air France', 'ITA Airways', 'Azul'] };
+function fusoDe(cod) { const c = CIDADES[cod]; return FUSO[cod] ?? FUSO[c.regiao] ?? 1; }
+function vooDeExemplo(origem, destino, data) {
+  const sorte = sorteador(numeroDoTexto(origem + destino + data + 'voo'));
+  const fora = CIDADES[origem].regiao === 'Brasil' ? destino : origem;
+  const brasil = fora === origem ? destino : origem;
+  const direto = DIRETOS.includes(fora + '-' + brasil) && sorte() < 0.6;
+  const escalas = direto ? 0 : (sorte() < 0.8 ? 1 : 2);
+  const minutos = Math.round(((HORAS_BASE[fora] + AJUSTE_BRASIL[brasil]) + escalas * (2 + sorte() * 3)) * 60 / 5) * 5;
+  const saidaMin = [7 * 60 + 10, 10 * 60 + 45, 16 * 60 + 30, 19 * 60 + 55, 21 * 60 + 40, 23 * 60 + 15][Math.floor(sorte() * 6)];
+  const chegadaTotal = saidaMin + minutos + (fusoDe(destino) - fusoDe(origem)) * 60;
+  const lista = CIAS[CIDADES[fora].regiao];
+  return {
+    companhia: lista[Math.floor(sorte() * lista.length)],
+    saida: hora(saidaMin), chegada: hora(chegadaTotal), diasDepois: Math.floor(chegadaTotal / 1440),
+    escalas, duracao: Math.floor(minutos / 60) + 'h' + String(minutos % 60).padStart(2, '0')
+  };
+}
+function hora(min) { const m = ((min % 1440) + 1440) % 1440; return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+
+/* ---------- Ajudantes ---------- */
+function montarLink(origem, destino, data) {
+  return CONFIG.AFFILIATE_LINK_TEMPLATE
+    .replace('{ORIGEM}', encodeURIComponent(origem))
+    .replace('{DESTINO}', encodeURIComponent(destino))
+    .replace('{DATA}', encodeURIComponent(data));
+}
+const DIAS_CURTOS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
+const DIAS_PLURAL = ['os domingos', 'as segundas', 'as terças', 'as quartas', 'as quintas', 'as sextas', 'os sábados'];
+const MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+const formatoNumero = new Intl.NumberFormat('pt-BR');
+
+function paraData(texto) { const [a, m, d] = texto.split('-').map(Number); return new Date(a, m - 1, d); }
+function dataCurta(texto) {            // "qua, 10/12"
+  const dt = paraData(texto);
+  return DIAS_CURTOS[dt.getDay()] + ', ' + String(dt.getDate()).padStart(2, '0') + '/' + String(dt.getMonth() + 1).padStart(2, '0');
+}
+function dataLonga(texto) {           // "qua, 4 de dezembro"
+  const dt = paraData(texto);
+  return DIAS_CURTOS[dt.getDay()] + ', ' + dt.getDate() + ' de ' + MESES[dt.getMonth()];
+}
+// Lista de detalhes (aparece só quando a pessoa abre o cartão)
+function fichaDoVoo(o, d, dia) {
+  const v = dia.voo;
+  const escalas = v.escalas === 0 ? 'Voo direto' : (v.escalas === 1 ? '1 escala' : v.escalas + ' escalas');
+  return '<div><dt>Aeroportos</dt><dd>' + CIDADES[o].aeroporto + ' (' + o + ') → ' + CIDADES[d].aeroporto + ' (' + d + ')</dd></div>'
+    + '<div><dt>Saída e chegada</dt><dd>' + v.saida + ' → ' + v.chegada + (v.diasDepois > 0 ? ' (+' + v.diasDepois + ' dia)' : '') + '</dd></div>'
+    + '<div><dt>Companhia</dt><dd>' + v.companhia + ' (exemplo)</dd></div>'
+    + '<div><dt>Escalas e duração</dt><dd>' + escalas + ', ' + v.duracao + ' de viagem</dd></div>'
+    + '<p class="obs">Só ida, por pessoa. Horário local de cada cidade.</p>';
+}
+function reais(valor) { return 'R$ ' + formatoNumero.format(valor); }
+function nomeRota(o, d) { return CIDADES[o].nome + ' → ' + CIDADES[d].nome; }
+const $ = (id) => document.getElementById(id);
+
+/* ---------- Formulário de busca ---------- */
+const selOrigem = $('origem'), selDestino = $('destino'), selMes = $('mes');
+
+// Monta as opções de um select. lado = 'fora' (EUA+Europa) ou 'brasil'
+function preencherCidades(select, lado, valorQuerido) {
+  const grupos = lado === 'brasil' ? ['Brasil'] : ['EUA', 'Europa'];
+  select.innerHTML = '';
+  grupos.forEach((g) => {
+    const og = document.createElement('optgroup');
+    og.label = g === 'Brasil' ? 'Brasil' : (g === 'EUA' ? 'Estados Unidos' : 'Europa');
+    Object.entries(CIDADES)
+      .filter(([, c]) => c.regiao === g)
+      .forEach(([cod, c]) => {
+        const op = document.createElement('option');
+        op.value = cod;
+        op.textContent = (c.destaque ? '★ ' : '') + c.nome;
+        og.appendChild(op);
+      });
+    select.appendChild(og);
+  });
+  if (valorQuerido && select.querySelector('option[value="' + valorQuerido + '"]')) select.value = valorQuerido;
+}
+function ladoDe(cod) { return CIDADES[cod].regiao === 'Brasil' ? 'brasil' : 'fora'; }
+function ladoOposto(cod) { return ladoDe(cod) === 'brasil' ? 'fora' : 'brasil'; }
+
+// Origem: todas as cidades. Destino: só o "outro lado" do oceano.
+function montarOrigem(valor) {
+  selOrigem.innerHTML = '';
+  ['EUA', 'Europa', 'Brasil'].forEach((g) => {
+    const og = document.createElement('optgroup');
+    og.label = g === 'EUA' ? 'Estados Unidos' : g;
+    Object.entries(CIDADES).filter(([, c]) => c.regiao === g).forEach(([cod, c]) => {
+      const op = document.createElement('option');
+      op.value = cod; op.textContent = (c.destaque ? '★ ' : '') + c.nome;
+      og.appendChild(op);
+    });
+    selOrigem.appendChild(og);
+  });
+  selOrigem.value = valor;
+}
+
+// Próximos 6 meses (a partir do mês que vem)
+function montarMeses() {
+  const hoje = new Date();
+  for (let i = 1; i <= 6; i++) {
+    const dt = new Date(hoje.getFullYear(), hoje.getMonth() + i, 1);
+    const op = document.createElement('option');
+    op.value = dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0');
+    const nome = MESES[dt.getMonth()];
+    op.textContent = nome.charAt(0).toUpperCase() + nome.slice(1) + ' de ' + dt.getFullYear();
+    selMes.appendChild(op);
+  }
+}
+
+selOrigem.addEventListener('change', () => {
+  const destinoAtual = selDestino.value;
+  preencherCidades(selDestino, ladoOposto(selOrigem.value), destinoAtual);
+});
+$('btn-inverter').addEventListener('click', () => {
+  const o = selOrigem.value, d = selDestino.value;
+  selOrigem.value = d;
+  preencherCidades(selDestino, ladoOposto(d), o);
+  pesquisar();
+});
+document.querySelectorAll('.chip').forEach((chip) => {
+  chip.addEventListener('click', () => {
+    const cod = chip.dataset.cidade;
+    // Coloca a cidade brasileira no lado do Brasil, seja origem ou destino
+    if (ladoDe(selOrigem.value) === 'brasil') selOrigem.value = cod; else selDestino.value = cod;
+    pesquisar();
+  });
+});
+$('form-busca').addEventListener('submit', (e) => { e.preventDefault(); pesquisar(true); });
+
+/* ---------- Resultado ---------- */
+let resultadoAtual = null;
+
+async function pesquisar(rolar) {
+  const dados = await buscarPrecos(selOrigem.value, selDestino.value, selMes.value);
+  mostrarResultado(dados);
+  if (rolar) $('resultado').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function mostrarResultado(dados) {
+  resultadoAtual = dados;
+  const porPreco = [...dados.dias].sort((a, b) => a.preco - b.preco);
+  const melhor = porPreco[0];
+  const tresMelhores = new Set(porPreco.slice(0, 3).map((d) => d.data));
+  const limiteCaro = porPreco[Math.floor(porPreco.length * 0.8)].preco;
+
+  // Cartão da rota
+  $('rota-nomes').innerHTML = CIDADES[dados.origem].nome + ' <span class="seta">→</span> ' + CIDADES[dados.destino].nome;
+  $('melhor-quando').textContent = dataLonga(melhor.data);
+  $('melhor-detalhes').innerHTML = fichaDoVoo(dados.origem, dados.destino, melhor);
+  $('melhor-valor').textContent = reais(melhor.preco);
+  $('melhor-link').href = melhor.link;
+
+  // Dica: dia da semana com a menor média
+  const soma = Array(7).fill(0), qtd = Array(7).fill(0);
+  dados.dias.forEach((d) => { const s = paraData(d.data).getDay(); soma[s] += d.preco; qtd[s]++; });
+  let melhorSemana = 0;
+  for (let s = 1; s < 7; s++) if (soma[s] / qtd[s] < soma[melhorSemana] / qtd[melhorSemana]) melhorSemana = s;
+  const media = Math.round(soma[melhorSemana] / qtd[melhorSemana] / 10) * 10;
+  $('dica-texto').textContent = 'Dica: nesta rota, ' + DIAS_PLURAL[melhorSemana] + ' costumam ser mais baratas'
+    .replace('mais baratas', (melhorSemana === 0 || melhorSemana === 6) ? 'mais baratos' : 'mais baratas')
+    + ' (média de ' + reais(media) + ').';
+
+  // Calendário
+  const [ano, m] = dados.mes.split('-').map(Number);
+  $('cal-titulo').textContent = MESES[m - 1].charAt(0).toUpperCase() + MESES[m - 1].slice(1) + ' de ' + ano;
+  const cal = $('calendario');
+  cal.innerHTML = '';
+  DIAS_CURTOS.forEach((n) => { const c = document.createElement('div'); c.className = 'cal-dow'; c.textContent = n; cal.appendChild(c); });
+  const primeiroDia = paraData(dados.dias[0].data).getDay();
+  for (let i = 0; i < primeiroDia; i++) { const v = document.createElement('div'); v.className = 'dia vazio'; cal.appendChild(v); }
+  dados.dias.forEach((d, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'dia';
+    b.style.setProperty('--i', i);
+    const ehMelhor = d.data === melhor.data;
+    if (tresMelhores.has(d.data)) b.classList.add('barato');
+    if (ehMelhor) b.classList.add('campeao');
+    if (!tresMelhores.has(d.data) && d.preco >= limiteCaro) b.classList.add('caro');
+    b.innerHTML = (ehMelhor ? '<span class="estrela">★</span>' : '')
+      + '<span class="n">' + paraData(d.data).getDate() + '</span>'
+      + '<span class="p">' + formatoNumero.format(d.preco) + '</span>';
+    b.setAttribute('aria-label', dataCurta(d.data) + ', ' + reais(d.preco) + (ehMelhor ? ', mais barato do mês' : ''));
+    b.addEventListener('click', () => escolherDia(d, b));
+    cal.appendChild(b);
+  });
+  $('escolha').hidden = true;
+
+  atualizarPost();
+}
+
+function escolherDia(d, botao) {
+  document.querySelectorAll('.dia.escolhido').forEach((x) => x.classList.remove('escolhido'));
+  botao.classList.add('escolhido');
+  $('escolha-texto').textContent = dataCurta(d.data) + ' — ' + reais(d.preco);
+  $('escolha-link').href = d.link;
+  $('escolha').hidden = false;
+}
+
+/* ---------- Gerador de post ---------- */
+function montarTextoPost(dados) {
+  const dois = [...dados.dias].sort((a, b) => a.preco - b.preco).slice(0, 2)
+    .sort((a, b) => a.data.localeCompare(b.data));
+  const indoParaBrasil = CIDADES[dados.destino].regiao === 'Brasil';
+  const chamada = indoParaBrasil ? 'viagem para o Brasil!' : 'viagem para ' + CIDADES[dados.destino].nome + '!';
+  const melhor = [...dados.dias].sort((a, b) => a.preco - b.preco)[0];
+  return '✈️ Olha, pessoal, aproveita essa promoção: ' + chamada + '\n'
+    + nomeRota(dados.origem, dados.destino) + '\n'
+    + dois.map((d) => '📅 ' + dataCurta(d.data) + ' — ' + reais(d.preco)).join('\n') + '\n'
+    + 'Compra agora, porque vai aumentar. Entra pelo link: ' + melhor.link;
+}
+function atualizarPost() {
+  if (!resultadoAtual) return;
+  $('texto-post').value = montarTextoPost(resultadoAtual);
+  atualizarLinkWhats();
+  $('feedback').textContent = '';
+}
+function atualizarLinkWhats() {
+  $('btn-whats').href = 'https://wa.me/?text=' + encodeURIComponent($('texto-post').value);
+}
+$('texto-post').addEventListener('input', atualizarLinkWhats);
+
+$('btn-copiar').addEventListener('click', async () => {
+  const caixa = $('texto-post');
+  const texto = caixa.value;
+  let deu = false;
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) { await navigator.clipboard.writeText(texto); deu = true; }
+  } catch (e) { deu = false; }
+  if (!deu) {                      // plano B: seleciona o texto e usa o copiar antigo
+    caixa.focus(); caixa.select();
+    try { deu = document.execCommand('copy'); } catch (e) { deu = false; }
+  }
+  $('feedback').textContent = deu ? 'Copiado! Agora é só colar no grupo.' : 'O texto ficou selecionado. Segure em cima dele e toque em Copiar.';
+  setTimeout(() => { $('feedback').textContent = ''; }, 4000);
+});
+
+/* ---------- Promoções de hoje ---------- */
+async function montarPromocoes() {
+  const mes = selMes.options[0].value;           // próximo mês
+  const caixa = $('promos');
+  caixa.innerHTML = '';
+  for (const [o, d] of ROTAS_PROMO) {
+    const dados = await buscarPrecos(o, d, mes);
+    const melhor = [...dados.dias].sort((a, b) => a.preco - b.preco)[0];
+    const card = document.createElement('details');
+    card.className = 'promo';
+    card.innerHTML =
+      '<summary>'
+      + '<span class="promo-rota">' + CIDADES[o].nome + ' <span class="seta">→</span> ' + CIDADES[d].nome + '</span>'
+      + '<span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>'
+      + '<span class="promo-valor">' + reais(melhor.preco) + '</span>'
+      + '<span class="promo-dia">' + dataLonga(melhor.data) + '</span>'
+      + '</summary>'
+      + '<div class="promo-mais">'
+      + '<dl class="ficha">' + fichaDoVoo(o, d, melhor) + '</dl>'
+      + '<div class="promo-botoes">'
+      + '<a class="btn btn-verde" href="' + melhor.link + '" target="_blank" rel="noopener sponsored">Comprar pelo link</a>'
+      + '<button type="button" class="btn btn-contorno">Ver calendário</button></div>'
+      + '</div>';
+    card.querySelector('button').addEventListener('click', () => {
+      selOrigem.value = o;
+      preencherCidades(selDestino, ladoOposto(o), d);
+      selMes.value = mes;
+      pesquisar(true);
+    });
+    caixa.appendChild(card);
+  }
+}
+
+/* ---------- Início ---------- */
+$('btn-canal').href = CONFIG.WHATSAPP_CHANNEL_URL;
+montarMeses();
+montarOrigem('MIA');
+preencherCidades(selDestino, 'brasil', 'CNF');
+pesquisar(false);
+montarPromocoes();
+</script>
+</body>
+</html>
