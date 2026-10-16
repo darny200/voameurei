@@ -33,14 +33,17 @@ jobs:
           TP_TOKEN: ${{ secrets.TP_TOKEN }}
         run: python scripts/atualizar_precos.py
 
-      - name: Salvar precos.json se mudou
+      - name: Gerar páginas de rota e sitemap (SEO)
+        run: python scripts/gerar_paginas.py
+
+      - name: Salvar preços, páginas e sitemap se mudaram
         run: |
-          if git diff --quiet -- precos.json; then
+          git add -A precos.json passagens sitemap.xml
+          if git diff --cached --quiet; then
             echo "Nada mudou."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add precos.json
-          git commit -m "Atualiza preços (automático)"
+          git commit -m "Atualiza preços e páginas de rota (automático)"
           git push origin HEAD:main

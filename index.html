@@ -4,10 +4,26 @@
 <meta charset="utf-8">
 <!-- 15/10/2026: os botões de compra agora vão para a Kiwi.com em português do Brasil (função linkCompra no fim da página). -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Baianinho das Passagens</title>
+<meta name="google-site-verification" content="VzCaHKdRFDAxf74clYELchxyOjPEsG1rvAhHsuzMCyM" />
+<title>Passagem barata para o Brasil | Baianinho das Passagens</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="icon" href="data:,">
-<meta name="description" content="Voa, meu rei! O Baianinho mostra a rota e o dia mais barato para voar entre o Brasil, os EUA e a Europa.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="description" content="Mora nos EUA ou na Europa? Ache passagem barata para o Brasil: veja o dia mais barato de Miami, Nova York, Lisboa ou Londres para BH, São Paulo e mais.">
+<link rel="canonical" href="https://voameurei.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Baianinho das Passagens">
+<meta property="og:title" content="Passagem barata para o Brasil | Baianinho das Passagens">
+<meta property="og:description" content="Mora nos EUA ou na Europa? Ache passagem barata para o Brasil: veja o dia mais barato de Miami, Nova York, Lisboa ou Londres para BH, São Paulo e mais.">
+<meta property="og:url" content="https://voameurei.com/">
+<meta property="og:image" content="https://voameurei.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Passagem barata para o Brasil | Baianinho das Passagens">
+<meta name="twitter:description" content="Mora nos EUA ou na Europa? Ache passagem barata para o Brasil: veja o dia mais barato de Miami, Nova York, Lisboa ou Londres para BH, São Paulo e mais.">
+<meta name="twitter:image" content="https://voameurei.com/og-image.png">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "name": "Baianinho das Passagens", "alternateName": "Voa Meu Rei", "url": "https://voameurei.com/", "inLanguage": "pt-BR"}, {"@context": "https://schema.org", "@type": "Organization", "name": "Baianinho das Passagens", "url": "https://voameurei.com/", "logo": "https://voameurei.com/favicon.svg"}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quando é mais barato voar para o Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "Fora das férias e das festas. Março a junho e agosto a novembro costumam ter as passagens mais baratas. Dezembro, janeiro e julho são os meses mais caros: para o Natal, compre com 2 a 3 meses de antecedência."}}, {"@type": "Question", "name": "Qual dia da semana a passagem é mais barata?", "acceptedAnswer": {"@type": "Answer", "text": "Em geral, terça, quarta e sábado saem mais em conta que sexta e domingo. Mas muda de rota para rota: o calendário do Baianinho mostra o preço de cada dia e a dica do dia da semana mais barato da sua rota."}}, {"@type": "Question", "name": "Em que moeda eu pago a passagem?", "acceptedAnswer": {"@type": "Answer", "text": "Na moeda de onde você mora: dólar para quem sai dos Estados Unidos, libra para quem sai de Londres e euro para quem sai do resto da Europa. Os preços do site já aparecem nessa moeda."}}, {"@type": "Question", "name": "Como eu compro a passagem?", "acceptedAnswer": {"@type": "Answer", "text": "Escolha a rota e o dia no calendário e toque em comprar. Você vai para a Kiwi.com, nossa parceira, com a rota e a data já preenchidas, e termina a compra lá, em português."}}, {"@type": "Question", "name": "É seguro comprar pelo Baianinho?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O Baianinho não pede seus dados nem o seu cartão: ele só mostra os preços. A compra é feita na Kiwi.com, uma das maiores agências de viagem on-line do mundo, em página segura (https)."}}, {"@type": "Question", "name": "De quais cidades tem passagem para o Brasil?", "acceptedAnswer": {"@type": "Answer", "text": "Dos Estados Unidos: Miami, Orlando, Nova York, Boston e Atlanta. Da Europa: Lisboa, Porto, Londres, Madri, Barcelona, Roma, Milão e Paris. Os destinos são Belo Horizonte, São Paulo, Goiânia, Rio de Janeiro, Salvador, Recife, Fortaleza e Brasília."}}]}]</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
@@ -92,7 +108,7 @@ a { color: inherit; }
 .logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: var(--t-m); letter-spacing: -.01em; text-decoration: none; white-space: nowrap; min-width: 0; }
 .logo-sol { width: 28px; height: 28px; border-radius: 50%; background: var(--sol); display: grid; place-items: center; color: var(--sobre-sol); flex: none; }
 .slogan { color: var(--sol); font-weight: 800; font-size: var(--t-s); white-space: nowrap; }
-.busca h1 { font-size: var(--t-l); font-weight: 800; letter-spacing: -.01em; }
+.busca-titulo { font-size: var(--t-l); font-weight: 800; letter-spacing: -.01em; }
 .valor-frase { font-size: var(--t-s); color: var(--sobre-mar-2); }
 
 /* Busca */
@@ -277,6 +293,18 @@ details[open] .chevron { transform: rotate(180deg); }
 .porque li strong { display: block; }
 .porque li span { color: var(--tinta-2); }
 
+/* Texto de SEO, rotas populares e perguntas frequentes */
+.seo-texto { display: grid; gap: 12px; max-width: 46rem; }
+.seo-texto h1 { font-size: var(--t-xl); font-weight: 800; letter-spacing: -.015em; }
+.seo-texto p { color: var(--tinta-2); }
+.rotas-links { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0 0; padding: 0; }
+.rotas-links a { display: inline-block; border: 2px solid var(--sol); background: var(--sol-suave); border-radius: 999px; padding: 8px 14px; font-weight: 600; font-size: var(--t-s); text-decoration: none; color: var(--tinta); }
+.rotas-links a:hover { background: var(--sol); color: var(--sobre-sol); }
+.faq { display: grid; gap: 10px; max-width: 46rem; }
+.faq details { background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio-p); }
+.faq summary { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 14px 16px; font-weight: 700; min-height: 52px; }
+.faq details p { padding: 0 16px 16px; color: var(--tinta-2); }
+
 /* Rodapé */
 footer { background: var(--mar-fundo); color: var(--sobre-mar-2); }
 footer .wrap { padding-block: 28px 40px; display: grid; gap: 10px; font-size: var(--t-s); }
@@ -320,7 +348,7 @@ footer strong { color: var(--sobre-mar); }
     </div>
 
     <form class="busca" id="form-busca" aria-label="Buscar passagens">
-      <h1>De onde sai e para onde vai?</h1>
+      <h2 class="busca-titulo">De onde sai e para onde vai?</h2>
       <div class="busca-linha">
         <div class="campo">
           <label for="origem">Saindo de</label>
@@ -430,6 +458,46 @@ footer strong { color: var(--sobre-mar); }
         <li><h3>Veja o mês inteiro</h3><p>O calendário mostra o preço de cada dia. Os dias verdes são os mais baratos.</p></li>
         <li><h3>Compre na parceira</h3><p>Toque em comprar: você vai para a Kiwi.com, nossa parceira, e termina a compra lá (site em português, preço em dólar, euro ou libra).</p></li>
       </ol>
+    </div>
+  </section>
+
+  <!-- TEXTO PARA O GOOGLE (SEO): fica abaixo da busca, o topo continua enxuto -->
+  <section id="sobre">
+    <div class="wrap">
+      <div class="seo-texto">
+        <h1>Passagem barata para o Brasil, para brasileiros no exterior</h1>
+        <p>Mora nos Estados Unidos ou na Europa e quer visitar a família? O Baianinho procura todo dia a passagem barata para o Brasil e mostra, num calendário, o dia mais em conta para voar. Tem passagem Miami São Paulo, passagem Estados Unidos Brasil saindo de Boston, Nova York, Orlando e Atlanta, passagem de Londres para o Brasil e passagem Lisboa São Paulo.</p>
+        <p>Muita gente da nossa comunidade é de Governador Valadares e de Minas Gerais: por isso a gente acompanha de perto o voo barato para Belo Horizonte, além de São Paulo, Goiânia, Rio, Salvador, Recife, Fortaleza e Brasília. Só ida, em dólar, euro ou libra.</p>
+      </div>
+      <ul class="rotas-links" aria-label="Rotas mais procuradas">
+          <li><a href="/passagens/miami-belo-horizonte/">Miami → Belo Horizonte</a></li>
+          <li><a href="/passagens/miami-sao-paulo/">Miami → São Paulo</a></li>
+          <li><a href="/passagens/boston-belo-horizonte/">Boston → Belo Horizonte</a></li>
+          <li><a href="/passagens/nova-york-belo-horizonte/">Nova York → Belo Horizonte</a></li>
+          <li><a href="/passagens/orlando-sao-paulo/">Orlando → São Paulo</a></li>
+          <li><a href="/passagens/atlanta-goiania/">Atlanta → Goiânia</a></li>
+          <li><a href="/passagens/lisboa-sao-paulo/">Lisboa → São Paulo</a></li>
+          <li><a href="/passagens/porto-belo-horizonte/">Porto → Belo Horizonte</a></li>
+          <li><a href="/passagens/londres-sao-paulo/">Londres → São Paulo</a></li>
+          <li><a href="/passagens/londres-rio-de-janeiro/">Londres → Rio de Janeiro</a></li>
+          <li><a href="/passagens/madri-sao-paulo/">Madri → São Paulo</a></li>
+          <li><a href="/passagens/paris-sao-paulo/">Paris → São Paulo</a></li>
+          <li><a href="/passagens/">Ver todas as rotas</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="promo-faixa" id="perguntas">
+    <div class="wrap">
+      <div class="secao-titulo"><h2>Perguntas frequentes</h2></div>
+      <div class="faq">
+        <details><summary>Quando é mais barato voar para o Brasil? <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>Fora das férias e das festas. Março a junho e agosto a novembro costumam ter as passagens mais baratas. Dezembro, janeiro e julho são os meses mais caros: para o Natal, compre com 2 a 3 meses de antecedência.</p></details>
+        <details><summary>Qual dia da semana a passagem é mais barata? <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>Em geral, terça, quarta e sábado saem mais em conta que sexta e domingo. Mas muda de rota para rota: o calendário do Baianinho mostra o preço de cada dia e a dica do dia da semana mais barato da sua rota.</p></details>
+        <details><summary>Em que moeda eu pago a passagem? <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>Na moeda de onde você mora: dólar para quem sai dos Estados Unidos, libra para quem sai de Londres e euro para quem sai do resto da Europa. Os preços do site já aparecem nessa moeda.</p></details>
+        <details><summary>Como eu compro a passagem? <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>Escolha a rota e o dia no calendário e toque em comprar. Você vai para a Kiwi.com, nossa parceira, com a rota e a data já preenchidas, e termina a compra lá, em português.</p></details>
+        <details><summary>É seguro comprar pelo Baianinho? <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>Sim. O Baianinho não pede seus dados nem o seu cartão: ele só mostra os preços. A compra é feita na Kiwi.com, uma das maiores agências de viagem on-line do mundo, em página segura (https).</p></details>
+        <details><summary>De quais cidades tem passagem para o Brasil? <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary><p>Dos Estados Unidos: Miami, Orlando, Nova York, Boston e Atlanta. Da Europa: Lisboa, Porto, Londres, Madri, Barcelona, Roma, Milão e Paris. Os destinos são Belo Horizonte, São Paulo, Goiânia, Rio de Janeiro, Salvador, Recife, Fortaleza e Brasília.</p></details>
+      </div>
     </div>
   </section>
 
@@ -928,7 +996,15 @@ async function iniciar() {
   }
   // Rota inicial: Miami → BH (ou a primeira das queridinhas que tiver preço), no mês com mais dias
   let inicio = ['MIA', 'BHZ'], mesInicio = selMes.options[0] ? selMes.options[0].value : '';
-  const candidatas = [['MIA', 'BHZ'], ['MIA', 'SAO'], ['MIA', 'GYN'], ['LIS', 'SAO'], ['LON', 'SAO']];
+  let candidatas = [['MIA', 'BHZ'], ['MIA', 'SAO'], ['MIA', 'GYN'], ['LIS', 'SAO'], ['LON', 'SAO']];
+  // Link vindo das páginas de rota: ?de=MIA&para=SAO (e &mes=AAAA-MM opcional) já abre a rota e o calendário
+  const qs = new URLSearchParams(location.search);
+  const de = (qs.get('de') || '').toUpperCase(), para = (qs.get('para') || '').toUpperCase(), mesQ = qs.get('mes') || '';
+  const veioDeLink = !!(CIDADES[de] && CIDADES[para] && ladoDe(de) !== ladoDe(para));
+  if (veioDeLink) {
+    candidatas = [[de, para]];
+    inicio = [de, para];
+  }
   achou: for (const [o, d] of candidatas) {
     let melhorQtd = 0;
     for (const op of selMes.options) {
@@ -937,11 +1013,13 @@ async function iniciar() {
     }
     if (melhorQtd) break achou;
   }
+  if (veioDeLink && [...selMes.options].some((op) => op.value === mesQ)) mesInicio = mesQ;
   montarOrigem(inicio[0]);
-  preencherCidades(selDestino, 'brasil', inicio[1]);
+  preencherCidades(selDestino, ladoOposto(inicio[0]), inicio[1]);
   selMes.value = mesInicio;
-  pesquisar(false);
+  await pesquisar(false);
   montarPromocoes();
+  if (veioDeLink) document.querySelector('.calendario-caixa').scrollIntoView({ block: 'start' });
 }
 iniciar();
 </script>
