@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-16T00:25:33+00:00",
+ "atualizado_em": "2026-10-16T09:18:40+00:00",
  "moeda": "por_rota",
  "fontes": [
   "v2/prices/month-matrix",
@@ -341,7 +341,7 @@
    "moeda": "usd",
    "2026-10": {
     "18": {
-     "preco": 395,
+     "preco": 425,
      "cia": "CM",
      "escalas": 1,
      "saida": "2026-10-18T08:01",
@@ -641,7 +641,7 @@
    "moeda": "usd",
    "2026-10": {
     "17": {
-     "preco": 839,
+     "preco": 870,
      "cia": "G3",
      "escalas": 1,
      "saida": "2026-10-17T23:00",
@@ -651,7 +651,7 @@
      "fonte": "prices_for_dates"
     },
     "18": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -661,7 +661,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -671,7 +671,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -681,7 +681,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -691,7 +691,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -701,7 +701,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -711,7 +711,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -721,7 +721,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -731,7 +731,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -741,7 +741,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -751,7 +751,7 @@
      "fonte": "month-matrix"
     },
     "28": {
-     "preco": 654,
+     "preco": 670,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -793,7 +793,7 @@
      "fonte": "prices_for_dates"
     },
     "03": {
-     "preco": 459,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -803,7 +803,7 @@
      "fonte": "month-matrix"
     },
     "04": {
-     "preco": 459,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -813,17 +813,17 @@
      "fonte": "month-matrix"
     },
     "05": {
-     "preco": 425,
-     "cia": "CM",
-     "escalas": 2,
-     "saida": "2026-11-05T02:15",
-     "duracao_min": 810,
-     "de": "JFK",
-     "para": "GRU",
-     "fonte": "prices_for_dates"
+     "preco": 437,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "NYC",
+     "para": "SAO",
+     "fonte": "month-matrix"
     },
     "06": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -833,7 +833,7 @@
      "fonte": "month-matrix"
     },
     "07": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -843,7 +843,7 @@
      "fonte": "month-matrix"
     },
     "08": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -853,7 +853,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -863,7 +863,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -873,7 +873,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -883,7 +883,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -893,7 +893,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 403,
+     "preco": 437,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1114,7 +1114,18 @@
   },
   "BOS-BHZ": {
    "moeda": "usd",
-   "2026-10": {},
+   "2026-10": {
+    "16": {
+     "preco": 594,
+     "cia": "LA",
+     "escalas": 2,
+     "saida": "2026-10-16T10:00",
+     "duracao_min": 750,
+     "de": "BOS",
+     "para": "CNF",
+     "fonte": "prices_for_dates"
+    }
+   },
    "2026-11": {},
    "2026-12": {}
   },
@@ -1123,6 +1134,36 @@
    "2026-10": {},
    "2026-11": {},
    "2026-12": {
+    "22": {
+     "preco": 582,
+     "cia": "LA",
+     "escalas": 2,
+     "saida": "2026-12-22T07:00",
+     "duracao_min": 963,
+     "de": "BOS",
+     "para": "GRU",
+     "fonte": "prices_for_dates"
+    },
+    "24": {
+     "preco": 530,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "BOS",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
+    "25": {
+     "preco": 530,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "BOS",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
     "26": {
      "preco": 479,
      "cia": "AA",
@@ -1272,7 +1313,7 @@
      "fonte": "prices_for_dates"
     },
     "23": {
-     "preco": 635,
+     "preco": 634,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1282,7 +1323,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 635,
+     "preco": 634,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1312,7 +1353,7 @@
      "fonte": "prices_for_dates"
     },
     "27": {
-     "preco": 533,
+     "preco": 532,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1352,7 +1393,7 @@
      "fonte": "month-matrix"
     },
     "31": {
-     "preco": 510,
+     "preco": 511,
      "cia": "G3",
      "escalas": 2,
      "saida": "2026-10-31T23:30",
@@ -1374,7 +1415,7 @@
      "fonte": "prices_for_dates"
     },
     "02": {
-     "preco": 513,
+     "preco": 512,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1394,7 +1435,7 @@
      "fonte": "prices_for_dates"
     },
     "04": {
-     "preco": 480,
+     "preco": 479,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1404,7 +1445,7 @@
      "fonte": "month-matrix"
     },
     "05": {
-     "preco": 480,
+     "preco": 479,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1424,7 +1465,7 @@
      "fonte": "prices_for_dates"
     },
     "07": {
-     "preco": 468,
+     "preco": 467,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1484,7 +1525,7 @@
      "fonte": "prices_for_dates"
     },
     "13": {
-     "preco": 401,
+     "preco": 400,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1574,7 +1615,7 @@
      "fonte": "prices_for_dates"
     },
     "22": {
-     "preco": 419,
+     "preco": 418,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1604,7 +1645,7 @@
      "fonte": "prices_for_dates"
     },
     "25": {
-     "preco": 329,
+     "preco": 383,
      "cia": "AD",
      "escalas": 0,
      "saida": "2026-11-25T09:15",
@@ -1776,17 +1817,17 @@
      "fonte": "prices_for_dates"
     },
     "12": {
-     "preco": 462,
-     "cia": "TP",
-     "escalas": 0,
-     "saida": "2026-12-12T16:30",
-     "duracao_min": 625,
+     "preco": 555,
+     "cia": "VY",
+     "escalas": 3,
+     "saida": "2026-12-12T17:40",
+     "duracao_min": 975,
      "de": "LIS",
      "para": "GRU",
      "fonte": "prices_for_dates"
     },
     "13": {
-     "preco": 460,
+     "preco": 506,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1816,7 +1857,7 @@
      "fonte": "prices_for_dates"
     },
     "16": {
-     "preco": 596,
+     "preco": 595,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1826,7 +1867,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 596,
+     "preco": 595,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1886,7 +1927,7 @@
      "fonte": "prices_for_dates"
     },
     "23": {
-     "preco": 560,
+     "preco": 559,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -1896,7 +1937,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 560,
+     "preco": 559,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2014,7 +2055,7 @@
      "fonte": "prices_for_dates"
     },
     "22": {
-     "preco": 509,
+     "preco": 508,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2024,7 +2065,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 509,
+     "preco": 508,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2034,7 +2075,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 509,
+     "preco": 508,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2044,7 +2085,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 509,
+     "preco": 508,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2076,7 +2117,7 @@
      "fonte": "prices_for_dates"
     },
     "05": {
-     "preco": 471,
+     "preco": 470,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2086,7 +2127,7 @@
      "fonte": "month-matrix"
     },
     "06": {
-     "preco": 471,
+     "preco": 470,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2176,7 +2217,7 @@
      "fonte": "prices_for_dates"
     },
     "19": {
-     "preco": 380,
+     "preco": 379,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2200,6 +2241,16 @@
      "cia": "TP",
      "escalas": 1,
      "saida": "2026-11-21T07:00",
+     "duracao_min": 685,
+     "de": "OPO",
+     "para": "GRU",
+     "fonte": "prices_for_dates"
+    },
+    "22": {
+     "preco": 415,
+     "cia": "TP",
+     "escalas": 1,
+     "saida": "2026-11-22T18:00",
      "duracao_min": 685,
      "de": "OPO",
      "para": "GRU",
@@ -2328,7 +2379,7 @@
      "fonte": "prices_for_dates"
     },
     "21": {
-     "preco": 606,
+     "preco": 605,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2338,7 +2389,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 606,
+     "preco": 605,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2348,7 +2399,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 606,
+     "preco": 605,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2358,7 +2409,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 606,
+     "preco": 605,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2368,7 +2419,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 606,
+     "preco": 605,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2398,7 +2449,7 @@
      "fonte": "prices_for_dates"
     },
     "29": {
-     "preco": 496,
+     "preco": 495,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2435,13 +2486,13 @@
    "moeda": "gbp",
    "2026-10": {
     "16": {
-     "preco": 545,
-     "cia": "LS",
+     "preco": 862,
+     "cia": "Z0",
      "escalas": 2,
-     "saida": "2026-10-16T09:00",
-     "duracao_min": 870,
-     "de": "LTN",
-     "para": "VCP",
+     "saida": "2026-10-16T14:00",
+     "duracao_min": 1192,
+     "de": "LGW",
+     "para": "GRU",
      "fonte": "prices_for_dates"
     },
     "17": {
@@ -2465,7 +2516,7 @@
      "fonte": "prices_for_dates"
     },
     "19": {
-     "preco": 600,
+     "preco": 599,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2475,7 +2526,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 542,
+     "preco": 541,
      "cia": "AV",
      "escalas": 1,
      "saida": "2026-10-20T22:05",
@@ -2485,17 +2536,17 @@
      "fonte": "prices_for_dates"
     },
     "21": {
-     "preco": 564,
+     "preco": 764,
      "cia": "EI",
-     "escalas": 2,
+     "escalas": 3,
      "saida": "2026-10-21T15:50",
-     "duracao_min": 1160,
+     "duracao_min": 1242,
      "de": "LHR",
-     "para": "GRU",
+     "para": "VCP",
      "fonte": "prices_for_dates"
     },
     "22": {
-     "preco": 586,
+     "preco": 685,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2525,7 +2576,7 @@
      "fonte": "prices_for_dates"
     },
     "25": {
-     "preco": 616,
+     "preco": 614,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2535,7 +2586,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 616,
+     "preco": 614,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2597,7 +2648,7 @@
      "fonte": "prices_for_dates"
     },
     "03": {
-     "preco": 423,
+     "preco": 422,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2607,7 +2658,7 @@
      "fonte": "month-matrix"
     },
     "04": {
-     "preco": 423,
+     "preco": 422,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2657,7 +2708,7 @@
      "fonte": "prices_for_dates"
     },
     "09": {
-     "preco": 393,
+     "preco": 392,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2677,7 +2728,7 @@
      "fonte": "prices_for_dates"
     },
     "11": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2687,7 +2738,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2697,7 +2748,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2707,7 +2758,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2717,7 +2768,7 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2727,7 +2778,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2737,7 +2788,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2747,7 +2798,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2757,7 +2808,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2767,7 +2818,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2777,7 +2828,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2787,7 +2838,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2797,7 +2848,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2807,7 +2858,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 392,
+     "preco": 391,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2829,7 +2880,7 @@
    },
    "2026-12": {
     "10": {
-     "preco": 468,
+     "preco": 467,
      "cia": "U2",
      "escalas": 1,
      "saida": "2026-12-10T10:45",
@@ -2839,7 +2890,7 @@
      "fonte": "prices_for_dates"
     },
     "11": {
-     "preco": 427,
+     "preco": 425,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2849,7 +2900,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 427,
+     "preco": 425,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2909,7 +2960,7 @@
      "fonte": "prices_for_dates"
     },
     "18": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2919,7 +2970,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2929,7 +2980,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2939,7 +2990,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -2949,7 +3000,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3019,7 +3070,7 @@
      "fonte": "prices_for_dates"
     },
     "29": {
-     "preco": 428,
+     "preco": 427,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3029,7 +3080,7 @@
      "fonte": "month-matrix"
     },
     "30": {
-     "preco": 428,
+     "preco": 427,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3066,13 +3117,13 @@
    "moeda": "eur",
    "2026-10": {
     "16": {
-     "preco": 828,
-     "cia": "UX",
+     "preco": 1056,
+     "cia": "IB",
      "escalas": 1,
-     "saida": "2026-10-16T06:35",
-     "duracao_min": 700,
+     "saida": "2026-10-16T12:25",
+     "duracao_min": 680,
      "de": "MAD",
-     "para": "VCP",
+     "para": "CGH",
      "fonte": "prices_for_dates"
     },
     "17": {
@@ -3196,14 +3247,14 @@
      "fonte": "prices_for_dates"
     },
     "29": {
-     "preco": 436,
-     "cia": "AD",
+     "preco": 572,
+     "cia": null,
      "escalas": 0,
-     "saida": "2026-10-29T10:50",
-     "duracao_min": 640,
+     "saida": null,
+     "duracao_min": null,
      "de": "MAD",
-     "para": "VCP",
-     "fonte": "prices_for_dates"
+     "para": "SAO",
+     "fonte": "month-matrix"
     },
     "30": {
      "preco": 641,
@@ -3216,13 +3267,13 @@
      "fonte": "prices_for_dates"
     },
     "31": {
-     "preco": 424,
-     "cia": "IB",
-     "escalas": 2,
-     "saida": "2026-10-31T19:50",
-     "duracao_min": 780,
+     "preco": 612,
+     "cia": "UX",
+     "escalas": 3,
+     "saida": "2026-10-31T06:30",
+     "duracao_min": 900,
      "de": "MAD",
-     "para": "VCP",
+     "para": "CGH",
      "fonte": "prices_for_dates"
     }
    },
@@ -3238,7 +3289,7 @@
      "fonte": "prices_for_dates"
     },
     "02": {
-     "preco": 505,
+     "preco": 504,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3328,7 +3379,7 @@
      "fonte": "prices_for_dates"
     },
     "11": {
-     "preco": 466,
+     "preco": 465,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3388,7 +3439,7 @@
      "fonte": "prices_for_dates"
     },
     "17": {
-     "preco": 459,
+     "preco": 458,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3398,7 +3449,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 459,
+     "preco": 458,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3408,7 +3459,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 459,
+     "preco": 458,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3468,13 +3519,13 @@
      "fonte": "prices_for_dates"
     },
     "25": {
-     "preco": 369,
+     "preco": 396,
      "cia": "AD",
      "escalas": 1,
      "saida": "2026-11-25T10:25",
-     "duracao_min": 710,
+     "duracao_min": 720,
      "de": "MAD",
-     "para": "GRU",
+     "para": "CGH",
      "fonte": "prices_for_dates"
     },
     "26": {
@@ -3540,7 +3591,7 @@
      "fonte": "prices_for_dates"
     },
     "02": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3550,7 +3601,7 @@
      "fonte": "month-matrix"
     },
     "03": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3560,7 +3611,7 @@
      "fonte": "month-matrix"
     },
     "04": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3570,7 +3621,7 @@
      "fonte": "month-matrix"
     },
     "05": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3580,7 +3631,7 @@
      "fonte": "month-matrix"
     },
     "06": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3590,7 +3641,7 @@
      "fonte": "month-matrix"
     },
     "07": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3600,7 +3651,7 @@
      "fonte": "month-matrix"
     },
     "08": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3610,7 +3661,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 469,
+     "preco": 468,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3630,7 +3681,7 @@
      "fonte": "prices_for_dates"
     },
     "11": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3640,7 +3691,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3650,7 +3701,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3660,7 +3711,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3670,7 +3721,7 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3680,7 +3731,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3690,7 +3741,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3700,7 +3751,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3710,7 +3761,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3720,7 +3771,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3730,7 +3781,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3740,7 +3791,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3750,7 +3801,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 532,
+     "preco": 531,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -3857,13 +3908,13 @@
    "moeda": "eur",
    "2026-10": {
     "16": {
-     "preco": 1087,
-     "cia": "VY",
-     "escalas": 1,
-     "saida": "2026-10-16T06:30",
-     "duracao_min": 825,
+     "preco": 1102,
+     "cia": "U2",
+     "escalas": 2,
+     "saida": "2026-10-16T17:45",
+     "duracao_min": 795,
      "de": "BCN",
-     "para": "GRU",
+     "para": "CGH",
      "fonte": "prices_for_dates"
     },
     "17": {
@@ -3987,7 +4038,7 @@
      "fonte": "prices_for_dates"
     },
     "29": {
-     "preco": 640,
+     "preco": 639,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4007,13 +4058,13 @@
      "fonte": "prices_for_dates"
     },
     "31": {
-     "preco": 641,
+     "preco": 600,
      "cia": "VY",
      "escalas": 3,
-     "saida": "2026-10-31T10:45",
-     "duracao_min": 935,
+     "saida": "2026-10-31T17:15",
+     "duracao_min": 945,
      "de": "BCN",
-     "para": "GRU",
+     "para": "CGH",
      "fonte": "prices_for_dates"
     }
    },
@@ -4029,7 +4080,7 @@
      "fonte": "prices_for_dates"
     },
     "05": {
-     "preco": 476,
+     "preco": 475,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4049,7 +4100,7 @@
      "fonte": "prices_for_dates"
     },
     "08": {
-     "preco": 444,
+     "preco": 443,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4059,7 +4110,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 444,
+     "preco": 443,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4069,7 +4120,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 444,
+     "preco": 443,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4109,7 +4160,7 @@
      "fonte": "prices_for_dates"
     },
     "16": {
-     "preco": 422,
+     "preco": 421,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4221,7 +4272,7 @@
      "fonte": "prices_for_dates"
     },
     "10": {
-     "preco": 539,
+     "preco": 538,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4231,7 +4282,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 539,
+     "preco": 538,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4241,7 +4292,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 539,
+     "preco": 538,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4281,7 +4332,7 @@
      "fonte": "prices_for_dates"
     },
     "17": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4291,7 +4342,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4301,7 +4352,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4311,7 +4362,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4321,7 +4372,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4331,7 +4382,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4341,7 +4392,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4351,7 +4402,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4361,7 +4412,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4371,7 +4422,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4381,7 +4432,7 @@
      "fonte": "month-matrix"
     },
     "28": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4391,7 +4442,7 @@
      "fonte": "month-matrix"
     },
     "29": {
-     "preco": 549,
+     "preco": 548,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4423,7 +4474,7 @@
    "2026-10": {},
    "2026-11": {
     "25": {
-     "preco": 433,
+     "preco": 432,
      "cia": "JJ",
      "escalas": 1,
      "saida": "2026-11-25T12:10",
@@ -4459,7 +4510,7 @@
      "fonte": "prices_for_dates"
     },
     "23": {
-     "preco": 679,
+     "preco": 678,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4469,7 +4520,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 679,
+     "preco": 678,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4479,7 +4530,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 679,
+     "preco": 678,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4489,7 +4540,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 679,
+     "preco": 678,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4499,7 +4550,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 679,
+     "preco": 678,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4509,7 +4560,7 @@
      "fonte": "month-matrix"
     },
     "28": {
-     "preco": 679,
+     "preco": 678,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4519,7 +4570,7 @@
      "fonte": "month-matrix"
     },
     "29": {
-     "preco": 679,
+     "preco": 678,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4536,6 +4587,16 @@
      "duracao_min": 1275,
      "de": "FCO",
      "para": "GRU",
+     "fonte": "prices_for_dates"
+    },
+    "31": {
+     "preco": 794,
+     "cia": "TP",
+     "escalas": 3,
+     "saida": "2026-10-31T05:55",
+     "duracao_min": 1010,
+     "de": "FCO",
+     "para": "CGH",
      "fonte": "prices_for_dates"
     }
    },
@@ -4581,7 +4642,7 @@
      "fonte": "prices_for_dates"
     },
     "08": {
-     "preco": 462,
+     "preco": 461,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4591,7 +4652,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 462,
+     "preco": 461,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4601,7 +4662,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 462,
+     "preco": 461,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4681,7 +4742,7 @@
      "fonte": "prices_for_dates"
     },
     "18": {
-     "preco": 391,
+     "preco": 389,
      "cia": "TP",
      "escalas": 2,
      "saida": "2026-11-18T19:35",
@@ -4691,7 +4752,7 @@
      "fonte": "prices_for_dates"
     },
     "19": {
-     "preco": 397,
+     "preco": 396,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4701,7 +4762,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 397,
+     "preco": 396,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4711,7 +4772,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 397,
+     "preco": 396,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4721,7 +4782,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 397,
+     "preco": 396,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4752,6 +4813,96 @@
     }
    },
    "2026-12": {
+    "10": {
+     "preco": 600,
+     "cia": "W4",
+     "escalas": 2,
+     "saida": "2026-12-10T07:25",
+     "duracao_min": 855,
+     "de": "FCO",
+     "para": "VCP",
+     "fonte": "prices_for_dates"
+    },
+    "11": {
+     "preco": 591,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "ROM",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
+    "12": {
+     "preco": 591,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "ROM",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
+    "13": {
+     "preco": 591,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "ROM",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
+    "14": {
+     "preco": 591,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "ROM",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
+    "15": {
+     "preco": 582,
+     "cia": "TP",
+     "escalas": 1,
+     "saida": "2026-12-15T12:15",
+     "duracao_min": 830,
+     "de": "FCO",
+     "para": "VCP",
+     "fonte": "prices_for_dates"
+    },
+    "16": {
+     "preco": 690,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "ROM",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
+    "17": {
+     "preco": 690,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "ROM",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
+    "18": {
+     "preco": 690,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "ROM",
+     "para": "SAO",
+     "fonte": "month-matrix"
+    },
     "19": {
      "preco": 803,
      "cia": "W4",
@@ -4800,7 +4951,7 @@
      "fonte": "prices_for_dates"
     },
     "22": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4810,7 +4961,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4820,7 +4971,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4830,7 +4981,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4840,7 +4991,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4850,7 +5001,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4860,7 +5011,7 @@
      "fonte": "month-matrix"
     },
     "28": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4902,7 +5053,7 @@
      "fonte": "prices_for_dates"
     },
     "02": {
-     "preco": 498,
+     "preco": 497,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4982,7 +5133,7 @@
      "fonte": "prices_for_dates"
     },
     "10": {
-     "preco": 479,
+     "preco": 478,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -4992,7 +5143,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 479,
+     "preco": 478,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5002,7 +5153,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 479,
+     "preco": 478,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5012,7 +5163,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 479,
+     "preco": 478,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5032,7 +5183,7 @@
      "fonte": "prices_for_dates"
     },
     "15": {
-     "preco": 422,
+     "preco": 421,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5042,7 +5193,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 422,
+     "preco": 421,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5134,17 +5285,17 @@
      "fonte": "prices_for_dates"
     },
     "03": {
-     "preco": 389,
-     "cia": "UX",
-     "escalas": 1,
-     "saida": "2026-12-03T10:20",
-     "duracao_min": 780,
-     "de": "MXP",
-     "para": "GRU",
-     "fonte": "prices_for_dates"
+     "preco": 499,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "MIL",
+     "para": "SAO",
+     "fonte": "month-matrix"
     },
     "04": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5154,7 +5305,7 @@
      "fonte": "month-matrix"
     },
     "05": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5164,7 +5315,7 @@
      "fonte": "month-matrix"
     },
     "06": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5174,7 +5325,7 @@
      "fonte": "month-matrix"
     },
     "07": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5184,7 +5335,7 @@
      "fonte": "month-matrix"
     },
     "08": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5194,7 +5345,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5204,7 +5355,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5214,7 +5365,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5224,7 +5375,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5234,7 +5385,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5244,7 +5395,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5254,7 +5405,7 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5264,7 +5415,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5274,7 +5425,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5284,7 +5435,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5294,7 +5445,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 486,
+     "preco": 499,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5342,12 +5493,12 @@
    "moeda": "eur",
    "2026-10": {
     "16": {
-     "preco": 1001,
-     "cia": "AV",
+     "preco": 1011,
+     "cia": "UX",
      "escalas": 1,
-     "saida": "2026-10-16T08:55",
-     "duracao_min": 1010,
-     "de": "CDG",
+     "saida": "2026-10-16T17:10",
+     "duracao_min": 755,
+     "de": "ORY",
      "para": "GRU",
      "fonte": "prices_for_dates"
     },
@@ -5372,7 +5523,7 @@
      "fonte": "prices_for_dates"
     },
     "19": {
-     "preco": 678,
+     "preco": 677,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5382,7 +5533,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 678,
+     "preco": 677,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5392,7 +5543,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 678,
+     "preco": 677,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5412,7 +5563,7 @@
      "fonte": "prices_for_dates"
     },
     "23": {
-     "preco": 677,
+     "preco": 676,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5422,7 +5573,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 677,
+     "preco": 676,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5524,7 +5675,7 @@
      "fonte": "prices_for_dates"
     },
     "04": {
-     "preco": 491,
+     "preco": 490,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5534,7 +5685,7 @@
      "fonte": "month-matrix"
     },
     "05": {
-     "preco": 491,
+     "preco": 490,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5544,7 +5695,7 @@
      "fonte": "month-matrix"
     },
     "06": {
-     "preco": 491,
+     "preco": 490,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5634,7 +5785,7 @@
      "fonte": "prices_for_dates"
     },
     "15": {
-     "preco": 451,
+     "preco": 450,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5654,7 +5805,7 @@
      "fonte": "prices_for_dates"
     },
     "17": {
-     "preco": 456,
+     "preco": 455,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5674,7 +5825,7 @@
      "fonte": "prices_for_dates"
     },
     "19": {
-     "preco": 439,
+     "preco": 438,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5704,7 +5855,7 @@
      "fonte": "prices_for_dates"
     },
     "22": {
-     "preco": 427,
+     "preco": 426,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5714,7 +5865,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 427,
+     "preco": 426,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5724,7 +5875,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 427,
+     "preco": 426,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5734,7 +5885,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 427,
+     "preco": 426,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5744,7 +5895,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 427,
+     "preco": 426,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5754,7 +5905,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 427,
+     "preco": 426,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5786,7 +5937,7 @@
      "fonte": "prices_for_dates"
     },
     "02": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5796,7 +5947,7 @@
      "fonte": "month-matrix"
     },
     "03": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5806,7 +5957,7 @@
      "fonte": "month-matrix"
     },
     "04": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5816,7 +5967,7 @@
      "fonte": "month-matrix"
     },
     "05": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5826,7 +5977,7 @@
      "fonte": "month-matrix"
     },
     "06": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5836,7 +5987,7 @@
      "fonte": "month-matrix"
     },
     "07": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5846,7 +5997,7 @@
      "fonte": "month-matrix"
     },
     "08": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5856,7 +6007,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5866,7 +6017,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5876,7 +6027,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5886,7 +6037,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5896,7 +6047,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5906,7 +6057,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5916,7 +6067,7 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5926,7 +6077,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 614,
+     "preco": 613,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5946,7 +6097,7 @@
      "fonte": "prices_for_dates"
     },
     "18": {
-     "preco": 767,
+     "preco": 766,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5956,7 +6107,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 767,
+     "preco": 766,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5976,7 +6127,7 @@
      "fonte": "prices_for_dates"
     },
     "21": {
-     "preco": 680,
+     "preco": 679,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5986,7 +6137,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 680,
+     "preco": 679,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -5996,7 +6147,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 680,
+     "preco": 679,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6006,7 +6157,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 680,
+     "preco": 679,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6026,7 +6177,7 @@
      "fonte": "prices_for_dates"
     },
     "26": {
-     "preco": 565,
+     "preco": 564,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6036,7 +6187,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 565,
+     "preco": 564,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6046,7 +6197,7 @@
      "fonte": "month-matrix"
     },
     "28": {
-     "preco": 565,
+     "preco": 564,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6463,16 +6614,6 @@
   "LIS-RIO": {
    "moeda": "eur",
    "2026-10": {
-    "16": {
-     "preco": 684,
-     "cia": "TP",
-     "escalas": 1,
-     "saida": "2026-10-16T07:00",
-     "duracao_min": 665,
-     "de": "LIS",
-     "para": "GIG",
-     "fonte": "prices_for_dates"
-    },
     "17": {
      "preco": 700,
      "cia": "TP",
@@ -6544,7 +6685,7 @@
      "fonte": "prices_for_dates"
     },
     "24": {
-     "preco": 735,
+     "preco": 734,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6554,7 +6695,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 735,
+     "preco": 734,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6696,7 +6837,7 @@
      "fonte": "prices_for_dates"
     },
     "12": {
-     "preco": 416,
+     "preco": 415,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6706,7 +6847,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 416,
+     "preco": 415,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6736,7 +6877,7 @@
      "fonte": "prices_for_dates"
     },
     "16": {
-     "preco": 511,
+     "preco": 510,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6826,7 +6967,7 @@
      "fonte": "prices_for_dates"
     },
     "25": {
-     "preco": 421,
+     "preco": 420,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6836,7 +6977,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 421,
+     "preco": 420,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6846,7 +6987,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 421,
+     "preco": 420,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6856,7 +6997,7 @@
      "fonte": "month-matrix"
     },
     "28": {
-     "preco": 421,
+     "preco": 420,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6866,7 +7007,7 @@
      "fonte": "month-matrix"
     },
     "29": {
-     "preco": 421,
+     "preco": 420,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6898,7 +7039,7 @@
      "fonte": "prices_for_dates"
     },
     "03": {
-     "preco": 456,
+     "preco": 455,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6908,7 +7049,7 @@
      "fonte": "month-matrix"
     },
     "04": {
-     "preco": 456,
+     "preco": 455,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6938,7 +7079,7 @@
      "fonte": "prices_for_dates"
     },
     "07": {
-     "preco": 475,
+     "preco": 474,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6948,7 +7089,7 @@
      "fonte": "month-matrix"
     },
     "08": {
-     "preco": 475,
+     "preco": 474,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -6978,7 +7119,7 @@
      "fonte": "prices_for_dates"
     },
     "11": {
-     "preco": 572,
+     "preco": 571,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7018,7 +7159,7 @@
      "fonte": "prices_for_dates"
     },
     "15": {
-     "preco": 706,
+     "preco": 705,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7028,7 +7169,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 706,
+     "preco": 705,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7048,7 +7189,7 @@
      "fonte": "prices_for_dates"
     },
     "18": {
-     "preco": 750,
+     "preco": 749,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7108,7 +7249,7 @@
      "fonte": "prices_for_dates"
     },
     "24": {
-     "preco": 675,
+     "preco": 674,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7118,7 +7259,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 675,
+     "preco": 674,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7277,7 +7418,7 @@
      "fonte": "prices_for_dates"
     },
     "10": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7287,7 +7428,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7297,7 +7438,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7307,7 +7448,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7317,7 +7458,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7327,7 +7468,7 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7337,7 +7478,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7347,7 +7488,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7357,7 +7498,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 576,
+     "preco": 575,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7387,7 +7528,7 @@
      "fonte": "prices_for_dates"
     },
     "21": {
-     "preco": 706,
+     "preco": 705,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7564,7 +7705,7 @@
      "fonte": "prices_for_dates"
     },
     "10": {
-     "preco": 413,
+     "preco": 412,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7606,7 +7747,7 @@
      "fonte": "prices_for_dates"
     },
     "19": {
-     "preco": 685,
+     "preco": 684,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7616,7 +7757,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 685,
+     "preco": 684,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7626,7 +7767,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 685,
+     "preco": 684,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7636,7 +7777,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 685,
+     "preco": 684,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7659,7 +7800,58 @@
   },
   "LIS-FOR": {
    "moeda": "eur",
-   "2026-10": {},
+   "2026-10": {
+    "20": {
+     "preco": 668,
+     "cia": "LA",
+     "escalas": 0,
+     "saida": "2026-10-20T19:30",
+     "duracao_min": 480,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "prices_for_dates"
+    },
+    "21": {
+     "preco": 664,
+     "cia": "LA",
+     "escalas": 1,
+     "saida": "2026-10-21T09:30",
+     "duracao_min": 795,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "prices_for_dates"
+    },
+    "22": {
+     "preco": 673,
+     "cia": "LA",
+     "escalas": 1,
+     "saida": "2026-10-22T09:35",
+     "duracao_min": 800,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "prices_for_dates"
+    },
+    "23": {
+     "preco": 658,
+     "cia": "G3",
+     "escalas": 1,
+     "saida": "2026-10-23T23:35",
+     "duracao_min": 790,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "prices_for_dates"
+    },
+    "24": {
+     "preco": 723,
+     "cia": "LA",
+     "escalas": 2,
+     "saida": "2026-10-24T09:25",
+     "duracao_min": 870,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "prices_for_dates"
+    }
+   },
    "2026-11": {
     "05": {
      "preco": 458,
@@ -7672,7 +7864,7 @@
      "fonte": "prices_for_dates"
     },
     "06": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7682,7 +7874,7 @@
      "fonte": "month-matrix"
     },
     "07": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7692,7 +7884,7 @@
      "fonte": "month-matrix"
     },
     "08": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7702,7 +7894,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7712,7 +7904,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7722,7 +7914,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7732,7 +7924,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7742,7 +7934,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7752,7 +7944,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 450,
+     "preco": 447,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7762,14 +7954,14 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 450,
-     "cia": null,
-     "escalas": 0,
-     "saida": null,
-     "duracao_min": null,
+     "preco": 440,
+     "cia": "TP",
+     "escalas": 2,
+     "saida": "2026-11-15T06:30",
+     "duracao_min": 635,
      "de": "LIS",
      "para": "FOR",
-     "fonte": "month-matrix"
+     "fonte": "prices_for_dates"
     },
     "16": {
      "preco": 445,
@@ -7834,7 +8026,7 @@
    },
    "2026-12": {
     "12": {
-     "preco": 480,
+     "preco": 519,
      "cia": "U2",
      "escalas": 2,
      "saida": "2026-12-12T13:30",
@@ -7844,7 +8036,7 @@
      "fonte": "prices_for_dates"
     },
     "13": {
-     "preco": 538,
+     "preco": 542,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7854,11 +8046,11 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 595,
-     "cia": "G3",
-     "escalas": 2,
-     "saida": "2026-12-14T23:30",
-     "duracao_min": 880,
+     "preco": 564,
+     "cia": "LA",
+     "escalas": 0,
+     "saida": "2026-12-14T19:10",
+     "duracao_min": 450,
      "de": "LIS",
      "para": "FOR",
      "fonte": "prices_for_dates"
@@ -7874,7 +8066,7 @@
      "fonte": "prices_for_dates"
     },
     "16": {
-     "preco": 705,
+     "preco": 704,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7884,7 +8076,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 705,
+     "preco": 704,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7904,7 +8096,7 @@
      "fonte": "prices_for_dates"
     },
     "19": {
-     "preco": 758,
+     "preco": 757,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7914,7 +8106,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 758,
+     "preco": 757,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7952,6 +8144,86 @@
      "de": "LIS",
      "para": "FOR",
      "fonte": "prices_for_dates"
+    },
+    "24": {
+     "preco": 578,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "month-matrix"
+    },
+    "25": {
+     "preco": 578,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "month-matrix"
+    },
+    "26": {
+     "preco": 578,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "month-matrix"
+    },
+    "27": {
+     "preco": 578,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "month-matrix"
+    },
+    "28": {
+     "preco": 578,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "month-matrix"
+    },
+    "29": {
+     "preco": 578,
+     "cia": null,
+     "escalas": 0,
+     "saida": null,
+     "duracao_min": null,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "month-matrix"
+    },
+    "30": {
+     "preco": 450,
+     "cia": "G3",
+     "escalas": 2,
+     "saida": "2026-12-30T23:30",
+     "duracao_min": 880,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "prices_for_dates"
+    },
+    "31": {
+     "preco": 474,
+     "cia": "LA",
+     "escalas": 0,
+     "saida": "2026-12-31T18:35",
+     "duracao_min": 450,
+     "de": "LIS",
+     "para": "FOR",
+     "fonte": "prices_for_dates"
     }
    }
   },
@@ -7971,7 +8243,7 @@
      "fonte": "prices_for_dates"
     },
     "13": {
-     "preco": 525,
+     "preco": 524,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -7991,7 +8263,7 @@
      "fonte": "prices_for_dates"
     },
     "15": {
-     "preco": 666,
+     "preco": 665,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8001,7 +8273,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 666,
+     "preco": 665,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8011,7 +8283,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 666,
+     "preco": 665,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8021,7 +8293,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 666,
+     "preco": 665,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8031,7 +8303,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 666,
+     "preco": 665,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8061,7 +8333,7 @@
      "fonte": "prices_for_dates"
     },
     "22": {
-     "preco": 650,
+     "preco": 649,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8071,7 +8343,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 650,
+     "preco": 649,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8081,7 +8353,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 650,
+     "preco": 649,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8106,13 +8378,13 @@
    "moeda": "gbp",
    "2026-10": {
     "16": {
-     "preco": 934,
-     "cia": "LS",
-     "escalas": 2,
-     "saida": "2026-10-16T09:00",
-     "duracao_min": 840,
-     "de": "LTN",
-     "para": "GIG",
+     "preco": 1226,
+     "cia": "LA",
+     "escalas": 1,
+     "saida": "2026-10-16T21:20",
+     "duracao_min": 745,
+     "de": "LHR",
+     "para": "SDU",
      "fonte": "prices_for_dates"
     },
     "17": {
@@ -8178,7 +8450,7 @@
      "fonte": "prices_for_dates"
     },
     "09": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8188,7 +8460,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8198,7 +8470,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8208,7 +8480,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8218,7 +8490,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8228,7 +8500,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8238,7 +8510,7 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8248,7 +8520,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8258,7 +8530,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8268,7 +8540,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8278,7 +8550,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8288,7 +8560,7 @@
      "fonte": "month-matrix"
     },
     "20": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8298,7 +8570,7 @@
      "fonte": "month-matrix"
     },
     "21": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8308,7 +8580,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8318,7 +8590,7 @@
      "fonte": "month-matrix"
     },
     "23": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8328,7 +8600,7 @@
      "fonte": "month-matrix"
     },
     "24": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8338,7 +8610,7 @@
      "fonte": "month-matrix"
     },
     "25": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8348,7 +8620,7 @@
      "fonte": "month-matrix"
     },
     "26": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8358,7 +8630,7 @@
      "fonte": "month-matrix"
     },
     "27": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8368,7 +8640,7 @@
      "fonte": "month-matrix"
     },
     "28": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8378,7 +8650,7 @@
      "fonte": "month-matrix"
     },
     "29": {
-     "preco": 460,
+     "preco": 459,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8410,7 +8682,7 @@
      "fonte": "prices_for_dates"
     },
     "02": {
-     "preco": 441,
+     "preco": 440,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8420,7 +8692,7 @@
      "fonte": "month-matrix"
     },
     "03": {
-     "preco": 441,
+     "preco": 440,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8430,7 +8702,7 @@
      "fonte": "month-matrix"
     },
     "04": {
-     "preco": 441,
+     "preco": 440,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8440,7 +8712,7 @@
      "fonte": "month-matrix"
     },
     "05": {
-     "preco": 441,
+     "preco": 440,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8460,7 +8732,7 @@
      "fonte": "prices_for_dates"
     },
     "07": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8470,7 +8742,7 @@
      "fonte": "month-matrix"
     },
     "08": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8480,7 +8752,7 @@
      "fonte": "month-matrix"
     },
     "09": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8490,7 +8762,7 @@
      "fonte": "month-matrix"
     },
     "10": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8500,7 +8772,7 @@
      "fonte": "month-matrix"
     },
     "11": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8510,7 +8782,7 @@
      "fonte": "month-matrix"
     },
     "12": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8520,7 +8792,7 @@
      "fonte": "month-matrix"
     },
     "13": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8530,7 +8802,7 @@
      "fonte": "month-matrix"
     },
     "14": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8540,7 +8812,7 @@
      "fonte": "month-matrix"
     },
     "15": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8550,7 +8822,7 @@
      "fonte": "month-matrix"
     },
     "16": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8560,7 +8832,7 @@
      "fonte": "month-matrix"
     },
     "17": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8570,7 +8842,7 @@
      "fonte": "month-matrix"
     },
     "18": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8580,7 +8852,7 @@
      "fonte": "month-matrix"
     },
     "19": {
-     "preco": 602,
+     "preco": 600,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8600,7 +8872,7 @@
      "fonte": "prices_for_dates"
     },
     "21": {
-     "preco": 707,
+     "preco": 705,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8610,7 +8882,7 @@
      "fonte": "month-matrix"
     },
     "22": {
-     "preco": 707,
+     "preco": 705,
      "cia": null,
      "escalas": 0,
      "saida": null,
@@ -8841,20 +9113,6 @@
    "moeda": "usd"
   },
   {
-   "rota": "LIS-SAO",
-   "origem": "LIS",
-   "destino": "SAO",
-   "origem_nome": "Lisboa",
-   "destino_nome": "São Paulo",
-   "data": "2026-11-25",
-   "preco": 329,
-   "cia": "AD",
-   "escalas": 0,
-   "saida": "2026-11-25T09:15",
-   "duracao_min": 635,
-   "moeda": "eur"
-  },
-  {
    "rota": "ATL-SAO",
    "origem": "ATL",
    "destino": "SAO",
@@ -8881,6 +9139,20 @@
    "saida": "2026-10-24T08:15",
    "duracao_min": 770,
    "moeda": "usd"
+  },
+  {
+   "rota": "MIL-SAO",
+   "origem": "MIL",
+   "destino": "SAO",
+   "origem_nome": "Milão",
+   "destino_nome": "São Paulo",
+   "data": "2026-11-18",
+   "preco": 375,
+   "cia": "TP",
+   "escalas": 2,
+   "saida": "2026-11-18T17:45",
+   "duracao_min": 900,
+   "moeda": "eur"
   }
  ]
 }
