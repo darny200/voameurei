@@ -468,8 +468,11 @@ const CONFIG = {
   // Os 2 números abaixo aparecem quando você entra no programa da Kiwi.com na Travelpayouts
   // (no link de parceiro da Kiwi.com gerado lá, copie o valor de "p=" e o de "campaign_id=").
   // Enquanto estiverem vazios, o botão vai DIRETO para a Kiwi.com (funciona, mas SEM comissão).
-  KIWI_PROGRAM_P: '',
-  KIWI_CAMPAIGN_ID: '',
+  // Link de afiliado da Kiwi.com pela Travelpayouts (formato oficial do suporte: "Kiwi.com affiliate links").
+  // Testado em 15/10/2026: abre a Kiwi em português do Brasil, na rota e no dia certos, com affilid ...-790537.
+  KIWI_CLICK_URL: 'https://c111.travelpayouts.com/click',
+  KIWI_PROMO_ID: '3791',
+  KIWI_SUBID: 'voameurei',
 
   // Arquivo com os preços reais (o robô do GitHub atualiza todo dia; o token fica escondido lá).
   PRECOS_URL: 'precos.json'
@@ -581,11 +584,8 @@ function linkCompra(orig, dest, data) {
   const [aaaa, mm, dd] = data.split('-');
   const deeplink = 'https://www.kiwi.com/deep?from=' + encodeURIComponent(orig) + '&to=' + encodeURIComponent(dest)
     + '&departure=' + dd + '-' + mm + '-' + aaaa + '&return=no-return&lang=br&currency=' + moedaDaRota(orig, dest) + '&adults=1';
-  if (CONFIG.KIWI_PROGRAM_P && CONFIG.KIWI_CAMPAIGN_ID) {
-    return 'https://tp.media/r?marker=' + CONFIG.TP_MARKER + '&trs=' + CONFIG.TP_TRS + '&p=' + CONFIG.KIWI_PROGRAM_P
-      + '&campaign_id=' + CONFIG.KIWI_CAMPAIGN_ID + '&u=' + encodeURIComponent(deeplink);
-  }
-  return deeplink;
+  return CONFIG.KIWI_CLICK_URL + '?shmarker=' + CONFIG.TP_MARKER + '.' + CONFIG.KIWI_SUBID
+    + '&promo_id=' + CONFIG.KIWI_PROMO_ID + '&source_type=customlink&type=click&custom_url=' + encodeURIComponent(deeplink);
 }
 function textoAviso(moeda) {
   return 'Você vai para a Kiwi.com, nossa parceira. O site é em português e o preço aparece em ' + MOEDAS[moeda].nome + '.';

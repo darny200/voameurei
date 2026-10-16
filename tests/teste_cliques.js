@@ -55,6 +55,7 @@ function deepLinkKiwi(u) {
   try {
     let url = new URL(u);
     if (url.hostname === 'tp.media') url = new URL(url.searchParams.get('u') || '');
+    if (/travelpayouts\.com$/.test(url.hostname)) { if (!/shmarker=790537\./.test(u) || url.searchParams.get('promo_id') !== '3791') return null; url = new URL(url.searchParams.get('custom_url') || ''); }
     return url.hostname === 'www.kiwi.com' && url.pathname === '/deep' ? url : null;
   } catch (e) { return null; }
 }
