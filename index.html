@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<!-- Travelpayouts Drive REMOVIDO em 15/10/2026: ele reescrevia os links e mandava o cliente para o voo errado. A comissão continua garantida pelo marker=790537 em todos os links da Aviasales. -->
+<!-- 15/10/2026: os botões de compra agora vão para a Kiwi.com em português do Brasil (função linkCompra no fim da página). -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Baianinho das Passagens</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -372,8 +372,8 @@ footer strong { color: var(--sobre-mar); }
           <span class="selo">Dia mais barato do mês</span>
         </div>
         <div class="embarque-canhoto">
-          <p class="aviso-parceiro">Você vai para a Aviasales, nossa parceira. Lá o site é em inglês e o preço aparece em dólar (US$).</p>
-          <a class="btn btn-verde btn-grande" id="melhor-link" href="https://www.aviasales.com/?marker=790537" target="_blank" rel="noopener sponsored">Comprar pelo link</a>
+          <p class="aviso-parceiro">Você vai para a Kiwi.com, nossa parceira. O site é em português e o preço aparece em dólar.</p>
+          <a class="btn btn-verde btn-grande" id="melhor-link" href="https://www.kiwi.com/br/" target="_blank" rel="noopener sponsored">Comprar pelo link</a>
         </div>
         <details class="embarque-detalhes" id="melhor-detalhes-caixa">
           <summary>Ver detalhes do voo <span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span></summary>
@@ -388,7 +388,7 @@ footer strong { color: var(--sobre-mar); }
       <div class="calendario-caixa">
         <div class="cal-topo">
           <h3 id="cal-titulo">Calendário</h3>
-          <span>Preço em R$ por dia. Toque em qualquer dia para ver os voos.</span>
+          <span>Preço em <span id="cal-moeda">US$</span> por dia. Toque em qualquer dia para ver os voos.</span>
         </div>
         <p class="poucos" id="poucos" hidden>Achamos poucos preços guardados para esta rota — toque em qualquer dia para ver o preço ao vivo.</p>
         <div class="cal" id="calendario" role="group" aria-label="Preços por dia"></div>
@@ -402,8 +402,8 @@ footer strong { color: var(--sobre-mar); }
         <div class="escolha" id="escolha" hidden>
           <span>Você escolheu <strong id="escolha-texto"></strong></span>
           <div class="escolha-compra">
-            <p class="aviso-parceiro">Você vai para a Aviasales, nossa parceira. Lá o site é em inglês e o preço aparece em dólar (US$).</p>
-            <a class="btn btn-sol" id="escolha-link" href="https://www.aviasales.com/?marker=790537" target="_blank" rel="noopener sponsored">Comprar este dia</a>
+            <p class="aviso-parceiro">Você vai para a Kiwi.com, nossa parceira. O site é em português e o preço aparece em dólar.</p>
+            <a class="btn btn-sol" id="escolha-link" href="https://www.kiwi.com/br/" target="_blank" rel="noopener sponsored">Comprar este dia</a>
           </div>
         </div>
       </div>
@@ -428,7 +428,7 @@ footer strong { color: var(--sobre-mar); }
       <ol class="passos">
         <li><h3>Escolha a rota</h3><p>De onde você sai e para onde vai. Pode ser para o Brasil ou do Brasil para fora.</p></li>
         <li><h3>Veja o mês inteiro</h3><p>O calendário mostra o preço de cada dia. Os dias verdes são os mais baratos.</p></li>
-        <li><h3>Compre na parceira</h3><p>Toque em comprar: você vai para a Aviasales, nossa parceira, e termina a compra lá (site em inglês, preço em dólar).</p></li>
+        <li><h3>Compre na parceira</h3><p>Toque em comprar: você vai para a Kiwi.com, nossa parceira, e termina a compra lá (site em português, preço em dólar, euro ou libra).</p></li>
       </ol>
     </div>
   </section>
@@ -441,7 +441,7 @@ footer strong { color: var(--sobre-mar); }
         <ul>
           <li><strong>As rotas da nossa gente</strong><span>Miami, Boston e Nova York para BH, Goiânia e São Paulo. Lisboa e Londres para o Rio e São Paulo.</span></li>
           <li><strong>Sem complicação</strong><span>Uma tela só: rota, dia mais barato e o botão de comprar.</span></li>
-          <li><strong>Qualquer dia, ao vivo</strong><span>Não achou preço guardado? Toque no dia e veja o preço na hora na Aviasales.</span></li>
+          <li><strong>Qualquer dia, ao vivo</strong><span>Não achou preço guardado? Toque no dia e veja o preço na hora na Kiwi.com.</span></li>
         </ul>
       </div>
     </div>
@@ -451,7 +451,7 @@ footer strong { color: var(--sobre-mar); }
 <footer>
   <div class="wrap">
     <strong>Baianinho das Passagens · VoaMeuRei.com</strong>
-    <p>Os preços vêm de buscas recentes na Aviasales e são atualizados todo dia. Só ida, por pessoa. Podem mudar até a hora da compra.</p>
+    <p>Os preços vêm de buscas recentes de viajantes e são atualizados todo dia. Só ida, por pessoa, na moeda da compra (dólar, euro ou libra). A compra é feita na Kiwi.com, nossa parceira, e o preço pode mudar até a hora da compra.</p>
     <p>Alguns links podem ser de parceiros. Você paga o mesmo e ajuda o Baianinho a continuar de graça.</p>
   </div>
 </footer>
@@ -461,11 +461,15 @@ footer strong { color: var(--sobre-mar); }
    CONFIG — mexa só aqui para trocar links.
    ===================================================================== */
 const CONFIG = {
-  // Link de compra (afiliado Aviasales, marker 790537). As palavras entre chaves são trocadas sozinhas:
-  // {ORIGEM} e {DESTINO} = código da cidade (ex.: MIA, BHZ); {DD} = dia; {MM} = mês. O "1" no fim = 1 adulto.
-  // Exemplo: MIA0312BHZ1 = Miami → Belo Horizonte no dia 03/12.
-  // Quando a API manda o link exato do voo, usamos ele (já vem com o marker no precos.json).
-  AFFILIATE_LINK_TEMPLATE: 'https://www.aviasales.com/search/{ORIGEM}{DD}{MM}{DESTINO}1?marker=790537',
+  // Link de compra: o botão leva para a Kiwi.com em português do Brasil (função linkCompra lá embaixo).
+  // Para a comissão contar, o link passa pelo "redirecionador" da Travelpayouts. Ele precisa de 4 números:
+  TP_MARKER: '790537',   // seu número de parceiro na Travelpayouts (marker)
+  TP_TRS: '586085',      // número do seu site (projeto) na Travelpayouts (trs)
+  // Os 2 números abaixo aparecem quando você entra no programa da Kiwi.com na Travelpayouts
+  // (no link de parceiro da Kiwi.com gerado lá, copie o valor de "p=" e o de "campaign_id=").
+  // Enquanto estiverem vazios, o botão vai DIRETO para a Kiwi.com (funciona, mas SEM comissão).
+  KIWI_PROGRAM_P: '',
+  KIWI_CAMPAIGN_ID: '',
 
   // Arquivo com os preços reais (o robô do GitHub atualiza todo dia; o token fica escondido lá).
   PRECOS_URL: 'precos.json'
@@ -530,31 +534,61 @@ function carregarPrecos() {
 
 async function buscarPrecos(origem, destino, mes) {
   const json = await carregarPrecos();
-  const doMes = ((json.rotas || {})[origem + '-' + destino] || {})[mes] || {};
+  const rota = (json.rotas || {})[origem + '-' + destino] || {};
+  const doMes = rota[mes] || {};
   const dias = Object.keys(doMes).sort().map((dd) => {
     const v = doMes[dd];
     const data = mes + '-' + dd;
     return {
-      data, preco: v.preco, link: (v.link && v.link.indexOf('https://') === 0) ? v.link : montarLink(origem, destino, data),
+      data, preco: v.preco, link: linkCompra(origem, destino, data),   // o campo "link" do json é ignorado
       voo: { cia: v.cia, escalas: v.escalas, saida: v.saida, duracaoMin: v.duracao_min }
     };
   });
-  return { origem, destino, mes, moeda: json.moeda || 'BRL', dias };
+  return { origem, destino, mes, moeda: moedaDe(json, origem, destino), dias };
 }
 
 // Quantos dias com preço cada rota/mês tem (para sugerir alternativas)
 async function diasComPreco(origem, destino, mes) {
   const json = await carregarPrecos();
-  return Object.keys(((json.rotas || {})[origem + '-' + destino] || {})[mes] || {}).length;
+  const doMes = ((json.rotas || {})[origem + '-' + destino] || {})[mes];
+  return doMes && typeof doMes === 'object' ? Object.keys(doMes).length : 0;
 }
 
 /* ---------- Ajudantes ---------- */
-function montarLink(origem, destino, data) {
-  const [, mm, dd] = data.split('-');
-  return CONFIG.AFFILIATE_LINK_TEMPLATE
-    .replace('{ORIGEM}', encodeURIComponent(origem))
-    .replace('{DESTINO}', encodeURIComponent(destino))
-    .replace('{DD}', dd).replace('{MM}', mm);
+// Moeda da compra: dólar (EUA), libra (Londres) ou euro (resto da Europa).
+// Rota que sai do Brasil usa a moeda da cidade de destino.
+function moedaDaRota(origem, destino) {
+  const fora = CIDADES[origem].regiao === 'Brasil' ? destino : origem;
+  if (CIDADES[fora].regiao === 'EUA') return 'usd';
+  if (fora === 'LON') return 'gbp';
+  return 'eur';
+}
+// Moeda gravada no precos.json para a rota (se não tiver, usa a regra acima)
+function moedaDe(json, origem, destino) {
+  const r = (json.rotas || {})[origem + '-' + destino];
+  return (r && MOEDAS[r.moeda]) ? r.moeda : moedaDaRota(origem, destino);
+}
+const MOEDAS = {
+  usd: { simbolo: 'US$', nome: 'dólar', paraOrdenar: 1 },
+  eur: { simbolo: '€', nome: 'euro', paraOrdenar: 1.08 },     // taxa aproximada SÓ para ordenar, nunca mostrada
+  gbp: { simbolo: '£', nome: 'libra', paraOrdenar: 1.27 }
+};
+
+/* linkCompra — o ÚNICO jeito de montar link de compra no site.
+   Monta a busca da Kiwi.com (português do Brasil, só ida, 1 adulto, na moeda da rota).
+   Com os números do programa Kiwi preenchidos no CONFIG, passa pelo redirecionador da Travelpayouts (comissão). */
+function linkCompra(orig, dest, data) {
+  const [aaaa, mm, dd] = data.split('-');
+  const deeplink = 'https://www.kiwi.com/deep?from=' + encodeURIComponent(orig) + '&to=' + encodeURIComponent(dest)
+    + '&departure=' + dd + '-' + mm + '-' + aaaa + '&return=no-return&lang=br&currency=' + moedaDaRota(orig, dest) + '&adults=1';
+  if (CONFIG.KIWI_PROGRAM_P && CONFIG.KIWI_CAMPAIGN_ID) {
+    return 'https://tp.media/r?marker=' + CONFIG.TP_MARKER + '&trs=' + CONFIG.TP_TRS + '&p=' + CONFIG.KIWI_PROGRAM_P
+      + '&campaign_id=' + CONFIG.KIWI_CAMPAIGN_ID + '&u=' + encodeURIComponent(deeplink);
+  }
+  return deeplink;
+}
+function textoAviso(moeda) {
+  return 'Você vai para a Kiwi.com, nossa parceira. O site é em português e o preço aparece em ' + MOEDAS[moeda].nome + '.';
 }
 const DIAS_CURTOS = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
 const DIAS_PLURAL = ['os domingos', 'as segundas', 'as terças', 'as quartas', 'as quintas', 'as sextas', 'os sábados'];
@@ -584,7 +618,7 @@ function fichaDoVoo(o, d, dia) {
     + ((escalas || duracao) ? '<div><dt>Escalas e duração</dt><dd>' + [escalas, duracao].filter(Boolean).join(', ') + '</dd></div>' : '')
     + '<p class="obs">Só ida, por pessoa. Preço de buscas recentes: pode mudar até a compra. Horário local da saída.</p>';
 }
-function reais(valor) { return 'R$\u00a0' + formatoNumero.format(valor); }
+function dinheiro(valor, moeda) { return MOEDAS[moeda].simbolo + '\u00a0' + formatoNumero.format(Math.round(valor)); }
 function nomeRota(o, d) { return CIDADES[o].nome + ' → ' + CIDADES[d].nome; }
 const $ = (id) => document.getElementById(id);
 
@@ -686,6 +720,9 @@ async function pesquisar(rolar) {
   const dados = await buscarPrecos(selOrigem.value, selDestino.value, selMes.value);
   const hoje = hojeISO();
   dados.dias = dados.dias.filter((d) => d.data >= hoje);   // nunca mostra preço de dia que já passou
+  // Aviso e moeda de acordo com a rota (dólar, euro ou libra)
+  document.querySelectorAll('#resultado .aviso-parceiro').forEach((p) => { p.textContent = textoAviso(dados.moeda); });
+  $('cal-moeda').textContent = MOEDAS[dados.moeda].simbolo;
   if (dados.dias.length) mostrarResultado(dados); else await mostrarSemDados(dados);
   montarCalendario(dados);
   // Marca o "queridinho" que está escolhido
@@ -715,10 +752,11 @@ async function mostrarSemDados(dados) {
     const qtd = await diasComPreco(ro, rd, mes);
     if (!qtd) continue;
     const menor = Math.min(...Object.values(json.rotas[chave][mes]).map((v) => v.preco));
-    rotas.push({ ro, rd, menor, peso: (ro === o ? 0 : 1) + (rd === d ? 0 : 1) });
+    const moedaR = moedaDe(json, ro, rd);
+    rotas.push({ ro, rd, menor, moeda: moedaR, peso: (ro === o ? 0 : 1) + (rd === d ? 0 : 1) });
   }
-  rotas.sort((a, b) => a.peso - b.peso || a.menor - b.menor);
-  rotas.slice(0, 4).forEach((r) => sugestoes.push([r.ro, r.rd, mes, nomeRota(r.ro, r.rd) + ' · desde ' + reais(r.menor)]));
+  rotas.sort((a, b) => a.peso - b.peso || a.menor * MOEDAS[a.moeda].paraOrdenar - b.menor * MOEDAS[b.moeda].paraOrdenar);
+  rotas.slice(0, 4).forEach((r) => sugestoes.push([r.ro, r.rd, mes, nomeRota(r.ro, r.rd) + ' · desde ' + dinheiro(r.menor, r.moeda)]));
 
   const caixa = $('sugestoes');
   caixa.innerHTML = '';
@@ -747,7 +785,7 @@ function mostrarResultado(dados) {
   $('rota-nomes').innerHTML = CIDADES[dados.origem].nome + ' <span class="seta">→</span> ' + CIDADES[dados.destino].nome;
   $('melhor-quando').textContent = dataLonga(melhor.data);
   $('melhor-detalhes').innerHTML = fichaDoVoo(dados.origem, dados.destino, melhor);
-  $('melhor-valor').textContent = reais(melhor.preco);
+  $('melhor-valor').textContent = dinheiro(melhor.preco, dados.moeda);
   $('melhor-link').href = melhor.link;
 
   // Dica: dia da semana com a menor média (só quando há dias suficientes)
@@ -756,10 +794,10 @@ function mostrarResultado(dados) {
   const validos = [0, 1, 2, 3, 4, 5, 6].filter((s) => qtd[s] >= 2);
   if (dados.dias.length >= 10 && validos.length >= 3) {
     const melhorSemana = validos.reduce((a, s) => (soma[s] / qtd[s] < soma[a] / qtd[a] ? s : a), validos[0]);
-    const media = Math.round(soma[melhorSemana] / qtd[melhorSemana] / 10) * 10;
+    const media = Math.round(soma[melhorSemana] / qtd[melhorSemana]);
     $('dica-texto').textContent = 'Dica: nesta rota, ' + DIAS_PLURAL[melhorSemana]
       + ((melhorSemana === 0 || melhorSemana === 6) ? ' costumam ser mais baratos' : ' costumam ser mais baratas')
-      + ' (média de ' + reais(media) + ').';
+      + ' (média de ' + dinheiro(media, dados.moeda) + ').';
   } else {
     $('dica-texto').textContent = 'Dica: achamos preço em ' + dados.dias.length + (dados.dias.length === 1 ? ' dia' : ' dias')
       + ' deste mês. Nos outros dias, toque em "ver" no calendário para ver o preço ao vivo.';
@@ -768,7 +806,7 @@ function mostrarResultado(dados) {
 
 /* ---------- Calendário: TODO dia do mês é clicável ----------
    Dia com preço  -> mostra o preço e o botão "Comprar este dia".
-   Dia sem preço  -> mostra "ver" e o botão "Ver voos deste dia" (busca ao vivo na Aviasales).
+   Dia sem preço  -> mostra "ver" e o botão "Ver voos deste dia" (busca ao vivo na Kiwi.com).
    Dia que passou -> desabilitado e esmaecido. */
 function montarCalendario(dados) {
   const porPreco = [...dados.dias].sort((a, b) => a.preco - b.preco);
@@ -803,8 +841,8 @@ function montarCalendario(dados) {
       b.classList.add('sem');
       b.innerHTML = '<span class="n">' + n + '</span><span class="p">'
         + '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>ver</span>';
-      b.setAttribute('aria-label', dataCurta(data) + ', ver o preço ao vivo na Aviasales');
-      b.addEventListener('click', () => escolherDia({ data, preco: null, link: montarLink(dados.origem, dados.destino, data) }, b));
+      b.setAttribute('aria-label', dataCurta(data) + ', ver o preço ao vivo na Kiwi.com');
+      b.addEventListener('click', () => escolherDia({ data, preco: null, link: linkCompra(dados.origem, dados.destino, data) }, b, dados.moeda));
     } else {
       const ehMelhor = d.data === melhor.data;
       if (tresMelhores.has(d.data)) b.classList.add('barato');
@@ -813,24 +851,24 @@ function montarCalendario(dados) {
       b.innerHTML = (ehMelhor ? '<span class="estrela">★</span>' : '')
         + '<span class="n">' + n + '</span>'
         + '<span class="p">' + formatoNumero.format(d.preco) + '</span>';
-      b.setAttribute('aria-label', dataCurta(d.data) + ', ' + reais(d.preco) + (ehMelhor ? ', mais barato do mês' : ''));
-      b.addEventListener('click', () => escolherDia(d, b));
+      b.setAttribute('aria-label', dataCurta(d.data) + ', ' + dinheiro(d.preco, dados.moeda) + (ehMelhor ? ', mais barato do mês' : ''));
+      b.addEventListener('click', () => escolherDia(d, b, dados.moeda));
     }
     cal.appendChild(b);
   }
   $('escolha').hidden = true;
 }
 
-// Mostra o cartão do dia escolhido. Sem preço guardado = preço ao vivo na Aviasales.
-function escolherDia(d, botao) {
+// Mostra o cartão do dia escolhido. Sem preço guardado = preço ao vivo na Kiwi.com.
+function escolherDia(d, botao, moeda) {
   document.querySelectorAll('.dia.escolhido').forEach((x) => x.classList.remove('escolhido'));
   botao.classList.add('escolhido');
-  const link = d.link || montarLink(selOrigem.value, selDestino.value, d.data);
+  const link = d.link || linkCompra(selOrigem.value, selDestino.value, d.data);
   if (d.preco == null) {
-    $('escolha-texto').textContent = dataCurta(d.data) + ' — Preço ao vivo na Aviasales';
+    $('escolha-texto').textContent = dataCurta(d.data) + ' — Preço ao vivo na Kiwi.com';
     $('escolha-link').textContent = 'Ver voos deste dia';
   } else {
-    $('escolha-texto').textContent = dataCurta(d.data) + ' — ' + reais(d.preco);
+    $('escolha-texto').textContent = dataCurta(d.data) + ' — ' + dinheiro(d.preco, moeda);
     $('escolha-link').textContent = 'Comprar este dia';
   }
   $('escolha-link').href = link;
@@ -843,13 +881,18 @@ async function montarPromocoes() {
   const json = await carregarPrecos();
   const caixa = $('promos');
   caixa.innerHTML = '';
-  const lista = json.promocoes || [];
+  // Moedas misturadas: ordena pelo valor aproximado em dólar (só para ordenar; mostra a moeda de cada uma)
+  const lista = (json.promocoes || []).map((p) => {
+    const o = p.origem || p.rota.split('-')[0], d = p.destino || p.rota.split('-')[1];
+    const moeda = MOEDAS[p.moeda] ? p.moeda : (CIDADES[o] && CIDADES[d] ? moedaDaRota(o, d) : 'usd');
+    return Object.assign({}, p, { origem: o, destino: d, moeda });
+  }).sort((a, b) => a.preco * MOEDAS[a.moeda].paraOrdenar - b.preco * MOEDAS[b.moeda].paraOrdenar);
   if (!lista.length) { caixa.innerHTML = '<p>Volte amanhã: as promoções são atualizadas todo dia.</p>'; return; }
   for (const p of lista) {
-    const o = p.origem || p.rota.split('-')[0], d = p.destino || p.rota.split('-')[1];
+    const o = p.origem, d = p.destino;
     if (!CIDADES[o] || !CIDADES[d]) continue;
     if (!p.data || p.data < hojeISO()) continue;   // promoção de dia que já passou
-    const dia = { data: p.data, preco: p.preco, link: (p.link && p.link.indexOf('https://') === 0) ? p.link : montarLink(o, d, p.data),
+    const dia = { data: p.data, preco: p.preco, link: linkCompra(o, d, p.data),
       voo: { cia: p.cia, escalas: p.escalas, saida: p.saida, duracaoMin: p.duracao_min } };
     const card = document.createElement('details');
     card.className = 'promo';
@@ -857,16 +900,17 @@ async function montarPromocoes() {
       '<summary>'
       + '<span class="promo-rota">' + CIDADES[o].nome + ' <span class="seta">→</span> ' + CIDADES[d].nome + '</span>'
       + '<span class="chevron" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>'
-      + '<span class="promo-valor">' + reais(dia.preco) + '</span>'
+      + '<span class="promo-valor">' + dinheiro(dia.preco, p.moeda) + '</span>'
       + '<span class="promo-dia">' + dataLonga(dia.data) + '</span>'
       + '</summary>'
       + '<div class="promo-mais">'
       + '<dl class="ficha">' + fichaDoVoo(o, d, dia) + '</dl>'
       + '<div class="promo-botoes">'
-      + '<p class="aviso-parceiro">Você vai para a Aviasales, nossa parceira. Lá o site é em inglês e o preço aparece em dólar (US$).</p>'
-      + '<a class="btn btn-verde" href="' + dia.link + '" target="_blank" rel="noopener sponsored">Comprar pelo link</a>'
+      + '<p class="aviso-parceiro">' + textoAviso(p.moeda) + '</p>'
+      + '<a class="btn btn-verde" href="https://www.kiwi.com/br/" target="_blank" rel="noopener sponsored">Comprar pelo link</a>'
       + '<button type="button" class="btn btn-contorno">Ver calendário</button></div>'
       + '</div>';
+    card.querySelector('a.btn').href = dia.link;   // pelo DOM, para os "&" do link não virarem outra coisa no HTML
     card.querySelector('button').addEventListener('click', () => irPara(o, d, dia.data.slice(0, 7), true));
     caixa.appendChild(card);
   }

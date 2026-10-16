@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """
-Atualiza o arquivo precos.json com preços REAIS da Travelpayouts/Aviasales.
+Atualiza o arquivo precos.json com preços REAIS da Travelpayouts (Data API).
 
 Como funciona (bem simples):
   1. Pega o token da variável TP_TOKEN (no GitHub vem do "secret"; no PC vem do arquivo .env).
   2. Para cada rota e para os próximos 3 meses, pergunta a 4 "fontes" da API (cada uma
      conhece dias diferentes), com o código da cidade E dos aeroportos dela, e junta tudo,
      ficando com o menor preço de cada dia.
-  3. Grava tudo em precos.json, que o site lê. O token NUNCA vai para o site.
+  3. Cada rota é pedida JÁ na moeda em que o cliente vai pagar na Kiwi.com:
+     dólar (usd) para os EUA, libra (gbp) para Londres e euro (eur) para o resto da Europa.
+     (Rota que sai do Brasil usa a moeda do destino.) A moeda vai gravada em cada rota.
+  4. Grava tudo em precos.json, que o site lê. O token NUNCA vai para o site.
+     Os links de compra NÃO vêm daqui: o site monta o link da Kiwi.com sozinho.
 
 Rodar:  python3 scripts/atualizar_precos.py
 """
@@ -24,7 +28,6 @@ import requests
 
 RAIZ = Path(__file__).resolve().parent.parent
 SAIDA = RAIZ / "precos.json"
-MARKER = "790537"
 PAUSA = 0.25  # segundos entre o início de uma chamada e o da próxima
 TRABALHADORES = 4  # chamadas ao mesmo tempo (o ritmo continua 1 chamada a cada PAUSA)
 LIMITE_SEGUNDOS = 17 * 60  # depois disso, para de consultar os aeroportos extras (o GitHub tem limite de tempo)
@@ -47,6 +50,22 @@ CIDADES = {
     "SAO": "São Paulo", "RIO": "Rio de Janeiro", "BHZ": "Belo Horizonte", "GYN": "Goiânia",
     "SSA": "Salvador", "REC": "Recife", "FOR": "Fortaleza", "BSB": "Brasília",
 }
+EUA = {"MIA", "ORL", "NYC", "BOS", "ATL"}
+BRASIL = {"SAO", "RIO", "BHZ", "GYN", "SSA", "REC", "FOR", "BSB"}
+# Taxa fixa aproximada (em dólar) SÓ para ordenar promoções de moedas diferentes. Nunca é mostrada.
+TAXA_ORDENAR = {"usd": 1.0, "eur": 1.08, "gbp": 1.27}
+
+
+def moeda_da_rota(origem, destino):
+    """usd (EUA), gbp (Londres) ou eur (resto da Europa). Saindo do Brasil, vale a cidade de destino."""
+    fora = destino if origem in BRASIL else origem
+    if fora in EUA:
+        return "usd"
+    if fora == "LON":
+        return "gbp"
+    return "eur"
+
+
 ORIGENS_FORA = ["MIA", "ORL", "NYC", "BOS", "ATL", "LIS", "OPO", "LON", "MAD", "BCN", "ROM", "MIL", "PAR"]
 DESTINOS_PRIORITARIOS = ["BHZ", "SAO", "GYN"]
 ORIGENS_EXTRA = ["MIA", "ORL", "LIS", "LON"]
@@ -116,20 +135,6 @@ def chamar(sessao, url, params):
     return None
 
 
-def link_padrao(origem, destino, data_iso):
-    _, mm, dd = data_iso.split("-")
-    return f"https://www.aviasales.com/search/{origem}{dd}{mm}{destino}1?marker={MARKER}"
-
-
-def link_da_api(link):
-    if not link:
-        return None
-    if not link.startswith("/"):
-        link = "/" + link
-    sep = "&" if "?" in link else "?"
-    return f"https://www.aviasales.com{link}{sep}marker={MARKER}"
-
-
 def saida_curta(departure_at):
     # "2026-12-03T08:10:00-05:00" -> "2026-12-03T08:10"
     return departure_at[:16] if departure_at else None
@@ -141,17 +146,17 @@ def _guardar(dias, data_iso, item):
     if atual is None or item["preco"] < atual["preco"]:
         dias[data_iso] = item
     elif item["preco"] == atual["preco"] and _riqueza(item) > _riqueza(atual):
-        dias[data_iso] = item  # mesmo preço, mas com mais detalhes (companhia, link do voo exato)
+        dias[data_iso] = item  # mesmo preço, mas com mais detalhes (companhia, horário, duração)
 
 
 def _riqueza(item):
-    return (1 if item.get("cia") else 0) + (1 if "?t=" in (item.get("link") or "") else 0) + (1 if item.get("saida") else 0)
+    return (1 if item.get("cia") else 0) + (1 if item.get("saida") else 0) + (1 if item.get("duracao_min") else 0)
 
 
 def buscar_calendario(sessao, token, cid_o, cid_d, o, d, mes):
     j = chamar(sessao, "https://api.travelpayouts.com/v1/prices/calendar", {
         "origin": o, "destination": d, "depart_date": mes,
-        "calendar_type": "departure_date", "currency": "brl", "token": token,
+        "calendar_type": "departure_date", "currency": moeda_da_rota(cid_o, cid_d), "token": token,
     })
     dias = {}
     if not j or not j.get("success") or not isinstance(j.get("data"), dict):
@@ -167,7 +172,6 @@ def buscar_calendario(sessao, token, cid_o, cid_d, o, d, mes):
             "escalas": v.get("transfers"),
             "saida": saida_curta(v.get("departure_at")),
             "duracao_min": v.get("duration"),
-            "link": link_padrao(cid_o, cid_d, data_iso),
             "de": o, "para": d, "fonte": "calendar",
         })
     return dias
@@ -175,7 +179,7 @@ def buscar_calendario(sessao, token, cid_o, cid_d, o, d, mes):
 
 def buscar_matriz(sessao, token, cid_o, cid_d, o, d, mes):
     j = chamar(sessao, "https://api.travelpayouts.com/v2/prices/month-matrix", {
-        "currency": "brl", "origin": o, "destination": d, "month": mes + "-01",
+        "currency": moeda_da_rota(cid_o, cid_d), "origin": o, "destination": d, "month": mes + "-01",
         "show_to_affiliates": "true", "token": token,
     })
     dias = {}
@@ -191,7 +195,6 @@ def buscar_matriz(sessao, token, cid_o, cid_d, o, d, mes):
             "escalas": v.get("number_of_changes"),
             "saida": None,
             "duracao_min": v.get("duration") or None,
-            "link": link_padrao(cid_o, cid_d, data_iso),
             "de": o, "para": d, "fonte": "month-matrix",
         })
     return dias
@@ -204,14 +207,13 @@ def _item_v3(v, cid_o, cid_d, data_iso, o, d, fonte):
         "escalas": v.get("transfers"),
         "saida": saida_curta(v.get("departure_at")),
         "duracao_min": v.get("duration_to") or v.get("duration"),
-        "link": link_da_api(v.get("link")) or link_padrao(cid_o, cid_d, data_iso),
         "de": v.get("origin_airport") or o, "para": v.get("destination_airport") or d, "fonte": fonte,
     }
 
 
 def buscar_por_datas(sessao, token, cid_o, cid_d, o, d, mes):
     j = chamar(sessao, "https://api.travelpayouts.com/aviasales/v3/prices_for_dates", {
-        "origin": o, "destination": d, "departure_at": mes, "currency": "brl",
+        "origin": o, "destination": d, "departure_at": mes, "currency": moeda_da_rota(cid_o, cid_d),
         "sorting": "price", "limit": 1000, "one_way": "true", "token": token,
     })
     dias = {}
@@ -228,7 +230,7 @@ def buscar_por_datas(sessao, token, cid_o, cid_d, o, d, mes):
 def buscar_agrupado(sessao, token, cid_o, cid_d, o, d, mes):
     j = chamar(sessao, "https://api.travelpayouts.com/aviasales/v3/grouped_prices", {
         "origin": o, "destination": d, "departure_at": mes, "group_by": "departure_at",
-        "currency": "brl", "token": token,
+        "currency": moeda_da_rota(cid_o, cid_d), "token": token,
     })
     dias = {}
     if not j or not isinstance(j.get("data"), dict):
@@ -258,6 +260,8 @@ def escolher_promocoes(rotas, hoje_iso, quantas=8, max_por_origem=2):
     for rota, meses in rotas.items():
         candidato = None
         for mes, dias in meses.items():
+            if not isinstance(dias, dict):
+                continue  # pula o campo "moeda"
             for dd, v in dias.items():
                 data_iso = f"{mes}-{dd}"
                 if data_iso < hoje_iso:
@@ -272,9 +276,10 @@ def escolher_promocoes(rotas, hoje_iso, quantas=8, max_por_origem=2):
                 "data": candidato["data"], "preco": candidato["preco"],
                 "cia": candidato.get("cia"), "escalas": candidato.get("escalas"),
                 "saida": candidato.get("saida"), "duracao_min": candidato.get("duracao_min"),
-                "link": candidato["link"],
+                "moeda": moeda_da_rota(o, d),
             })
-    melhores.sort(key=lambda p: p["preco"])
+    # Moedas diferentes: ordena pelo valor aproximado em dólar (só para ordenar; o site mostra a moeda original)
+    melhores.sort(key=lambda p: p["preco"] * TAXA_ORDENAR[p["moeda"]])
     escolhidas, por_origem = [], {}
     for p in melhores:
         if por_origem.get(p["origem"], 0) >= max_por_origem:
@@ -332,25 +337,25 @@ def main():
     com_dados, vazias = 0, 0
     for i, (o, d) in enumerate(ROTAS, 1):
         chave = f"{o}-{d}"
-        rotas[chave] = {}
+        rotas[chave] = {"moeda": moeda_da_rota(o, d)}
         for mes in meses:
             dias = junto.get((o, d, mes), {})
             # só dias de hoje em diante, em ordem
             dias = {k: v for k, v in sorted(dias.items()) if k >= hoje_iso}
             rotas[chave][mes] = {k[-2:]: v for k, v in dias.items()}
-        total = sum(len(x) for x in rotas[chave].values())
+        total = sum(len(rotas[chave][m]) for m in meses)
         if total:
             com_dados += 1
         else:
             vazias += 1
         print(f"[{i:2d}/{len(ROTAS)}] {chave}: {total} dias com preço")
-    total_dias = sum(len(x) for r in rotas.values() for x in r.values())
+    total_dias = sum(len(r[m]) for r in rotas.values() for m in meses)
     print(f"Total: {total_dias} dias com preço; {_contador['chamadas']} chamadas, {_contador['erros']} erros, "
           f"{time.monotonic() - inicio:.0f}s")
 
     resultado = {
         "atualizado_em": agora.replace(microsecond=0).isoformat(),
-        "moeda": "BRL",
+        "moeda": "por_rota",  # cada rota tem o seu campo "moeda": usd, eur ou gbp
         "fontes": ["v2/prices/month-matrix", "v1/prices/calendar", "aviasales/v3/prices_for_dates",
                    "aviasales/v3/grouped_prices"],
         "meses": meses,
